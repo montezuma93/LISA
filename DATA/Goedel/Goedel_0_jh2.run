@@ -1,0 +1,160 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: Goedel 0
+Note: No cause effect groups. Hand code the hell out of firing order.
+Note: Goedel_2jh is not learning mapping connections. WTF??
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:SOLogic    Recip : NatLang    Fire control:props    Goals: NORMAL     Phase set: P1:SELFREF (SOL)
+Seq. 1    Driver:NatLang    Recip : SOLogic Schema    Fire control:props    Goals: NORMAL     Phase set: P1:SELFREF (NL)
+Seq. 2    Driver:NatLang    Recip : SOLogic Schema    Fire control:props    Goals: NORMAL     Phase set: P2:HASUNPROVABLESTATEMENT (NL)
+Seq. 3    Driver:NatLang    Recip : SOLogic Schema    Fire control:props    Goals: NORMAL     Phase set: P3:INCOMPLETE (NL)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From NatLang to SOLogic:
+  Groups:
+  Props:
+    From P1 (IC = 0.618) to:    P1 = 0.982
+    From P2 (IC = 0.500) to:    'P1' = 0.982
+    From P3 (IC = 0.500) to:    'P2' = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.992
+    From SP2.1 to:    'SP1' = 0.987
+    From SP3.1 to:    'SP2' = 0.987
+  Preds:
+    From SELFREF1 to:    SELFREF1 = 0.968
+    From HASUNPROVABLESTATEMENT1 to:    'HASUNPROVABLESTATEMENT1' = 0.968
+    From INCOMPLETE1 to:    'INCOMPLETE1' = 0.968
+  Objs:
+    From NL to:    SOL = 0.968
+
+From NatLang to Schema:
+  Groups:
+  Props:
+    From P1 (IC = 0.618) to:    'P0' = 0.982
+    From P2 (IC = 0.500) to:    'P1' = 0.982
+    From P3 (IC = 0.500) to:    'P2' = 0.982
+  SPs:
+    From SP1.1 to:    'SP0' = 0.992
+    From SP2.1 to:    'SP1' = 0.987
+    From SP3.1 to:    'SP2' = 0.987
+  Preds:
+    From SELFREF1 to:    'SELFREF1' = 0.968
+    From HASUNPROVABLESTATEMENT1 to:    'HASUNPROVABLESTATEMENT1' = 0.968
+    From INCOMPLETE1 to:    'INCOMPLETE1' = 0.968
+  Objs:
+    From NL to:    'NL' = 0.968
+
+From SOLogic to NatLang:
+  Groups:
+  Props:
+    From P1 (IC = 0.618) to:    P1 = 0.982
+    From 'P1' (IC = 0.424) to:    P2 = 0.982
+    From 'P2' (IC = 0.241) to:    P3 = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.992
+    From 'SP1' to:    SP2.1 = 0.987
+    From 'SP2' to:    SP3.1 = 0.987
+  Preds:
+    From SELFREF1 to:    SELFREF1 = 0.968
+    From 'HASUNPROVABLESTATEMENT1' to:    HASUNPROVABLESTATEMENT1 = 0.968
+    From 'INCOMPLETE1' to:    INCOMPLETE1 = 0.968
+  Objs:
+    From SOL to:    NL = 0.968
+
+From Schema to NatLang:
+  Groups:
+  Props:
+    From 'P0' (IC = 0.655) to:    P1 = 0.982
+    From 'P1' (IC = 0.424) to:    P2 = 0.982
+    From 'P2' (IC = 0.241) to:    P3 = 0.982
+  SPs:
+    From 'SP0' to:    SP1.1 = 0.992
+    From 'SP1' to:    SP2.1 = 0.987
+    From 'SP2' to:    SP3.1 = 0.987
+  Preds:
+    From 'SELFREF1' to:    SELFREF1 = 0.968
+    From 'HASUNPROVABLESTATEMENT1' to:    HASUNPROVABLESTATEMENT1 = 0.968
+    From 'INCOMPLETE1' to:    INCOMPLETE1 = 0.968
+  Objs:
+    From 'NL' to:    NL = 0.968
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog SOLogic * * * * *
+
+Groups:
+
+Props:
+'P1':  [ 'HASUNPROVABLESTATEMENT1' + SOL ] 
+'P2':  [ 'INCOMPLETE1' + SOL ] 
+
+Preds:
+'HASUNPROVABLESTATEMENT1':
+   HUS11(1.000)
+   HUS21(1.000)
+   HUS31(1.000)
+
+'INCOMPLETE1':
+   INC11(1.000)
+   INC21(1.000)
+   INC31(1.000)
+
+
+Objs:
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+
+Props:
+'P0':  [ 'SELFREF1' + 'NL' ] 
+'P1':  [ 'HASUNPROVABLESTATEMENT1' + 'NL' ] 
+'P2':  [ 'INCOMPLETE1' + 'NL' ] 
+
+Preds:
+'SELFREF1':
+   SR11(1.000)
+   SR21(1.000)
+   SR31(1.000)
+
+'HASUNPROVABLESTATEMENT1':
+   HUS11(1.000)
+   HUS21(1.000)
+   HUS31(1.000)
+
+'INCOMPLETE1':
+   INC11(1.000)
+   INC21(1.000)
+   INC31(1.000)
+
+
+Objs:
+'NL':
+   ISTHEORY(1.000)
+   ISLANGUAGE(1.000)
+         NL1(0.448)
+       PA1(0.563)
+

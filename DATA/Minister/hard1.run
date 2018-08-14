@@ -1,0 +1,98 @@
+Run of LISA Version Ex 2.01; last modified 4/6/14
+
+Note: Minister/Hard1.sym (no manufacture() prop in the schemas)
+Note: Made from Easy2
+Note: This is 'hard' 'cause the relevant knowledge is split over two analogs 
+Note: However, there's still no distracting info.  Just the Most Basic test of whether LISA
+Note:  can do it at all.  If it succeeds on this, Then we'll branch out...
+Note: 4/21/08:
+Note: Removing the manufacture() prop from the schema
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Minister    Recip :    Fire control:groups (EXPLANANDUM)     Goals: EXPLAIN RETRIEVE     Phase set: P1:PREFER (MINISTER, COKE)
+Retrieved group CE-1 in analog PreferSchema.
+Seq. 1    Driver:Minister    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:PREFER (MINISTER, COKE)
+Seq. 2    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P2:AGREE-WITH (PERSON, MANUFACTURER)
+Seq. 3    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:PREFER (PERSON, PRODUCT)
+Seq. 4    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P2:AGREE-WITH (PERSON, MANUFACTURER)
+Seq. 5    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:PREFER (PERSON, PRODUCT)
+
+
+* * * Current Mapping Connections From Minister to WorkSpace * * *
+  Groups:
+    From EXPLANANDUM to:    Effect-1 = 0.879
+  Props:
+    From P1 (IC = 0.621) to:    P1 = 0.990
+    From 'P1' (IC = 0.675) to:    P2 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From 'SP2' to:    SP2.1 = 0.993
+    From 'SP3' to:    SP2.2 = 0.993
+  Preds:
+    From PREFER1 to:    PREFER1 = 0.968
+    From PREFER2 to:    PREFER2 = 0.968
+    From 'AGREE-WITH1' to:    AGREE-WITH1 = 0.968
+    From 'AGREE-WITH2' to:    AGREE-WITH2 = 0.968
+  Objs:
+    From MINISTER to:    PERSON = 0.968
+    From COKE to:    PRODUCT = 0.968
+    From 'MANUFACTURER' to:    MANUFACTURER = 0.968
+
+
+
+* * * * Inferred Groups and Props in Explanandum * * * *
+
+Groups:
+
+Props:
+'P1':  [ 'AGREE-WITH1' + MINISTER ] [ 'AGREE-WITH2' + 'MANUFACTURER' ] 
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Minister * * * * *
+
+Groups:
+
+Props:
+'P1':  [ 'AGREE-WITH1' + MINISTER ] [ 'AGREE-WITH2' + 'MANUFACTURER' ] 
+
+Preds:
+'AGREE-WITH1':
+   AGREE1(1.000)
+
+'AGREE-WITH2':
+   AGREE2(1.000)
+
+
+Objs:
+'MANUFACTURER':
+   COMPANY(1.000)
+   ORGANIZATION(1.000)
+   PRODUCE(1.000)
+   MAKE(1.000)
+   MANUFACTURER(1.000)
+

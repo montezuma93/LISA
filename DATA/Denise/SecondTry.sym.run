@@ -1,0 +1,109 @@
+Run of LISA Version Ex 1.15; last modified 2/23/11
+
+Note: SecondTry.sym: Second attempt to use LISA to simulate moral reasoning
+Note: Made from FirstTry but removed action from target; and weighted "chosen" action in source to make it more likely to fire
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Fumes    Recip : Trolly    Fire control:groups    Goals: NORMAL     Phase set: P2:RUNAWAY (FUMES)
+Seq. 1    Driver:Fumes    Recip : Trolly    Fire control:groups    Goals: NORMAL     Phase set: P2:RUNAWAY (FUMES)
+Seq. 2    Driver:Fumes    Recip : Trolly    Fire control:groups    Goals: NORMAL     Phase set: P2:RUNAWAY (FUMES)
+Seq. 3    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P1:TRAVEL (TROLLY, TRACKS)
+Seq. 4    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P3:HIT (TROLLY, LARGE_GROUP)
+Seq. 5    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P2:RUNAWAY (TROLLY)
+Seq. 6    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P3:HIT (TROLLY, LARGE_GROUP)
+Seq. 7    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P3:HIT (TROLLY, LARGE_GROUP)
+Seq. 8    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P6:SAVE (YOU, SMALL_GROUP)
+Seq. 9    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P5:KILL (TROLLY, LARGE_GROUP)
+Seq. 10    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P6:SAVE (YOU, SMALL_GROUP)
+Seq. 11    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P7:PUSH (YOU, SWITCH)
+Seq. 12    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P7:PUSH (YOU, SWITCH)
+Seq. 13    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P8:DIVERT (SWITCH, TROLLY)
+Seq. 14    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P8:DIVERT (SWITCH, TROLLY)
+Seq. 15    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P11:SAVE (YOU, LARGE_GROUP)
+Seq. 16    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P10:KILL (TROLLY, SMALL_GROUP)
+Seq. 17    Driver:Trolly    Recip : Fumes Schema    Fire control:groups    Goals: NORMAL     Phase set: P10:KILL (TROLLY, SMALL_GROUP)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Trolly to Fumes:
+  Groups:
+    From CAUSE1 to:    CAUSE1 = 0.879
+    From EFFECT1 to:    EFFECT1 = 0.001
+    From CE-1 to:    CE-1 = 0.879
+    From CAUSE2 to:    CAUSE1 = 0.003
+    From EFFECT2 to:    EFFECT1 = 0.888
+    From CE-2 to:    CE-1 = 0.132
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.982
+    From P3 to:    P3 = 0.990
+    From P5 to:    P5 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.992
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.993
+    From SP5.1 to:    SP5.1 = 0.993
+    From SP5.2 to:    SP5.2 = 0.993
+  Preds:
+    From TRAVEL1 to:    TRAVEL1 = 0.970
+    From TRAVEL2 to:    TRAVEL2 = 0.970
+    From RUNAWAY1 to:    RUNAWAY1 = 0.970
+    From HIT1 to:    POISON1 = 0.970
+    From HIT2 to:    POISON2 = 0.970
+    From KILL1 to:    KILL1 = 0.968
+    From KILL2 to:    KILL2 = 0.968
+  Objs:
+    From TROLLY to:    FUMES = 0.968
+    From TRACKS to:    VENTS = 0.970
+    From LARGE_GROUP to:    MANY_PATIENTS = 0.968
+
+From Fumes to Trolly:
+  Groups:
+    From CAUSE1 to:    CAUSE1 = 0.879    CAUSE2 = 0.003
+    From EFFECT1 to:    EFFECT1 = 0.001    EFFECT2 = 0.888
+    From CE-1 to:    CE-1 = 0.879    CE-2 = 0.132
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.982
+    From P3 to:    P3 = 0.990
+    From P5 to:    P5 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.992
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.993
+    From SP5.1 to:    SP5.1 = 0.993
+    From SP5.2 to:    SP5.2 = 0.993
+  Preds:
+    From TRAVEL1 to:    TRAVEL1 = 0.970
+    From TRAVEL2 to:    TRAVEL2 = 0.970
+    From RUNAWAY1 to:    RUNAWAY1 = 0.970
+    From POISON1 to:    HIT1 = 0.970
+    From POISON2 to:    HIT2 = 0.970
+    From KILL1 to:    KILL1 = 0.968
+    From KILL2 to:    KILL2 = 0.968
+  Objs:
+    From FUMES to:    TROLLY = 0.968
+    From VENTS to:    TRACKS = 0.970
+    From MANY_PATIENTS to:    LARGE_GROUP = 0.968
+

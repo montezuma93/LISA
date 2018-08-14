@@ -1,0 +1,56 @@
+Note: RobinsHaveEnzyme
+Note: Tell LISA robins have enzyme; ask it whether birds do
+
+Parameters
+    SaveGroupHebbs False
+    SavePropHebbs False
+    SaveSPHebbs False
+    SaveOPHebbs False
+Done
+
+Include worldknowledge.inc { analogs 0...2
+
+Analog Robin { analog 3
+  DefPreds
+    has 2 state possess has1 has2 ;
+    isa [ isa1 exemplar ] [ isa2 category ] ;
+  end
+  DefObjs
+    robin bird fly small sing nest robin ;
+    enzyme chemical bio enzyme ;
+  end
+  DefProps
+    P1 has ( robin enzyme ) ;
+    P2 isa ( robin robin ) ;
+  end
+  DefGroups
+    Cause ( P2 ) ( P1 ) ;
+  end
+done
+
+Analog ToVerify { analog 4
+  DefPreds
+    has 2 state possess has1 has2 ;
+  end
+  DefObjs
+    bird bird fly small sing nest ;
+    enzyme chemical bio enzyme ;
+  end
+  DefProps
+    P1 has ( bird enzyme ) ;
+  end
+  DefGroups
+    ToVerify
+      Props: P1 %
+      Semantics: Effect %
+      %%
+  end
+done { to verify
+
+Sequence { 
+  Driver=[ 4 ]
+  ContraDetect= On { turn contradiction detection on
+  Goal= Verify   { turn on explanation mode just before last prop
+  Order=[ ToVerify ( 1 1 ) ]
+done.
+    

@@ -1,0 +1,33 @@
+Note: Semantic/test9.sym
+Note: assert that a lamb is an animal
+
+Parameters
+    SaveGroupHebbs False
+    SavePropHebbs False
+    SaveSPHebbs False
+    SaveOPHebbs False
+Done
+
+Include Semantics.inc
+
+Include WorldKnowledge.inc
+
+Analog ToVerify
+  DefPreds
+    animal [ breath move natural born will-die animal ] ;
+  end
+  DefObjs
+    lamb baby sheep lamb ;
+  end
+  DefProps
+    P1 animal ( lamb ) ;
+  end
+done { glass example
+
+Sequence { 
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  ContraDetect= On { turn contradiction detection on
+  Order=[ P1 h P1 h ]
+done.
+    

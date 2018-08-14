@@ -1,0 +1,356 @@
+
+================================
+Sequence element0
+    Driver:Explanandum
+    Recip: 
+
+    Fire control: groups
+    Goals: EXPLAIN RETRIEVE 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+
+retrieved group CE-1 on iteration 239
+
+================================
+Sequence element1
+    Driver:Explanandum
+    Recip: WorkSpace  
+
+    Fire control: groups-d
+    Goals: EXPLAIN MAP 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+
+================================
+Sequence element2
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P5 
+
+* * * Switching from LISA mode to DORA mode
+
+================================
+Sequence element3
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P4 
+
+
+================================
+Sequence element4
+    Driver:Explanandum
+    Recip: 
+
+    Fire control: groups-d
+    Goals: EXPLAIN RETRIEVE 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: 'P1' 
+
+* * * Switching from DORA mode to LISA mode
+
+retrieved group EFFECT2 on iteration 2080
+
+================================
+Sequence element5
+    Driver:Explanandum
+    Recip: WorkSpace  
+
+    Fire control: groups-d
+    Goals: EXPLAIN MAP 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: 'P1' 
+
+
+================================
+Sequence element6
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P5 
+
+* * * Switching from LISA mode to DORA mode
+
+================================
+Sequence element7
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P3 
+
+
+================================
+Sequence element8
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P4 
+
+
+================================
+Sequence element9
+    Driver:Explanandum
+    Recip: 
+
+    Fire control: groups-d
+    Goals: EXPLAIN RETRIEVE 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: 'P1' 
+
+* * * Switching from DORA mode to LISA mode
+
+retrieved group EFFECT2 on iteration 4043
+
+================================
+Sequence element10
+    Driver:Explanandum
+    Recip: WorkSpace  
+
+    Fire control: groups-d
+    Goals: EXPLAIN MAP 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: 'P1' 
+
+
+================================
+Sequence element11
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P5 
+
+* * * Switching from LISA mode to DORA mode
+
+================================
+Sequence element12
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P3 
+
+
+================================
+Sequence element13
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P4 
+
+
+================================
+Sequence element14
+    Driver:Explanandum
+    Recip: 
+
+    Fire control: groups-d
+    Goals: EXPLAIN RETRIEVE 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: 'P1' 
+
+* * * Switching from DORA mode to LISA mode
+
+retrieved group CAUSE1 on iteration 6010
+
+================================
+Sequence element15
+    Driver:Explanandum
+    Recip: WorkSpace  
+
+    Fire control: groups-d
+    Goals: EXPLAIN MAP 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: 'P1' 
+
+
+================================
+Sequence element16
+    Driver:Explanandum
+    Recip: WorkSpace  
+
+    Fire control: groups-d
+    Goals: EXPLAIN MAP 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: 'P2' 
+
+
+================================
+Sequence element17
+    Driver:Explanandum
+    Recip: WorkSpace  
+
+    Fire control: groups-d
+    Goals: EXPLAIN MAP 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: 'P3' 
+
+
+================================
+Sequence element18
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P5 
+
+* * * Switching from LISA mode to DORA mode
+
+================================
+Sequence element19
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P4 
+
+
+================================
+Sequence element20
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P5 
+
+
+================================
+Sequence element21
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P4 
+
+
+================================
+Sequence element22
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P5 
+
+
+================================
+Sequence element23
+    Driver:WorkSpace
+    Recip: Explanandum  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P4 
+
+
+* * * * * * * * * *
+Simulation is done.
+* * * * * * * * * *
+

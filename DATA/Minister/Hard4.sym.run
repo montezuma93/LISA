@@ -1,0 +1,336 @@
+Run of LISA Version Ex 1.15; last modified 3/2/11
+
+Note: Minister/Hard4.sym 
+Note: First attempt to produce the “Coke used to contain cocaine” explanation
+Note: Same difficulties as Hard3 and then some:
+Note: Coke containing cocaine is an Instantiation of a more general
+Note:   kind of situation… and one that ministers might disapprove of
+Note: This need to appreciate x as an instantiation of y, where ministers
+Note:   might not like any kind f y, is a new problem I’m not sure we’re
+Note:   prepared to solve (aiee!)
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Explanandum    Recip :    Fire control:groups (EXPLANANDUM)     Goals: EXPLAIN RETRIEVE     Phase set: P1:DISLIKE (MINISTER, COKE)
+Seq. 1    Driver:Explanandum    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:DISLIKE (MINISTER, COKE)
+Seq. 2    Driver:WorkSpace    Recip : Explanandum    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P3:WAS-IMMORAL (COKE)
+Seq. 3    Driver:WorkSpace    Recip : Explanandum    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:CONTAINED (COKE, COCAINE)
+Seq. 4    Driver:WorkSpace    Recip : Explanandum    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P2:ILLEGAL (COCAINE)
+Seq. 5    Driver:WorkSpace    Recip : Explanandum    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P5:DISLIKE (MINISTER, IMMORAL-STUFF)
+Seq. 6    Driver:WorkSpace    Recip : Explanandum    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P4:IMMORAL (IMMORAL-STUFF)
+
+
+* * * Current Mapping Connections From Explanandum to WorkSpace * * *
+  Groups:
+    From EXPLANANDUM to:    EFFECT1 = 0.969
+    From 'CE-1' to:    CE-1 = 0.879
+    From 'CE-2' to:    CE-1 = 0.969
+    From 'CAUSE3' to:    CAUSE1 = 0.967
+  Props:
+    From P1 to:    P5 = 0.990
+    From 'P1' to:    P3 = 0.982
+    From 'P2' to:    P1 = 0.990
+    From 'P3' to:    P2 = 0.982
+    From 'P4' to:    P4 = 0.982
+  SPs:
+    From SP1.1 to:    SP5.1 = 0.993
+    From SP1.2 to:    SP5.2 = 0.993
+    From 'SP2' to:    SP3.1 = 0.992
+    From 'SP3' to:    SP1.1 = 0.990
+    From 'SP4' to:    SP1.2 = 0.993
+    From 'SP5' to:    SP2.1 = 0.987
+    From 'SP6' to:    SP4.1 = 0.987
+  Preds:
+    From DISLIKE1 to:    DISLIKE1 = 0.968
+    From DISLIKE2 to:    DISLIKE2 = 0.968
+    From 'WAS-IMMORAL1' to:    WAS-IMMORAL1 = 0.970
+    From 'CONTAINED1' to:    CONTAINED1 = 0.969
+    From 'CONTAINED2' to:    CONTAINED2 = 0.970
+    From 'ILLEGAL1' to:    ILLEGAL1 = 0.969
+    From 'IMMORAL1' to:    IMMORAL1 = 0.969
+  Objs:
+    From MINISTER to:    MINISTER = 0.968
+    From COKE to:    IMMORAL-STUFF = 0.968
+    From 'COKE' to:    COKE = 0.970
+    From 'COCAINE' to:    COCAINE = 0.970
+
+
+
+* * * * Inferred Groups and Props in Explanandum * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_0.5 (0.778) 
+
+
+'CE-2' (index = 2 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_1.0 (0.778) 
+
+     Groups: 
+     EXPLANANDUM (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DISLIKE (MINISTER, COKE) 
+
+     'CAUSE3' (index = 3 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P4')  
+
+
+'CAUSE3' (index = 3 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P4')  
+
+
+Props:
+'P1':  [ 'WAS-IMMORAL1' + 'COKE' ] 
+'P2':  [ 'CONTAINED1' + 'COKE' ] [ 'CONTAINED2' + 'COCAINE' ] 
+'P3':  [ 'ILLEGAL1' + 'COCAINE' ] 
+'P4':  [ 'IMMORAL1' + COKE ] 
+Seq. 7    Driver:Explanandum    Recip :    Fire control:groups-d    Goals: EXPLAIN RETRIEVE     Phase set: 'P4':
+Seq. 8    Driver:Explanandum    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: 'P4':'IMMORAL' (COKE)
+Seq. 9    Driver:WorkSpace    Recip : Explanandum    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P3:WAS-IMMORAL (COKE)
+Seq. 10    Driver:WorkSpace    Recip : Explanandum    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:CONTAINED (COKE, COCAINE)
+Seq. 11    Driver:WorkSpace    Recip : Explanandum    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P2:ILLEGAL (COCAINE)
+
+
+* * * Current Mapping Connections From Explanandum to WorkSpace * * *
+  Groups:
+    From 'EFFECT5' to:    EFFECT1 = 0.967
+    From 'CE-6' to:    CE-1 = 0.969
+    From 'CAUSE7' to:    CAUSE1 = 0.967
+  Props:
+    From 'P4' to:    P3 = 0.982
+    From 'P5' to:    P1 = 0.990
+    From 'P6' to:    P2 = 0.982
+  SPs:
+    From 'SP6' to:    SP3.1 = 0.992
+    From 'SP7' to:    SP1.1 = 0.990
+    From 'SP8' to:    SP1.2 = 0.993
+    From 'SP9' to:    SP2.1 = 0.987
+  Preds:
+    From 'IMMORAL1' to:    WAS-IMMORAL1 = 0.969
+    From 'CONTAINED1' to:    CONTAINED1 = 0.969
+    From 'CONTAINED2' to:    CONTAINED2 = 0.970
+    From 'ILLEGAL1' to:    ILLEGAL1 = 0.969
+  Objs:
+    From COKE to:    COKE = 0.969
+    From 'COCAINE' to:    COCAINE = 0.970
+
+
+
+* * * * Inferred Groups and Props in Explanandum * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_0.5 (0.778) 
+
+
+'CE-2' (index = 2 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_1.0 (0.778) 
+
+     Groups: 
+     EXPLANANDUM (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DISLIKE (MINISTER, COKE) 
+
+     'CAUSE3' (index = 3 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P4') 'IMMORAL' (COKE) 
+
+
+'CAUSE3' (index = 3 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P4') 'IMMORAL' (COKE) 
+
+EFFECT2 (index = 4 level =0):  
+     Semantics: EFFECT (1.000) 
+     Props: 'P4') 'IMMORAL' (COKE) 
+
+'EFFECT5' (index = 5 level =0):  
+     Semantics: EFFECT (0.725) 
+     Props: 'P4') 'IMMORAL' (COKE) 
+
+'CE-6' (index = 6 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_0.5 (0.778) 
+
+     Groups: 
+     'EFFECT5' (index = 5 level =0):  
+          Semantics: EFFECT (0.725) 
+          Props: 'P4') 'IMMORAL' (COKE) 
+
+     'CAUSE7' (index = 7 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P5') 'CONTAINED' (COKE, 'COCAINE') 'P6')  
+
+
+'CAUSE7' (index = 7 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P5') 'CONTAINED' (COKE, 'COCAINE') 'P6')  
+
+
+Props:
+'P1':  [ 'WAS-IMMORAL1' + 'COKE' ] 
+'P2':  [ 'CONTAINED1' + 'COKE' ] [ 'CONTAINED2' + 'COCAINE' ] 
+'P3':  [ 'ILLEGAL1' + 'COCAINE' ] 
+'P4':  [ 'IMMORAL1' + COKE ] 
+'P5':  [ 'CONTAINED1' + COKE ] [ 'CONTAINED2' + 'COCAINE' ] 
+'P6':  [ 'ILLEGAL1' + 'COCAINE' ] 
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Explanandum * * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_0.5 (0.778) 
+
+
+'CE-2' (index = 2 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_1.0 (0.778) 
+
+     Groups: 
+     EXPLANANDUM (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DISLIKE (MINISTER, COKE) 
+
+     'CAUSE3' (index = 3 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P4') 'IMMORAL' (COKE) 
+
+
+'CAUSE3' (index = 3 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P4') 'IMMORAL' (COKE) 
+
+EFFECT2 (index = 4 level =0):  
+     Semantics: EFFECT (1.000) 
+     Props: 'P4') 'IMMORAL' (COKE) 
+
+'EFFECT5' (index = 5 level =0):  
+     Semantics: EFFECT (0.725) 
+     Props: 'P4') 'IMMORAL' (COKE) 
+
+'CE-6' (index = 6 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_0.5 (0.778) 
+
+     Groups: 
+     'EFFECT5' (index = 5 level =0):  
+          Semantics: EFFECT (0.725) 
+          Props: 'P4') 'IMMORAL' (COKE) 
+
+     'CAUSE7' (index = 7 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P5') 'CONTAINED' (COKE, 'COCAINE') 'P6')  
+
+
+'CAUSE7' (index = 7 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P5') 'CONTAINED' (COKE, 'COCAINE') 'P6')  
+
+EFFECT3 (index = 8 level =0):  
+     Semantics: EFFECT (1.000) 
+     Props: 'P4') 'IMMORAL' (COKE) 
+
+
+Props:
+'P1':  [ 'WAS-IMMORAL1' + 'COKE' ] 
+'P2':  [ 'CONTAINED1' + 'COKE' ] [ 'CONTAINED2' + 'COCAINE' ] 
+'P3':  [ 'ILLEGAL1' + 'COCAINE' ] 
+'P4':  [ 'IMMORAL1' + COKE ] 
+'P5':  [ 'CONTAINED1' + COKE ] [ 'CONTAINED2' + 'COCAINE' ] 
+'P6':  [ 'ILLEGAL1' + 'COCAINE' ] 
+
+Preds:
+'WAS-IMMORAL1':
+   TIME=PAST(1.000)
+   IMMORAL(1.000)
+   ETHICS(1.000)
+   EVIL(1.000)
+   NEGATIVE(1.000)
+
+'CONTAINED1':
+   TIME=PAST(1.000)
+   CONTAINER(1.000)
+   HOLDER(1.000)
+   PRODUCT(1.000)
+
+'CONTAINED2':
+   TIME=PAST(1.000)
+   CONTAINEE(1.000)
+   HELD(1.000)
+   INGREDIENT(1.000)
+
+'ILLEGAL1':
+   LAW(1.000)
+   ILLEGAL(1.000)
+   NOT-LEGAL(1.000)
+   IMMORAL(1.000)
+
+'IMMORAL1':
+   IMMORAL(1.000)
+   ETHICS(1.000)
+   EVIL(1.000)
+   NEGATIVE(1.000)
+   MORALS(1.000)
+
+'CONTAINED1':
+   TIME=PAST(1.000)
+   CONTAINER(1.000)
+   HOLDER(1.000)
+   PRODUCT(1.000)
+
+'CONTAINED2':
+   TIME=PAST(1.000)
+   CONTAINEE(1.000)
+   HELD(1.000)
+   INGREDIENT(1.000)
+
+'ILLEGAL1':
+   LAW(1.000)
+   ILLEGAL(1.000)
+   NOT-LEGAL(1.000)
+   IMMORAL(1.000)
+
+
+Objs:
+'COKE':
+   BEVERAGE(1.000)
+   SWEET(1.000)
+   COKE(1.000)
+
+'COCAINE':
+   ILLEGAL(1.000)
+   DRUG(1.000)
+   COCAINE(1.000)
+   OPIATE(1.000)
+   ADDICTIVE(1.000)
+
+'COCAINE':
+   ILLEGAL(1.000)
+   DRUG(1.000)
+   COCAINE(1.000)
+   OPIATE(1.000)
+   ADDICTIVE(1.000)
+

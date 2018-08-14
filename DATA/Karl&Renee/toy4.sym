@@ -1,0 +1,59 @@
+Note: Third attempt to illustrate how (child) LISA can run mental models
+Note: This time, LISA must figure out why the glass did not fall
+
+Analog NaivePhysics
+  DefPreds
+    support 2 support hold -fall ;
+    fall 1 fall descend gravity break ;
+    unsupported 1 -support -hold fall ;
+    not 1 negate not false ;
+    under 2 below spatial under ;
+    beside [ nextTo spatial1 spatial2 beside ] [ nextTo spatial1 spatial2 beside ] ;
+  end
+  DefObjs
+    supporter solid strong horizontal supporter ;
+    supported light supported ;
+  end
+  DefProps
+    P1 support ( supporter supported ) ;
+    P2 fall ( supported ) ;
+    P3 not ( P2 ) ;
+    P4 unsupported ( supported ) ;
+    P5 under ( supporter supported ) ;
+    P6 beside (supporter supported ) ;
+  end
+  DefGroups
+    Cause ( P1 ) ( P2 P3 ) 1 ; { will automatically be named "CE-1"
+    Cause ( P4 ) ( P2 ) 1 ;  { CE-2
+    Cause ( P5 ) ( P1 ) 1 ;  { CE-3
+    Cause ( P6 ) ( P4 ) 1 ;  { CE-4
+  end
+done { naiive physics analog
+
+Analog NotFallGlass
+  DefPreds
+    fall 1 fall descend gravity break ;
+    not 1 negate not false ;
+  end
+  DefObjs
+    glass glass container drink fragile ;
+  end
+  DefProps
+    P1 fall ( Glass ) ;
+    P2 not ( P1 ) ;
+  end
+  DefGroups
+    G1
+      Props: P1 P2 %
+      Semantics: Effect %
+      %%
+  end
+done { glass example
+
+Sequence { no hand-holding here
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  Mode= Predict   { turn on prediction mode just before last prop
+  Order=[ G1 ( 1 2 ) ]
+done.
+    

@@ -1,0 +1,327 @@
+Run of LISA Version Ex 2.01; last modified 12/18/13
+
+Note: Andrei&Zack/Schemas/Ex1.sym
+Note: Why do we drink OJ for breakfast?
+Note: One of the earliest schemas to be learned, e.g., when one is 3.2778 years old
+Note: One guy has inherent reason and one idiosyncratic reason
+Note: Other guy has same inherent reason and a diff idiosyncratic reason
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:SecondGuy    Recip : FirstGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P1:DRINK (SECONDGUY, OJ)
+Seq. 1    Driver:SecondGuy    Recip : FirstGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P2:DELICIOUS (OJ)
+Seq. 2    Driver:SecondGuy    Recip : FirstGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P2:DELICIOUS (OJ)
+Seq. 3    Driver:SecondGuy    Recip : FirstGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P3:ISA (SECONDGUY, MECHANIC)
+Seq. 4    Driver:SecondGuy    Recip : FirstGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P1:DRINK (SECONDGUY, OJ)
+Seq. 5    Driver:SecondGuy    Recip : FirstGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P3:ISA (SECONDGUY, MECHANIC)
+Seq. 6    Driver:FirstGuy    Recip : SecondGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P2:DELICIOUS (OJ)
+Seq. 7    Driver:FirstGuy    Recip : SecondGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P2:DELICIOUS (OJ)
+Seq. 8    Driver:FirstGuy    Recip : SecondGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P1:DRINK (FIRSTGUY, OJ)
+Seq. 9    Driver:FirstGuy    Recip : SecondGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P1:DRINK (FIRSTGUY, OJ)
+Seq. 10    Driver:FirstGuy    Recip : SecondGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P3:HASA (FIRSTGUY, FETISH)
+Seq. 11    Driver:FirstGuy    Recip : SecondGuy SchemaEx1b    Fire control:groups    Goals: NORMAL     Phase set: P1:DRINK (FIRSTGUY, OJ)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From FirstGuy to SecondGuy:
+  Groups:
+    From Cause-1 to:
+    From Effect-1 to:    Effect-2 = 0.879
+    From CE-1 to:    CE-1 = 0.879
+    From Cause-2 to:    'Cause-6' = 0.879
+    From Effect-2 to:    'Effect-7' = 0.879
+    From CE-2 to:    CE-2 = 0.879
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.982
+    From P3 to:    'P3' = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.992
+    From SP3.1 to:    'SP5' = 0.990
+    From SP3.2 to:    'SP6' = 0.993
+  Preds:
+    From DELICIOUS1 to:    DELICIOUS1 = 0.970
+    From DRINK1 to:    DRINK1 = 0.970
+    From DRINK2 to:    DRINK2 = 0.970
+    From HASA1 to:    'HASA1' = 0.969
+    From HASA2 to:    'HASA2' = 0.970
+  Objs:
+    From OJ to:    OJ = 0.970
+    From FIRSTGUY to:    SECONDGUY = 0.970
+    From FETISH to:    'FETISH' = 0.970
+
+From FirstGuy to SchemaEx1b:
+  Groups:
+    From Cause-1 to:
+    From Effect-1 to:    'Effect-2' = 0.879
+    From CE-1 to:    'CE-0' = 0.879
+    From Cause-2 to:
+    From Effect-2 to:    'Effect-6' = 0.879
+    From CE-2 to:    'CE-3' = 0.879
+  Props:
+    From P1 to:    'P1' = 0.990
+    From P2 to:    'P0' = 0.982
+    From P3 to:    'P2' = 0.990
+  SPs:
+    From SP1.1 to:    'SP1' = 0.993
+    From SP1.2 to:    'SP2' = 0.993
+    From SP2.1 to:    'SP0' = 0.992
+    From SP3.1 to:    'SP3' = 0.990
+    From SP3.2 to:    'SP4' = 0.993
+  Preds:
+    From DELICIOUS1 to:    'DELICIOUS1' = 0.970
+    From DRINK1 to:    'DRINK1' = 0.970
+    From DRINK2 to:    'DRINK2' = 0.970
+    From HASA1 to:    'HASA1' = 0.969
+    From HASA2 to:    'HASA2' = 0.970
+  Objs:
+    From OJ to:    'OJ' = 0.970
+    From FIRSTGUY to:    'FIRSTGUY' = 0.970
+    From FETISH to:    'FETISH' = 0.970
+
+From SecondGuy to FirstGuy:
+  Groups:
+    From Cause-1 to:
+    From Effect-1 to:
+    From CE-1 to:    CE-1 = 0.879
+    From Cause-2 to:
+    From Effect-2 to:    Effect-1 = 0.879
+    From CE-2 to:    CE-2 = 0.879
+    From 'Cause-6' to:    Cause-2 = 0.879
+    From 'Effect-7' to:    Effect-2 = 0.879
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.982
+    From 'P3' to:    P3 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.992
+    From 'SP5' to:    SP3.1 = 0.990
+    From 'SP6' to:    SP3.2 = 0.993
+  Preds:
+    From DELICIOUS1 to:    DELICIOUS1 = 0.970
+    From DRINK1 to:    DRINK1 = 0.970
+    From DRINK2 to:    DRINK2 = 0.970
+    From 'HASA1' to:    HASA1 = 0.969
+    From 'HASA2' to:    HASA2 = 0.970
+  Objs:
+    From OJ to:    OJ = 0.970
+    From SECONDGUY to:    FIRSTGUY = 0.970
+    From 'FETISH' to:    FETISH = 0.970
+
+From SchemaEx1b to FirstGuy:
+  Groups:
+    From 'CE-0' to:    CE-1 = 0.879
+    From 'Cause-1' to:
+    From 'Effect-2' to:    Effect-1 = 0.879
+    From 'CE-3' to:    CE-2 = 0.879
+    From 'Effect-4' to:
+    From 'Cause-5' to:
+    From 'Effect-6' to:    Effect-2 = 0.879
+  Props:
+    From 'P0' to:    P2 = 0.982
+    From 'P1' to:    P1 = 0.990
+    From 'P2' to:    P3 = 0.990
+  SPs:
+    From 'SP0' to:    SP2.1 = 0.992
+    From 'SP1' to:    SP1.1 = 0.993
+    From 'SP2' to:    SP1.2 = 0.993
+    From 'SP3' to:    SP3.1 = 0.990
+    From 'SP4' to:    SP3.2 = 0.993
+  Preds:
+    From 'DELICIOUS1' to:    DELICIOUS1 = 0.970
+    From 'DRINK1' to:    DRINK1 = 0.970
+    From 'DRINK2' to:    DRINK2 = 0.970
+    From 'HASA1' to:    HASA1 = 0.969
+    From 'HASA2' to:    HASA2 = 0.970
+  Objs:
+    From 'OJ' to:    OJ = 0.970
+    From 'FIRSTGUY' to:    FIRSTGUY = 0.970
+    From 'FETISH' to:    FETISH = 0.970
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog SecondGuy * * * * *
+
+Groups:
+'Cause-6' (index = 6 level =0):  
+     Semantics: CAUSE (0.725) 
+     Props: 'P3') 'HASA' (SECONDGUY, 'FETISH') 
+
+'Effect-7' (index = 7 level =0):  
+     Semantics: EFFECT (0.725) 
+     Props: P1) DRINK (SECONDGUY, OJ) 
+
+
+Props:
+'P3':  [ 'HASA1' + SECONDGUY ] [ 'HASA2' + 'FETISH' ] 
+
+Preds:
+'HASA1':
+   POSSESSION1(1.000)
+   HAS1(1.000)
+   PROPERTY1(1.000)
+
+'HASA2':
+   POSSESSION2(1.000)
+   HAS2(1.000)
+   PROPERTY2(1.000)
+
+
+Objs:
+'FETISH':
+   PROPERTY(1.000)
+   DESIRE(1.000)
+   FREAKY(1.000)
+   SEXUAL(1.000)
+   COMPULSION(1.000)
+
+
+* * * * * Analog SchemaEx1b * * * * *
+
+Groups:
+'CE-0' (index = 0 level =1):  
+	Inductive confidence = 0.486
+     Semantics: CAUSE-EFFECT (0.781) CS_1.0 (0.781) 
+
+     Groups: 
+     'Cause-1' (index = 1 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P0') 'DELICIOUS' ('OJ') 
+
+     'Effect-2' (index = 2 level =0):  
+          Semantics: EFFECT (0.725) 
+          Props: 'P1') 'DRINK' ('FIRSTGUY', 'OJ') 
+
+
+'Cause-1' (index = 1 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P0') 'DELICIOUS' ('OJ') 
+
+'Effect-2' (index = 2 level =0):  
+     Semantics: EFFECT (0.725) 
+     Props: 'P1') 'DRINK' ('FIRSTGUY', 'OJ') 
+
+'CE-3' (index = 3 level =1):  
+	Inductive confidence = 0.486
+     Semantics: CAUSE-EFFECT (0.781) CS_0.5 (0.781) 
+
+     Groups: 
+     'Effect-4' (index = 4 level =0):  
+          Semantics: EFFECT (0.725) 
+          Props: 'P1') 'DRINK' ('FIRSTGUY', 'OJ') 
+
+     'Cause-5' (index = 5 level =0):  
+          Semantics: CAUSE (0.725) 
+          Props: 'P2') 'HASA' ('FIRSTGUY', 'FETISH') 
+
+     'Effect-6' (index = 6 level =0):  
+          Semantics: EFFECT (0.725) 
+          Props: 'P1') 'DRINK' ('FIRSTGUY', 'OJ') 
+
+
+'Effect-4' (index = 4 level =0):  
+     Semantics: EFFECT (0.725) 
+     Props: 'P1') 'DRINK' ('FIRSTGUY', 'OJ') 
+
+'Cause-5' (index = 5 level =0):  
+     Semantics: CAUSE (0.725) 
+     Props: 'P2') 'HASA' ('FIRSTGUY', 'FETISH') 
+
+'Effect-6' (index = 6 level =0):  
+     Semantics: EFFECT (0.725) 
+     Props: 'P1') 'DRINK' ('FIRSTGUY', 'OJ') 
+
+
+Props:
+'P0':  [ 'DELICIOUS1' + 'OJ' ] 
+'P1':  [ 'DRINK1' + 'FIRSTGUY' ] [ 'DRINK2' + 'OJ' ] 
+'P2':  [ 'HASA1' + 'FIRSTGUY' ] [ 'HASA2' + 'FETISH' ] 
+
+Preds:
+'DELICIOUS1':
+   TASTE1(1.000)
+   GOOD1(1.000)
+   YUM1(1.000)
+   DELICIOUS1(1.000)
+   TASTY1(1.000)
+   REFRESHING1(1.000)
+   TANGY1(1.000)
+   CITRUS1(1.000)
+   TART1(1.000)
+
+'DRINK1':
+        INGEST1(0.500)
+        CONSUME1(0.500)
+   LIQUID1(1.000)
+        SWALLOW1(0.500)
+
+'DRINK2':
+        INGEST2(0.500)
+        CONSUME2(0.500)
+   LIQUID2(1.000)
+        SWALLOW2(0.500)
+
+'HASA1':
+   POSSESSION1(1.000)
+   HAS1(1.000)
+   PROPERTY1(1.000)
+
+'HASA2':
+   POSSESSION2(1.000)
+   HAS2(1.000)
+   PROPERTY2(1.000)
+
+
+Objs:
+'OJ':
+   ORANGE(1.000)
+   JUICE(1.000)
+   LIQUID(1.000)
+   BREAKFAST(1.000)
+   MORNING(1.000)
+
+'FIRSTGUY':
+   HUMAN(1.000)
+   PERSON(1.000)
+   ANIMATE(1.000)
+   ALIVE(1.000)
+   MALE(1.000)
+         BANKER(0.448)
+         DESERVES_DEATH(0.448)
+         1%(0.448)
+         LARRY(0.448)
+       MECHANIC(0.563)
+       FATHER(0.563)
+       DUDE(0.563)
+
+'FETISH':
+   PROPERTY(1.000)
+   DESIRE(1.000)
+   FREAKY(1.000)
+   SEXUAL(1.000)
+   COMPULSION(1.000)
+

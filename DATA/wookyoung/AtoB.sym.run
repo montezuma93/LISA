@@ -1,0 +1,59 @@
+Run of LISA Version Ex 1.15; last modified 10/21/09
+
+Note: wookyoung/AtoB.sym 
+Note: What mapping does LISA discover when it maps an A (1101) to a B (0001)
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:1101    Recip : 0001    Fire control:random    Goals: NORMAL     Phase set: P2:DARKER (CIRCLE, SQUARE)
+Seq. 1    Driver:1101    Recip : 0001    Fire control:random    Goals: NORMAL     Phase set: P1:LARGER (CIRCLE, SQUARE)
+Seq. 2    Driver:1101    Recip : 0001    Fire control:random    Goals: NORMAL     Phase set: P2:DARKER (CIRCLE, SQUARE)
+Seq. 3    Driver:1101    Recip : 0001    Fire control:random    Goals: NORMAL     Phase set: P3:ABOVE (CIRCLE, SQUARE)
+Seq. 4    Driver:1101    Recip : 0001    Fire control:random    Goals: NORMAL     Phase set: P3:ABOVE (CIRCLE, SQUARE)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From 1101 to 0001:
+  Groups:
+  Props:
+    From P3 to:    P3 = 0.990
+  SPs:
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.993
+  Preds:
+    From ABOVE1 to:    ABOVE1 = 0.968
+    From ABOVE2 to:    ABOVE2 = 0.968
+  Objs:
+    From CIRCLE to:    CIRCLE = 0.968
+    From SQUARE to:    SQUARE = 0.968
+
+From 0001 to 1101:
+  Groups:
+  Props:
+    From P3 to:    P3 = 0.990
+  SPs:
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.993
+  Preds:
+    From ABOVE1 to:    ABOVE1 = 0.968
+    From ABOVE2 to:    ABOVE2 = 0.968
+  Objs:
+    From CIRCLE to:    CIRCLE = 0.968
+    From SQUARE to:    SQUARE = 0.968
+

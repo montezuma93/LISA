@@ -1,0 +1,28 @@
+Run of LISA Version Ex 1.06; last modified 3/27/08
+
+Note: st.john/groups.sym  The whole kit & kaboodle
+Note: This version uses groups to represent causal and enabling relations
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Target-Joan    Recip : Source-Bill    Fire control:props    Goals: NORMAL     Phase set: P1
+Seq. 1    Driver:Target-Joan    Recip : Source-Bill    Fire control:props    Goals: NORMAL     Phase set: P2
+Seq. 2    Driver:Target-Joan    Recip : Source-Bill    Fire control:props    Goals: NORMAL     Phase set: P3
+Seq. 3    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:props    Goals: NORMAL     Phase set: P1
+Seq. 4    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:props    Goals: NORMAL     Phase set: P2
+Seq. 5    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:props    Goals: NORMAL     Phase set: P3
+Seq. 6    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:props    Goals: NORMAL     Phase set: P4
+Seq. 7    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:groups    Goals: NORMAL 

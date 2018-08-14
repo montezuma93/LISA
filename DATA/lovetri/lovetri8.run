@@ -1,0 +1,221 @@
+Run of LISA Version Ex 1.06; last modified 3/27/08
+
+Note: LoveTri8.sym
+Note: This version uses hierarchical group-based fire control during SSL
+Note: Whole thing: Inference schema induction, LISA-guided initiation fo SSL
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Abe&Beth    Recip : Amy&Bill    Fire control:props    Goals: NORMAL     Phase set: P1 P2
+Seq. 1    Driver:Abe&Beth    Recip : Amy&Bill    Fire control:props    Goals: NORMAL     Phase set: P1
+Seq. 2    Driver:Abe&Beth    Recip : Amy&Bill    Fire control:props    Goals: NORMAL     Phase set: P2
+Seq. 3    Driver:Abe&Beth    Recip : Amy&Bill    Fire control:props    Goals: NORMAL     Phase set: P1
+Seq. 4    Driver:Abe&Beth    Recip : Amy&Bill    Fire control:props    Goals: NORMAL     Phase set: P2
+Seq. 5    Driver:Amy&Bill    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P2
+Seq. 6    Driver:Amy&Bill    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P2
+Seq. 7    Driver:Amy&Bill    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P1
+Seq. 8    Driver:Amy&Bill    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P2
+Seq. 9    Driver:Amy&Bill    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P3
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Amy&Bill to Abe&Beth:
+  Groups:
+  Props:
+    From P1 to:    P2 = 0.990
+    From P2 to:    P1 = 0.990
+    From P3 to:    "P3" = 0.990
+  SPs:
+    From SP1.1 to:    SP2.1 = 0.993
+    From SP1.2 to:    SP2.2 = 0.993
+    From SP2.1 to:    SP1.1 = 0.993
+    From SP2.2 to:    SP1.2 = 0.993
+    From SP3.1 to:    "SP3.1" = 0.990
+    From SP3.2 to:    "SP3.2" = 0.990
+  Preds:
+    From LOVES1 to:    LOVES1 = 0.970
+    From LOVES2 to:    LOVES2 = 0.970
+    From JEALOUS1 to:    "JEALOUS1" = 0.969
+    From JEALOUS2 to:    "JEALOUS2" = 0.969
+  Objs:
+    From AMY to:    BETH = 0.970
+    From BILL to:    ABE = 0.970    CHAD = 0.970
+    From CAT to:    BETH = 0.970
+
+From Amy&Bill to Schema:
+  Groups:
+    From G1 to:
+    From G2 to:
+    From G3 to:    "G3" = 0.879
+  Props:
+    From P1 to:    "P1" = 0.990
+    From P2 to:    "P2" = 0.990
+    From P3 to:    "P3" = 0.990
+  SPs:
+    From SP1.1 to:    "SP1.1" = 0.990
+    From SP1.2 to:    "SP1.2" = 0.982
+    From SP2.1 to:    "SP2.1" = 0.993
+    From SP2.2 to:    "SP2.2" = 0.993
+    From SP3.1 to:    "SP3.1" = 0.990
+    From SP3.2 to:    "SP3.2" = 0.990
+  Preds:
+    From LOVES1 to:    "LOVES1" = 0.970
+    From LOVES2 to:    "LOVES2" = 0.970
+    From JEALOUS1 to:    "JEALOUS1" = 0.969
+    From JEALOUS2 to:    "JEALOUS2" = 0.969
+  Objs:
+    From AMY to:    "AMY" = 0.969
+    From BILL to:    "BILL" = 0.970
+    From CAT to:    "CAT" = 0.970
+
+From Abe&Beth to Amy&Bill:
+  Groups:
+  Props:
+    From P1 to:    P2 = 0.990
+    From P2 to:    P1 = 0.990
+    From "P3" to:    P3 = 0.990
+  SPs:
+    From SP1.1 to:    SP2.1 = 0.993
+    From SP1.2 to:    SP2.2 = 0.993
+    From SP2.1 to:    SP1.1 = 0.993
+    From SP2.2 to:    SP1.2 = 0.993
+    From "SP3.1" to:    SP3.1 = 0.990
+    From "SP3.2" to:    SP3.2 = 0.990
+  Preds:
+    From LOVES1 to:    LOVES1 = 0.970
+    From LOVES2 to:    LOVES2 = 0.970
+    From "JEALOUS1" to:    JEALOUS1 = 0.969
+    From "JEALOUS2" to:    JEALOUS2 = 0.969
+  Objs:
+    From ABE to:    BILL = 0.970
+    From BETH to:    CAT = 0.970    AMY = 0.970
+    From CHAD to:    BILL = 0.970
+
+From Schema to Amy&Bill:
+  Groups:
+    From "G3" to:    G3 = 0.879
+  Props:
+    From "P2" to:    P2 = 0.990
+    From "P1" to:    P1 = 0.990
+    From "P3" to:    P3 = 0.990
+  SPs:
+    From "SP2.1" to:    SP2.1 = 0.993
+    From "SP2.2" to:    SP2.2 = 0.993
+    From "SP1.1" to:    SP1.1 = 0.990
+    From "SP1.2" to:    SP1.2 = 0.982
+    From "SP3.1" to:    SP3.1 = 0.990
+    From "SP3.2" to:    SP3.2 = 0.990
+  Preds:
+    From "LOVES1" to:    LOVES1 = 0.970
+    From "LOVES2" to:    LOVES2 = 0.970
+    From "JEALOUS1" to:    JEALOUS1 = 0.969
+    From "JEALOUS2" to:    JEALOUS2 = 0.969
+  Objs:
+    From "BILL" to:    BILL = 0.970
+    From "CAT" to:    CAT = 0.970
+    From "AMY" to:    AMY = 0.969
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Abe&Beth * * * * *
+
+Groups:
+
+Props:
+"P3":  [ "JEALOUS1" + BETH ] [ "JEALOUS2" + BETH ] 
+
+Preds:
+"JEALOUS1":
+   EMOTION1(1.000)
+   STRONG1(1.000)
+   NEGATIVE1(1.000)
+   JEALOUS1(1.000)
+
+"JEALOUS2":
+   EMOTION2(1.000)
+   STRONG2(1.000)
+   NEGATIVE2(1.000)
+   JEALOUS2(1.000)
+
+
+Objs:
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+"G3"(0):  "P2" "P1" "P3" CAUSE-RELATION (0.781) 
+
+Props:
+"P2":  [ "LOVES1" + "BILL" ] [ "LOVES2" + "CAT" ] 
+"P1":  [ "LOVES1" + "AMY" ] [ "LOVES2" + "BILL" ] 
+"P3":  [ "JEALOUS1" + "AMY" ] [ "JEALOUS2" + "CAT" ] 
+
+Preds:
+"LOVES1":
+   EMOTION1(1.000)
+   POSITIVE1(1.000)
+   STRONG1(1.000)
+   LOVES1(1.000)
+
+"LOVES2":
+   EMOTION2(1.000)
+   POSITIVE2(1.000)
+   STRONG2(1.000)
+   LOVES2(1.000)
+
+"JEALOUS1":
+   EMOTION1(1.000)
+   STRONG1(1.000)
+   NEGATIVE1(1.000)
+   JEALOUS1(1.000)
+
+"JEALOUS2":
+   EMOTION2(1.000)
+   STRONG2(1.000)
+   NEGATIVE2(1.000)
+   JEALOUS2(1.000)
+
+
+Objs:
+"BILL":
+   HUMAN(1.000)
+   ADULT(1.000)
+   MALE(1.000)
+          BILL(0.292)
+         ABE(0.363)
+         CHAD(0.351)
+
+"CAT":
+   HUMAN(1.000)
+   ADULT(1.000)
+   FEMALE(1.000)
+         CAT(0.448)
+       BETH(0.563)
+
+"AMY":
+   HUMAN(1.000)
+   ADULT(1.000)
+   FEMALE(1.000)
+         AMY(0.448)
+       BETH(0.563)
+

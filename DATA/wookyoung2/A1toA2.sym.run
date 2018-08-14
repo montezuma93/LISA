@@ -1,0 +1,254 @@
+Run of LISA Version Ex 1.15; last modified 10/21/09
+
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:A1    Recip : A2    Fire control:props    Goals: NORMAL     Phase set: P1:LARGER (SQUARE, CIRCLE)
+Seq. 1    Driver:A1    Recip : A2    Fire control:props    Goals: NORMAL     Phase set: P2:DARKER (CIRCLE, SQUARE)
+Seq. 2    Driver:A1    Recip : A2    Fire control:props    Goals: NORMAL     Phase set: P3:ABOVE (CIRCLE, SQUARE)
+Seq. 3    Driver:A1    Recip : A2    Fire control:props    Goals: NORMAL     Phase set: P4:INFRONT (CIRCLE, SQUARE)
+Seq. 4    Driver:A2    Recip : A1 Schema    Fire control:props    Goals: NORMAL     Phase set: P6:LARGER (CIRCLE, SQUARE)
+Seq. 5    Driver:A2    Recip : A1 Schema    Fire control:props    Goals: NORMAL     Phase set: P7:DARKER (SQUARE, CIRCLE)
+Seq. 6    Driver:A2    Recip : A1 Schema    Fire control:props    Goals: NORMAL     Phase set: P8:ABOVE (CIRCLE, SQUARE)
+Seq. 7    Driver:A2    Recip : A1 Schema    Fire control:props    Goals: NORMAL     Phase set: P9:INFRONT (CIRCLE, SQUARE)
+Seq. 8    Driver:A2    Recip : A1 Schema    Fire control:props    Goals: NORMAL     Phase set: P10:CATEGORY (A)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From A2 to A1:
+  Groups:
+  Props:
+    From P6 to:    P1 = 0.990
+    From P7 to:    P2 = 0.990
+    From P8 to:    P3 = 0.990
+    From P9 to:    P4 = 0.990
+    From P10 to:    'P4' = 0.982
+  SPs:
+    From SP6.1 to:    SP1.1 = 0.990
+    From SP6.2 to:    SP1.2 = 0.990
+    From SP7.1 to:    SP2.2 = 0.993
+    From SP7.2 to:    SP2.1 = 0.993
+    From SP8.1 to:    SP3.1 = 0.993
+    From SP8.2 to:    SP3.2 = 0.993
+    From SP9.1 to:    SP4.1 = 0.993
+    From SP9.2 to:    SP4.2 = 0.993
+    From SP10.1 to:    'SP8' = 0.992
+  Preds:
+    From LARGER1 to:    LARGER1 = 0.968
+    From LARGER2 to:    LARGER2 = 0.968
+    From DARKER1 to:    DARKER2 = 0.968
+    From DARKER2 to:    DARKER1 = 0.968
+    From ABOVE1 to:    ABOVE1 = 0.968
+    From ABOVE2 to:    ABOVE2 = 0.968
+    From INFRONT1 to:    INFRONT1 = 0.968
+    From INFRONT2 to:    INFRONT2 = 0.968
+    From CATEGORY1 to:    'CATEGORY1' = 0.968
+  Objs:
+    From CIRCLE to:    CIRCLE = 0.968
+    From SQUARE to:    SQUARE = 0.968
+    From A to:    'A' = 0.968
+
+From A2 to Schema:
+  Groups:
+  Props:
+    From P6 to:    'P0' = 0.990
+    From P7 to:    'P1' = 0.990
+    From P8 to:    'P2' = 0.990
+    From P9 to:    'P3' = 0.990
+    From P10 to:    'P4' = 0.982
+  SPs:
+    From SP6.1 to:    'SP0' = 0.993
+    From SP6.2 to:    'SP1' = 0.993
+    From SP7.1 to:    'SP2' = 0.990
+    From SP7.2 to:    'SP3' = 0.990
+    From SP8.1 to:    'SP4' = 0.990
+    From SP8.2 to:    'SP5' = 0.990
+    From SP9.1 to:    'SP6' = 0.990
+    From SP9.2 to:    'SP7' = 0.990
+    From SP10.1 to:    'SP8' = 0.992
+  Preds:
+    From LARGER1 to:    'LARGER1' = 0.970
+    From LARGER2 to:    'LARGER2' = 0.970
+    From DARKER1 to:    'DARKER1' = 0.969
+    From DARKER2 to:    'DARKER2' = 0.969
+    From ABOVE1 to:    'ABOVE1' = 0.969
+    From ABOVE2 to:    'ABOVE2' = 0.969
+    From INFRONT1 to:    'INFRONT1' = 0.969
+    From INFRONT2 to:    'INFRONT2' = 0.969
+    From CATEGORY1 to:    'CATEGORY1' = 0.968
+  Objs:
+    From CIRCLE to:    'CIRCLE' = 0.970
+    From SQUARE to:    'SQUARE' = 0.970
+    From A to:    'A' = 0.968
+
+From A1 to A2:
+  Groups:
+  Props:
+    From P1 to:    P6 = 0.990
+    From P2 to:    P7 = 0.990
+    From P3 to:    P8 = 0.990
+    From P4 to:    P9 = 0.990
+    From 'P4' to:    P10 = 0.982
+  SPs:
+    From SP1.1 to:    SP6.1 = 0.990
+    From SP1.2 to:    SP6.2 = 0.990
+    From SP2.1 to:    SP7.2 = 0.993
+    From SP2.2 to:    SP7.1 = 0.993
+    From SP3.1 to:    SP8.1 = 0.993
+    From SP3.2 to:    SP8.2 = 0.993
+    From SP4.1 to:    SP9.1 = 0.993
+    From SP4.2 to:    SP9.2 = 0.993
+    From 'SP8' to:    SP10.1 = 0.992
+  Preds:
+    From LARGER1 to:    LARGER1 = 0.968
+    From LARGER2 to:    LARGER2 = 0.968
+    From DARKER1 to:    DARKER2 = 0.968
+    From DARKER2 to:    DARKER1 = 0.968
+    From ABOVE1 to:    ABOVE1 = 0.968
+    From ABOVE2 to:    ABOVE2 = 0.968
+    From INFRONT1 to:    INFRONT1 = 0.968
+    From INFRONT2 to:    INFRONT2 = 0.968
+    From 'CATEGORY1' to:    CATEGORY1 = 0.968
+  Objs:
+    From CIRCLE to:    CIRCLE = 0.968
+    From SQUARE to:    SQUARE = 0.968
+    From 'A' to:    A = 0.968
+
+From Schema to A2:
+  Groups:
+  Props:
+    From 'P0' to:    P6 = 0.990
+    From 'P1' to:    P7 = 0.990
+    From 'P2' to:    P8 = 0.990
+    From 'P3' to:    P9 = 0.990
+    From 'P4' to:    P10 = 0.982
+  SPs:
+    From 'SP0' to:    SP6.1 = 0.993
+    From 'SP1' to:    SP6.2 = 0.993
+    From 'SP2' to:    SP7.1 = 0.990
+    From 'SP3' to:    SP7.2 = 0.990
+    From 'SP4' to:    SP8.1 = 0.990
+    From 'SP5' to:    SP8.2 = 0.990
+    From 'SP6' to:    SP9.1 = 0.990
+    From 'SP7' to:    SP9.2 = 0.990
+    From 'SP8' to:    SP10.1 = 0.992
+  Preds:
+    From 'LARGER1' to:    LARGER1 = 0.970
+    From 'LARGER2' to:    LARGER2 = 0.970
+    From 'DARKER1' to:    DARKER1 = 0.969
+    From 'DARKER2' to:    DARKER2 = 0.969
+    From 'ABOVE1' to:    ABOVE1 = 0.969
+    From 'ABOVE2' to:    ABOVE2 = 0.969
+    From 'INFRONT1' to:    INFRONT1 = 0.969
+    From 'INFRONT2' to:    INFRONT2 = 0.969
+    From 'CATEGORY1' to:    CATEGORY1 = 0.968
+  Objs:
+    From 'CIRCLE' to:    CIRCLE = 0.970
+    From 'SQUARE' to:    SQUARE = 0.970
+    From 'A' to:    A = 0.968
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog A1 * * * * *
+
+Groups:
+
+Props:
+'P4':  [ 'CATEGORY1' + 'A' ] 
+
+Preds:
+'CATEGORY1':
+   CAT(1.000)
+   LABEL(1.000)
+
+
+Objs:
+'A':
+   LABEL(1.000)
+   A(1.000)
+
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+
+Props:
+'P0':  [ 'LARGER1' + 'CIRCLE' ] [ 'LARGER2' + 'SQUARE' ] 
+'P1':  [ 'DARKER1' + 'SQUARE' ] [ 'DARKER2' + 'CIRCLE' ] 
+'P2':  [ 'ABOVE1' + 'CIRCLE' ] [ 'ABOVE2' + 'SQUARE' ] 
+'P3':  [ 'INFRONT1' + 'CIRCLE' ] [ 'INFRONT2' + 'SQUARE' ] 
+'P4':  [ 'CATEGORY1' + 'A' ] 
+
+Preds:
+'LARGER1':
+   REL_SIZE(1.000)
+   LARGER(1.000)
+
+'LARGER2':
+   REL_SIZE(1.000)
+   SMALLER(1.000)
+
+'DARKER1':
+   REL_SHADE(1.000)
+        DARKER(0.464)
+        LIGHTER(0.537)
+
+'DARKER2':
+   REL_SHADE(1.000)
+        DARKER(0.537)
+        LIGHTER(0.464)
+
+'ABOVE1':
+   REL_LOC(1.000)
+   ABOVE(1.000)
+
+'ABOVE2':
+   REL_LOC(1.000)
+   BELOW(1.000)
+
+'INFRONT1':
+   REL_DEPTH(1.000)
+   IN_FRONT(1.000)
+
+'INFRONT2':
+   REL_DEPTH(1.000)
+   BEHIND(1.000)
+
+'CATEGORY1':
+   CAT(1.000)
+   LABEL(1.000)
+
+
+Objs:
+'CIRCLE':
+   PART(1.000)
+   CIRCLE(1.000)
+
+'SQUARE':
+   PART(1.000)
+   SQUARE(1.000)
+
+'A':
+   LABEL(1.000)
+   A(1.000)
+

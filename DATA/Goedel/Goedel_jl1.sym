@@ -1,0 +1,60 @@
+Note: fds
+
+Analog NL { Analog 0
+  DefPreds
+    selfReferable 1 sr1 sr2 sr3 ;
+    hasUnprovableStatement 1 hus1 hus2 hus3 ;
+    incomplete 1 inc1 inc2 inc3 ;
+  end
+  DefObjs
+    NL isTheory isLanguage NL1 ;
+  end
+  DefProps
+    P1 selfReferable ( NL ) ;
+    P2 hasUnprovableStatement ( NL ) ;
+    P3 incomplete ( NL ) ;
+  end
+  DefGroups
+    Cause ( P1 ) ( P2 ) 1.0 ;
+    Cause ( P2 ) ( P3 ) 1.0 ;
+  end
+done {
+
+Analog PA {
+  DefPreds
+    selfReferable 1 sr1 sr2 sr3 ;
+    hasUnprovableStatement 1 hus1 hus2 hus3 ;
+    incomplete 1 inc1 inc2 inc3 ;
+  end
+  DefObjs
+    PA isTheory isLanguage PA1 ;
+  end
+  DefProps
+    P1 incomplete ( PA ) ;
+  end
+done
+
+Sequence { 
+  Driver=[ 0 ] 
+  Recip=[ 1 ] { 
+  Order=[ P1 P2 P3 P2 P3 P1 ]
+  Driver=[ 1 ] 
+  Recip=[ 0 ]
+  Order=[ P1 P1 P1 P1 P1 P1 P1 P1 ]
+  Driver=[ 0 ] 
+  Recip=[ 1 ] { 
+  Order=[ P1 P2 P3 P2 P3 P1 ]
+  SSL_ON
+  Driver=[ 0 ] 
+  Recip=[ 1 ] { 
+  Order=[ P1 P2 P3 P2 P3 P1 ]
+  Driver=[ 1 ] 
+  Recip=[ 0 ]
+  Order=[ P1 P1 P1 P1 P1 P1 P1 P1 ]
+  Driver=[ 0 ] 
+  Recip=[ 1 ] { 
+  Order=[ CE-1 ( 6 1 ) ] { fire 5 props: give it time to think
+  Order=[ CE-2 ( 6 1 ) ] { fire 5 props: give it time to think
+  SaveSym=[ 2 ] { save the resulting schema as a .sym file
+done.
+    

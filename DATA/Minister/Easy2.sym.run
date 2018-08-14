@@ -1,0 +1,135 @@
+Run of LISA Version Ex 1.15; last modified 3/2/11
+
+Note: Minister/Easy2.sym
+Note: First earnest attempt to simulate explanation of why ministers prefer Coke
+Note: This is easy 'cause all the relevant knowledge is in one analog and 'cause
+Note:  there is no distracting info.  Just the Most Basic test of whether LISA
+Note:  can do it at all.  If it succeeds on this, Then we'll branch out...
+Note: 4/18/08:
+Note: Removing the manufacture() prop from the schema
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Minister    Recip :    Fire control:groups (EXPLANANDUM)     Goals: EXPLAIN RETRIEVE     Phase set: P1:PREFER (MINISTER, COKE)
+Seq. 1    Driver:Minister    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:PREFER (MINISTER, COKE)
+Seq. 2    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:PREFER (PERSON, PRODUCT)
+Seq. 3    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P5:AGREE-WITH (PERSON, MANUFACTURER)
+
+
+* * * Current Mapping Connections From Minister to WorkSpace * * *
+  Groups:
+    From EXPLANANDUM to:    EFFECT1 = 0.969
+    From 'CE-1' to:    CE-1 = 0.969
+    From 'CAUSE2' to:    CAUSE1 = 0.967
+  Props:
+    From P1 to:    P1 = 0.990
+    From 'P1' to:    P5 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From 'SP2' to:    SP5.1 = 0.990
+    From 'SP3' to:    SP5.2 = 0.993
+  Preds:
+    From PREFER1 to:    PREFER1 = 0.968
+    From PREFER2 to:    PREFER2 = 0.968
+    From 'AGREE-WITH1' to:    AGREE-WITH1 = 0.969
+    From 'AGREE-WITH2' to:    AGREE-WITH2 = 0.970
+  Objs:
+    From MINISTER to:    PERSON = 0.968
+    From COKE to:    PRODUCT = 0.968
+    From 'MANUFACTURER' to:    MANUFACTURER = 0.970
+
+
+
+* * * * Inferred Groups and Props in Explanandum * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_0.5 (0.725) 
+
+     Groups: 
+     EXPLANANDUM (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) PREFER (MINISTER, COKE) 
+
+     'CAUSE2' (index = 2 level =0):  
+          Semantics: CAUSE (0.725) 
+          Props: 'P1')  
+
+
+'CAUSE2' (index = 2 level =0):  
+     Semantics: CAUSE (0.725) 
+     Props: 'P1')  
+
+
+Props:
+'P1':  [ 'AGREE-WITH1' + MINISTER ] [ 'AGREE-WITH2' + 'MANUFACTURER' ] 
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Minister * * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_0.5 (0.725) 
+
+     Groups: 
+     EXPLANANDUM (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) PREFER (MINISTER, COKE) 
+
+     'CAUSE2' (index = 2 level =0):  
+          Semantics: CAUSE (0.725) 
+          Props: 'P1')  
+
+
+'CAUSE2' (index = 2 level =0):  
+     Semantics: CAUSE (0.725) 
+     Props: 'P1')  
+
+EFFECT2 (index = 3 level =0):  
+     Semantics: EFFECT (1.000) 
+     Props: 'P1')  
+
+
+Props:
+'P1':  [ 'AGREE-WITH1' + MINISTER ] [ 'AGREE-WITH2' + 'MANUFACTURER' ] 
+
+Preds:
+'AGREE-WITH1':
+   AGREE1(1.000)
+
+'AGREE-WITH2':
+   AGREE2(1.000)
+
+
+Objs:
+'MANUFACTURER':
+   COMPANY(1.000)
+   ORGANIZATION(1.000)
+   PRODUCE(1.000)
+   MAKE(1.000)
+   MANUFACTURER(1.000)
+

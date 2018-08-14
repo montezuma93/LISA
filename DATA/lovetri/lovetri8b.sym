@@ -1,0 +1,54 @@
+Note: LoveTri8b.sym
+Note: 3/28/08  Investigating apparent problem w/ Group Hebb creation
+Note: This version maps males to males & females to females to make it easy
+Analog Andy&Betty
+  Defpreds
+    Loves 2 emotion positive strong loves ;
+    Jealous 2 emotion negative strong jealous ;
+  end; { def preds
+  Defobjs
+     Andy human adult male andy ;
+     Betty human adult female betty ;
+     Carl  human adult male carl ;
+  end; { def objs
+  DefProps
+     P1 Loves ( Andy Betty ) ; { NOTE: New prop syntax! 
+     P2 Loves ( Betty Carl ) ; {       Pred on the OUTSIDE of the parens!
+     P3 Jealous ( Andy Carl ) ;
+  end ; { def props
+  DefGroups
+    Cause ( P1 P2 ) ( P3 ) ;
+  end { def groups
+done ; { analog 0
+Analog Abe&Beth
+  Defpreds
+    Loves 2 emotion positive strong loves ;
+  end ; { def preds
+  Defobjs
+     Abe human adult male abe ;
+     Beth human adult female beth ;
+     Chad  human adult male chad ;
+  end ; { def objs
+  DefProps
+     P1 Loves ( Abe Beth ) ;
+     P2 Loves ( Beth Chad ) ;
+  end ; { defprops
+  DefGroups
+    G1
+        Props: P1 P2 %
+        Semantics: dummy group %
+        %% { ends the group def of G1
+  end { def groups
+done ; { analog 1
+Analog Schema
+done ; { schema
+Sequence
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  Order=[ P1 P2 h P1 h P2 h P1 h P2 h ]
+  { volley and let LISA initiate ssl
+  Driver=[ 0 ]
+  Recip=[ 1 2 ]
+  SSL_OK  { LISA initiates ssl
+  Order=[ CE-1 ( 5 1 ) ] % hierarchical group-based control: G3 has no props of its own!
+Done. { whole sym file

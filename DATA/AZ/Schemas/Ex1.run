@@ -1,0 +1,169 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: Andrei&Zack/Schemas/Ex1.sym
+Note: Why do we drink OJ for breakfast?
+Note: One of the earliest schemas to be learned, e.g., when one is 3.2778 years old
+Note: One guy has inherent reason and one idiosyncratic reason
+Note: Other guy has same inherent reason and a diff idiosyncratic reason
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:SecondGuy    Recip : FirstGuy SchemaEx1    Fire control:groups    Goals: NORMAL     Phase set: P2:DELICIOUS (OJ)
+Seq. 1    Driver:SecondGuy    Recip : FirstGuy SchemaEx1    Fire control:groups    Goals: NORMAL     Phase set: P1:DRINK (SECONDGUY, OJ)
+Seq. 2    Driver:SecondGuy    Recip : FirstGuy SchemaEx1    Fire control:groups    Goals: NORMAL     Phase set: P1:DRINK (SECONDGUY, OJ)
+Seq. 3    Driver:FirstGuy    Recip : SecondGuy SchemaEx1    Fire control:groups    Goals: NORMAL     Phase set: P1:DRINK (FIRSTGUY, OJ)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From FirstGuy to SecondGuy:
+  Groups:
+    From Cause-1 to:
+    From Effect-1 to:    Effect-1 = 0.879
+    From CE-1 (IC = 0.585) to:    CE-1 = 0.879
+  Props:
+    From P1 (IC = 0.621) to:    P1 = 0.990
+    From P2 (IC = 0.618) to:    P2 = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.992
+  Preds:
+    From DELICIOUS1 to:    DELICIOUS1 = 0.970
+    From DRINK1 to:    DRINK1 = 0.970
+    From DRINK2 to:    DRINK2 = 0.970
+  Objs:
+    From OJ to:    OJ = 0.970
+    From FIRSTGUY to:    SECONDGUY = 0.970
+
+From FirstGuy to SchemaEx1:
+  Groups:
+    From Cause-1 to:
+    From Effect-1 to:    'Effect-1' = 1.000
+    From CE-1 (IC = 0.585) to:    'CE-0' = 1.000
+  Props:
+    From P1 (IC = 0.621) to:    'P0' = 1.000
+  SPs:
+    From SP1.1 to:    'SP0' = 1.000
+    From SP1.2 to:    'SP1' = 1.000
+  Preds:
+    From DRINK1 to:    'DRINK1' = 1.000
+    From DRINK2 to:    'DRINK2' = 1.000
+  Objs:
+    From OJ to:    'OJ' = 1.000
+    From FIRSTGUY to:    'FIRSTGUY' = 1.000
+
+From SecondGuy to FirstGuy:
+  Groups:
+    From Cause-1 to:
+    From Effect-1 to:    Effect-1 = 0.879
+    From CE-1 (IC = 0.585) to:    CE-1 = 0.879
+  Props:
+    From P1 (IC = 0.621) to:    P1 = 0.990
+    From P2 (IC = 0.618) to:    P2 = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.992
+  Preds:
+    From DELICIOUS1 to:    DELICIOUS1 = 0.970
+    From DRINK1 to:    DRINK1 = 0.970
+    From DRINK2 to:    DRINK2 = 0.970
+  Objs:
+    From OJ to:    OJ = 0.970
+    From SECONDGUY to:    FIRSTGUY = 0.970
+
+From SchemaEx1 to FirstGuy:
+  Groups:
+    From 'CE-0' (IC = 0.000) to:    CE-1 = 1.000
+    From 'Effect-1' to:    Effect-1 = 1.000
+  Props:
+    From 'P0' (IC = 0.000) to:    P1 = 1.000
+  SPs:
+    From 'SP0' to:    SP1.1 = 1.000
+    From 'SP1' to:    SP1.2 = 1.000
+  Preds:
+    From 'DRINK1' to:    DRINK1 = 1.000
+    From 'DRINK2' to:    DRINK2 = 1.000
+  Objs:
+    From 'FIRSTGUY' to:    FIRSTGUY = 1.000
+    From 'OJ' to:    OJ = 1.000
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog SchemaEx1 * * * * *
+
+Groups:
+'CE-0' (index = 0 level =1):  
+	Inductive confidence = 0.000
+     Semantics: CAUSE-EFFECT (0.875) CS_1.0 (0.875) 
+
+     Groups: 
+     'Effect-1' (index = 1 level =0):  
+          Semantics: EFFECT (0.775) 
+          Props: 'P0')  
+
+
+'Effect-1' (index = 1 level =0):  
+     Semantics: EFFECT (0.775) 
+     Props: 'P0')  
+
+
+Props:
+'P0':  [ 'DRINK1' + 'FIRSTGUY' ] [ 'DRINK2' + 'OJ' ] 
+
+Preds:
+'DRINK1':
+        INGEST1(0.500)
+        CONSUME1(0.500)
+   LIQUID1(1.000)
+        SWALLOW1(0.500)
+
+'DRINK2':
+        INGEST2(0.500)
+        CONSUME2(0.500)
+   LIQUID2(1.000)
+        SWALLOW2(0.500)
+
+
+Objs:
+'FIRSTGUY':
+   HUMAN(1.000)
+   PERSON(1.000)
+   ANIMATE(1.000)
+   ALIVE(1.000)
+   MALE(1.000)
+         BANKER(0.448)
+         DESERVES_DEATH(0.448)
+         1%(0.448)
+         LARRY(0.448)
+       MECHANIC(0.563)
+       FATHER(0.563)
+       DUDE(0.563)
+
+'OJ':
+   ORANGE(1.000)
+   JUICE(1.000)
+   LIQUID(1.000)
+   BREAKFAST(1.000)
+   MORNING(1.000)
+

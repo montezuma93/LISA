@@ -1,0 +1,347 @@
+Run of LISA Version Ex 1.06; last modified 3/27/08
+
+Note: st.john/groups4.sym  
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Target-Joan    Recip : Source-Bill&Tom    Fire control:props    Goals: NORMAL     Phase set: P1
+Seq. 1    Driver:Target-Joan    Recip : Source-Bill&Tom    Fire control:props    Goals: NORMAL     Phase set: P2
+Seq. 2    Driver:Target-Joan    Recip : Source-Bill&Tom    Fire control:props    Goals: NORMAL     Phase set: P3
+Seq. 3    Driver:Source-Bill&Tom    Recip : Target-Joan Schema    Fire control:groups    Goals: NORMAL     Phase set: P5
+Seq. 4    Driver:Source-Bill&Tom    Recip : Target-Joan Schema    Fire control:groups    Goals: NORMAL     Phase set: P7
+Seq. 5    Driver:Source-Bill&Tom    Recip : Target-Joan Schema    Fire control:groups    Goals: NORMAL     Phase set: P8
+Seq. 6    Driver:Source-Bill&Tom    Recip : Target-Joan Schema    Fire control:groups    Goals: NORMAL     Phase set: P8
+Seq. 7    Driver:Source-Bill&Tom    Recip : Target-Joan Schema    Fire control:groups    Goals: NORMAL     Phase set: P8
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Target-Joan to Source-Bill&Tom:
+  Groups:
+    From NOT1 to:    NOT1 = 0.879
+    From "CE-2" to:    CE-2 = 0.879
+    From "EFFECT2" to:    EFFECT2 = 0.879
+  Props:
+    From P1 to:    P5 = 0.990
+    From P2 to:    P6 = 0.981
+    From P3 to:    P7 = 0.990
+    From "P8" to:    P8 = 0.993
+  SPs:
+    From SP1.1 to:    SP5.1 = 0.993
+    From SP1.2 to:    SP5.2 = 0.993
+    From SP3.1 to:    SP7.1 = 0.993
+    From SP3.2 to:    SP7.2 = 0.992
+    From "SP8.1" to:    SP8.1 = 0.994
+    From "SP8.2" to:    SP8.2 = 0.994
+    From "SP8.3" to:    SP8.3 = 0.994
+  Preds:
+    From HAS1 to:    HAS1 = 0.970
+    From HAS2 to:    HAS2 = 0.970
+    From WANT1 to:    WANT1 = 0.970
+    From WANT2 to:    WANT2 = 0.970
+    From "RIDETO1" to:    RIDETO1 = 0.970
+    From "RIDETO2" to:    RIDETO2 = 0.970
+    From "RIDETO3" to:    RIDETO3 = 0.970
+  Objs:
+    From JOAN to:    TOM = 0.970
+    From CIVIC to:    JEEP = 0.970
+    From "TAXI" to:    TAXI = 0.970
+    From "BEACH" to:    BEACH = 0.970
+
+From Source-Bill&Tom to Target-Joan:
+  Groups:
+    From NOT1 to:    NOT1 = 0.879
+    From CAUSE2 to:
+    From EFFECT2 to:    "EFFECT2" = 0.879
+    From CE-2 to:    "CE-2" = 0.879
+  Props:
+    From P5 to:    P1 = 0.990
+    From P6 to:    P2 = 0.981
+    From P7 to:    P3 = 0.990
+    From P8 to:    "P8" = 0.993
+  SPs:
+    From SP5.1 to:    SP1.1 = 0.993
+    From SP5.2 to:    SP1.2 = 0.993
+    From SP7.1 to:    SP3.1 = 0.993
+    From SP7.2 to:    SP3.2 = 0.992
+    From SP8.1 to:    "SP8.1" = 0.994
+    From SP8.2 to:    "SP8.2" = 0.994
+    From SP8.3 to:    "SP8.3" = 0.994
+  Preds:
+    From HAS1 to:    HAS1 = 0.970
+    From HAS2 to:    HAS2 = 0.970
+    From WANT1 to:    WANT1 = 0.970
+    From WANT2 to:    WANT2 = 0.970
+    From RIDETO1 to:    "RIDETO1" = 0.970
+    From RIDETO2 to:    "RIDETO2" = 0.970
+    From RIDETO3 to:    "RIDETO3" = 0.970
+  Objs:
+    From TOM to:    JOAN = 0.970
+    From JEEP to:    CIVIC = 0.970
+    From TAXI to:    "TAXI" = 0.970
+    From BEACH to:    "BEACH" = 0.970
+
+From Source-Bill&Tom to Schema:
+  Groups:
+    From NOT1 to:    "NOT1" = 0.879
+    From CAUSE2 to:    "CAUSE2" = 0.879
+    From EFFECT2 to:    "EFFECT2" = 0.879
+    From CE-2 to:    "CE-2" = 0.879
+  Props:
+    From P5 to:    "P5" = 0.990
+    From P6 to:    "P6" = 0.982
+    From P7 to:    "P7" = 0.990
+    From P8 to:    "P8" = 0.993
+  SPs:
+    From SP5.1 to:    "SP5.1" = 0.993
+    From SP5.2 to:    "SP5.2" = 0.993
+    From SP7.1 to:    "SP7.1" = 0.990
+    From SP7.2 to:    "SP7.2" = 0.992
+    From SP8.1 to:    "SP8.1" = 0.994
+    From SP8.2 to:    "SP8.2" = 0.994
+    From SP8.3 to:    "SP8.3" = 0.994
+  Preds:
+    From HAS1 to:    "HAS1" = 0.970
+    From HAS2 to:    "HAS2" = 0.970
+    From WANT1 to:    "WANT1" = 0.969
+    From WANT2 to:    "WANT2" = 0.970
+    From RIDETO1 to:    "RIDETO1" = 0.970
+    From RIDETO2 to:    "RIDETO2" = 0.970
+    From RIDETO3 to:    "RIDETO3" = 0.970
+  Objs:
+    From TOM to:    "TOM" = 0.970
+    From JEEP to:    "JEEP" = 0.970
+    From TAXI to:    "TAXI" = 0.970
+    From BEACH to:    "BEACH" = 0.970
+
+From Schema to Source-Bill&Tom:
+  Groups:
+    From "NOT1" to:    NOT1 = 0.879
+    From "CAUSE2" to:    CAUSE2 = 0.879
+    From "CE-2" to:    CE-2 = 0.879
+    From "EFFECT2" to:    EFFECT2 = 0.879
+  Props:
+    From "P5" to:    P5 = 0.990
+    From "P7" to:    P7 = 0.990
+    From "P6" to:    P6 = 0.982
+    From "P8" to:    P8 = 0.993
+  SPs:
+    From "SP5.1" to:    SP5.1 = 0.993
+    From "SP5.2" to:    SP5.2 = 0.993
+    From "SP7.1" to:    SP7.1 = 0.990
+    From "SP7.2" to:    SP7.2 = 0.992
+    From "SP8.1" to:    SP8.1 = 0.994
+    From "SP8.2" to:    SP8.2 = 0.994
+    From "SP8.3" to:    SP8.3 = 0.994
+  Preds:
+    From "HAS1" to:    HAS1 = 0.970
+    From "HAS2" to:    HAS2 = 0.970
+    From "WANT1" to:    WANT1 = 0.969
+    From "WANT2" to:    WANT2 = 0.970
+    From "RIDETO1" to:    RIDETO1 = 0.970
+    From "RIDETO2" to:    RIDETO2 = 0.970
+    From "RIDETO3" to:    RIDETO3 = 0.970
+  Objs:
+    From "TOM" to:    TOM = 0.970
+    From "JEEP" to:    JEEP = 0.970
+    From "TAXI" to:    TAXI = 0.970
+    From "BEACH" to:    BEACH = 0.970
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Target-Joan * * * * *
+
+Groups:
+"CE-2"(1):  "EFFECT2" CAUSE-EFFECT (0.748) CS_1.0 (0.748) 
+"EFFECT2"(2):  "P8" EFFECT (0.603) 
+
+Props:
+"P8":  [ "RIDETO1" + JOAN ] [ "RIDETO2" + "TAXI" ] [ "RIDETO3" + "BEACH" ] 
+
+Preds:
+"RIDETO1":
+   PTRANS1(1.000)
+   GOTO1(1.000)
+   VEHICLE1(1.000)
+   RIDE1(1.000)
+   RIDE21(1.000)
+   RIDE31(1.000)
+
+"RIDETO2":
+   PTRANS2(1.000)
+   GOTO2(1.000)
+   VEHICLE2(1.000)
+   RIDE2(1.000)
+   RIDE22(1.000)
+   RIDE32(1.000)
+
+"RIDETO3":
+   PTRANS3(1.000)
+   GOTO3(1.000)
+   VEHICLE3(1.000)
+   RIDE3(1.000)
+   RIDE23(1.000)
+   RIDE33(1.000)
+
+
+Objs:
+"TAXI":
+   CAR(1.000)
+   ARTIFACT(1.000)
+   VEHICLE(1.000)
+   TAXI1(1.000)
+   TAXI2(1.000)
+
+"BEACH":
+    PLACE(0.938)
+     BEACH(0.753)
+   LOCATION(1.000)
+   COMMERCE(1.000)
+   RECREATION(1.000)
+   OCEAN(1.000)
+   SAND(1.000)
+
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+"NOT1"(0):  "P5" NOT (0.690) 
+"CAUSE2"(1):  "P7" CAUSE (0.710) 
+"CE-2"(2):  "CAUSE2" "EFFECT2" CAUSE-EFFECT (0.748) CS_1.0 (0.748) 
+"EFFECT2"(3):  "P8" EFFECT (0.603) 
+
+Props:
+"P5":  [ "HAS1" + "TOM" ] [ "HAS2" + "JEEP" ] 
+"P7":  [ "WANT1" + "TOM" ] [ "WANT2" + "P6" ] 
+"P6":  
+"P8":  [ "RIDETO1" + "TOM" ] [ "RIDETO2" + "TAXI" ] [ "RIDETO3" + "BEACH" ] 
+
+Preds:
+"HAS1":
+   STATE1(1.000)
+   HAS11(1.000)
+   HAS21(1.000)
+   HAS31(1.000)
+         HUMAN(0.372)
+         ADULT(0.372)
+         FEMALE(0.372)
+         JOAN1(0.372)
+         JOAN2(0.372)
+         JOAN3(0.372)
+
+"HAS2":
+       CAR(0.571)
+          CIVIC(0.296)
+   STATE2(1.000)
+   HAS12(1.000)
+   HAS22(1.000)
+   HAS32(1.000)
+         ARTIFACT(0.379)
+         VEHICLE(0.379)
+         JAPANESE(0.379)
+         GOOD(0.379)
+
+"WANT1":
+   STATE1(1.000)
+   WANT11(1.000)
+   WANT21(1.000)
+   WANT31(1.000)
+
+"WANT2":
+   STATE2(1.000)
+   WANT12(1.000)
+   WANT22(1.000)
+   WANT32(1.000)
+
+"RIDETO1":
+   PTRANS1(1.000)
+   GOTO1(1.000)
+   VEHICLE1(1.000)
+   RIDE1(1.000)
+   RIDE21(1.000)
+   RIDE31(1.000)
+
+"RIDETO2":
+   PTRANS2(1.000)
+   GOTO2(1.000)
+   VEHICLE2(1.000)
+   RIDE2(1.000)
+   RIDE22(1.000)
+   RIDE32(1.000)
+
+"RIDETO3":
+   PTRANS3(1.000)
+   GOTO3(1.000)
+   VEHICLE3(1.000)
+   RIDE3(1.000)
+   RIDE23(1.000)
+   RIDE33(1.000)
+
+
+Objs:
+"TOM":
+         STATE1(0.392)
+         HAS11(0.392)
+         HAS21(0.392)
+         HAS31(0.392)
+   HUMAN(1.000)
+   ADULT(1.000)
+         FEMALE(0.433)
+         JOAN1(0.433)
+         JOAN2(0.433)
+         JOAN3(0.433)
+       MALE(0.612)
+       TOM1(0.612)
+       TOM2(0.612)
+       TOM3(0.612)
+
+"JEEP":
+   CAR(1.000)
+           CIVIC(0.202)
+          JEEP(0.330)
+          STATE2(0.281)
+          HAS12(0.281)
+          HAS22(0.281)
+          HAS32(0.281)
+      ARTIFACT(0.735)
+      VEHICLE(0.735)
+          JAPANESE(0.316)
+          GOOD(0.316)
+        AMERICAN(0.464)
+        SHIT(0.464)
+
+"TAXI":
+   CAR(1.000)
+   ARTIFACT(1.000)
+   VEHICLE(1.000)
+   TAXI1(1.000)
+   TAXI2(1.000)
+
+"BEACH":
+    PLACE(0.938)
+     BEACH(0.753)
+   LOCATION(1.000)
+   COMMERCE(1.000)
+   RECREATION(1.000)
+   OCEAN(1.000)
+   SAND(1.000)
+

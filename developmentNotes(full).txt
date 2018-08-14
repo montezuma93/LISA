@@ -1,0 +1,374 @@
+
+5/17/07
+STATUS: SSL "works", if you count not producing run-time
+errors with probably 1.0 as "working".  However, it still
+does not work Satisfactorily. In particular, it infers many
+copies of the same group(s), and does not infer enough SPs
+or preds.  Too many groups, too few SPs & preds (and probably
+objects)
+
+5/19/07
+IDEA: Inferred groups never grow up as long as they are
+in the recipient.  A group integrate over many props and
+so needs to be able to keep learning over multiple phase
+sets.  So, rather than "update_infant_group()", write
+the function "update_inferred_groups".  I suspect similar
+constraints may apply to props: A prop should be able to connect
+to new SPs any time said prop is active in parent mode an there
+is an SP in need of a perent.  The code as it now stands may
+actually handle this.  I dont know.
+UPDATE: Well, the above is a good idea, but (as expected) implementing
+it did not solve the problems with ssl: Still inferring too
+units (especially but not only groups); not inferring enough
+SPs, preds or props... basically just fucked way the hell up.
+
+5/20/07
+Still need to make sure groups only inhibit other groups at
+same level
+During ssl, somehow objects in the recip that map to active
+objects in the driver are NOT getting active... (WTF??)
+This happens to props in child mode, too... so P3 maps to P3,
+but when P3 becomes active in the driver as a child, rather than
+activating P3 in the recip, LISA infers a *new* P3 in child mode.
+Also, Driver obj units are failing to get active during ssl (???)
+Ah... That could be due to the growth of the SP inhibitor... but
+why only the obj units?
+And IF the driver obj unit is active THEN the recip obj will be
+INactive (???)
+It's as though the driver and recip obj units are inhibiting each
+other... is the hebb weight somehow going negative?
+
+5/21/07
+Hmmm... the problem persists even with ssl turned off.  Must be 
+some kinda problem with the hebbs?  P5 and P5 in the Bill analog 
+contain novel preds, SPs and props.  All three inhibit their
+respective unit classes in the recipient via the hebbs.  How is
+this inhibition spilling over into objs and child props?  And why 
+do Driver objs appear to be getting inhibited?
+Ha!  It doesn't happen with god-like WM, so it's probably something
+in neurally-plausible update driver.  Although in god-like WM,
+the recip props do not properly go into child mode.
+
+PART of the problem was that I wasnt initializing a variable.
+(simulation['objs&childs']).  But that was only part.
+
+Driver child P3 still failing to activate recip P3 as child.
+
+Also, the phase set appears too short in neurally-plausible WM
+for ssl to learn all roles... up this in dataTypes: phase set longer,
+slow inhibitor growth slower.
+
+It infers P3 just After P3 in the driver finishes firing as arg.
+then switches *IMMEDIATELY* to firing P4 as child
+
+Child props getting squashed by global inhbition slower than anyone 
+else.  Is this because GI affects top-down input, which child
+props ignore?
+
+Then P4 in child mode fails to activate P4 in the recip in child,
+although P3 (child) Does activate the (incorrectly) inferred P3
+in child mode... weird, weird, weird.
+
+One problem found: Update modes was initializing td input (thus
+erasing the refresh signal) And was setting props' hebb input
+
+YES... pred units are getting inferred at the Very End of the SP's
+reign and are thus growing up INSTANTLY (?maybe... due to end of SP?)
+and are thus not getting to learn semantics
+
+SSL is learning pred semantics correctly now (at least w/
+unlimited WM)
+
+in unlimited WM mode: only inferring one sp per phase, no props
+
+Try this: Allow hebbs to exert influence before TopDownOK
+It seems to have helped
+
+child props are inhibiting their parents in recip: problem
+was in get_max_and_second_max (child props getting counted
+as props)
+
+Otherwise MUCH better: Allowing hebb input before TopDown OK 
+helped a lot
+
+run lovetri now, though. Result: Outstanding!
+
+Remaining problem (w/ finite wm, at least): when p3
+first fires as argument of p5, p3 in the recip initially gets 
+inhibited, with the result that it gets "inferred" even though
+it already exists... why, why, why?  Ah hah!  Is it getting
+inhibited by p5?  It IS getting inhibited by p5, but when it
+gets inferred, it adopts the name of p3... and at the time when 
+this happens, it has a strong positive connection to p3...
+maybe is it in neutral mode whereas p3 in the driver is a child?
+It's not p3 per se (sometimes its p4): It's the first one to get
+active As A Child after top-down becomes OK... Is it in neutral
+mode, so it's not getting counted?
+
+It's getting inferred in response to p5 (that's what it maps to, 
+anyhow).  Prior to p5 (driver) firing, p3 (in the recip) is
+mapped to p3 (driver).  But After p5 (driver) fires, p3 (recip)
+is mapped to IT.  But they're not even in the Same Mode!!
+
+Last time inferred p3 mapped, not to p5, but to p3
+
+Try this w/ unlimited WM.  That's even Worse: Same thing happens
+but in addition, only one SP gets inferred per prop
+
+Implemented the constraint that of the most active driver unit
+of a given type already maps to the recipient, then hte recipient
+does not ned to infer a unit of that type.  This solved the probleem.
+But now I've got the problem that, for some weird reason, P3 and P4
+aren't getting active as children in the recipient.  What the??
+
+There must still be some kind of inhibition between parent and
+child props in the recipient.  But the inhibition ONLY operates
+between infant parent props and child props... infant 
+props.  What is it about infant child props that could cause this?
+Could it be that they aren't yet connected to their children so they 
+inhibit them?  Or the inferred SPs are!  Could the infant SPs be 
+inhibiting the child props before they get connected?  I'll bet
+that's Exactly it.  Prohibit an SP from pasing inhibition down until
+it has an argument (and a pred).
+
+Addressing this (by making sure SP has argument before it can inhibit
+objs or child props) did not solve the problem.
+
+OK.  Here's a clue: Child props don't get active in the recipient even 
+when they already exist.  So it is not necessarily a problem
+with ssl Per Se.
+
+But it's Not Universal: when p3: want (bill p2) fires, p2 becomes
+active in the recipient just fucking Fine!  It's just when p5,
+cause (p3 p4), fires that p3 and p4 don't get active.  WTF WTF WTF???
+
+Another clue (maybe) the child props Do get retrieved...
+
+More info: Both P3 and P4 are getting hebb-based inhibition.  Mode 
+check in hebb-based input must not be working.
+
+10:27 pm, 5/21/07:
+I have a hypothesis about what's happening: I suspect the child props
+in the recipient are receiving Hebb inhibition but not Hebb excitation.
+
+5/22/07:
+CORRECT!!  PROBLEM SOLVED!!
+
+However, SSL still does not work correctly with god-like WM:
+Only infers one sp per prop; does not connect sps to props, preds or
+objs
+
+Schema induction still does not work.
+
+Problem was that schema was not tagged as "ready to learn"
+
+Now it is and now it works.  Almost.  The first prop to get inferred in the schema only gets half inferred (which ever role fires second).  Why the delay?
+
+I increased iterations per sp from 330 to 365 and that did not solve the problem
+
+5/23/07
+
+The first SP inferred (in the first prop) is not getting inhibited when the second SP fires... could it be because hebb inhibition is hebb-set-based and I'm not computing the correct MaxHebb in the driver hebb sets corresponding to the schema (or vice-versa)?  If I'm not doing this, then there would be no basis for hebb inhibition form teh driver to the (brand new) schema units.
+
+YES!  I suspect I'm updating MaxHebb on the hebb sets only after updating the hebbs at the end fo the phase set!  I'll bet that's IT!
+
+5/29/07
+
+If prop p is the parent of prop q, then putting p and q into the phase set together is buggy.  Modes don't get set properly.  Also, look out for a prop being listed in both the Props list in teh phase_set and the ChildProps and Childs&Objs.
+
+5/30/07:
+On the faiulure of ssl under unlimited WM: It appears that inferred props are misbehaving: Not acquiring hebbs from driver prop?  Not getting active, anyhow, so the sp isn't learning a connection to it, and so the sp isn't growing up.  It all seems to stem from the inferred prop's failure to become active.
+
+Problem solved!  Driver props weren't setting their modes to 1 in unlimited WM!
+
+5/30/07
+
+All completed aspects of te code appear to be working at this time.  Batch run still not implemented.
+
+Some time after 5/30: Batch run implememted and working
+
+6/13/07 -- Version Beta 3:
+
+Making groups more intelligent
+
+For SS-learning: Question is whether groups should be able to take both groups and props as arguments
+Your previous leaning was to say No.
+However, working with Karl today, you discovered a case in which it is advantageous to say Yes:
+  That is, in the case of cause-relation groups, which take cause and effect groups as arguments,
+  you may wany to also allow those groups to take an explicit causal proposition as an argument as well.
+But saying Yes poses a problem for U-learining: When should a group learn a conneciton to a prop.
+Potential answer: Only the lowest-level group active with a prop can take that prop as an argument.
+In this case, the cause-relation group can take a cause relation prop as an argument because the
+  cause-relation (top-level_ group will be actiev, but the lower-level (cause and effect) groups will not,
+  so the causal proposition will learn a connection only to the higher-level cause-relation group.
+  
+Another goal is to make group-based fire cntrol more inteligent: When a high-level group is given   
+  fire control, to allow the props owned by its lower-level groups to fire.
+  
+For SS-learning:  You corrected some bugs in learning groups at different levels.  It now works properly.
+
+However, still need to implement stuff named above.
+
+6/18/07
+
+Implementing group-based fire control.
+
+It MAY be working.  Or it may not.  (It may be group-based SSL that's
+screwing up).  To wit, these results are from LoveTri8, which uses SSL and group-based fire control.  Note that infant groups are learning connections to too many props (I doubt this is the fault of group-based fire control, but it's hard to tell).  These are soem of the inferred units in the schema:
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+"G3":  "G1" "G2" CAUSE-RELATION (0.717) 
+"G1":  "P2" "P3" "P1" CAUSE (0.723) 
+"G2":  "P3" "P1" "P2" EFFECT (0.723) 
+
+Props:
+"P2":  [ "LOVES2" + "CAT" ] [ "LOVES1" + "BILL" ] 
+"P3":  [ "JEALOUS1" + "AMY" ] [ "JEALOUS2" + "CAT" ] 
+"P1":  [ "LOVES1" + "AMY" ] [ "LOVES2" + "BILL" ] 
+
+Note that the props are all correct, but the groups are too promiscuous: Both lower-level groups (G1 and G2) are connecting to ALL props -- as though theye're not inhibiting one another.  (Note that they connect to the proper semantics. however.)
+
+Now, let's run LoveTri7 (which does not use group-based fire control) and see whether we have the same problem.
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+"G3":  "G1" "G2" CAUSE-RELATION (0.717) 
+"G1":  "P1" "P2" "P3" CAUSE (0.723) 
+"G2":  "P3" EFFECT (0.723) 
+
+Props:
+"P1":  [ "LOVES1" + "AMY" ] [ "LOVES2" + "BILL" ] 
+"P2":  [ "LOVES2" + "CAT" ] [ "LOVES1" + "BILL" ] 
+"P3":  [ "JEALOUS2" + "CAT" ] [ "JEALOUS1" + "AMY" ] 
+
+The results are quite similar, but not identical (natur-fucking-ally): G2 is right but G1 is too promiscuous.  Based on these results, Ill WAGER the problem is with group-updating in SSL, not with group-based fire control.    HMMM...  Indeed: G1 was infered FIRST.  Looks like mayge groups are learning even when not active!  Let's see...
+
+That was IT!  Problem solved (in one tiny line of code: inferred groups now update only when active [duh!])
+
+Group-based fire control and group SSL now both appear to work correctly. (6/18/07)
+
+6/22/07
+
+Group-based SSL not working quite perfectly: LISA is inferring mutiple copies of the same group.  Make sure mapping connections getting (a) properly set up at time of inference and (b) properly used to decide whether new units really needed
+
+Need better control of which groups get active in the driver, including top-down control (?).  In Karl&Renee/Toy2b: G9 contains G8 and G7, which contain P1 and P5, respectively.  When G9 has fire control and P1 fires, it (P1) activates G1 and G3, which are at the same level as G8 and which should therefore be inhibited by G8 (in the driver, recall).
+
+Also, need top-down input to groups in phase set.
+
+After much mucking about, it now Appears to work properly, with the tiny exception that inferred group-to-semantic learning is a bit messy: inferred groups connected most strongly to correct semantics, but not exclusively.
+
+For future reference: The problem wasn't with SSL, per se, but rather with the lack of proper inhibition and excitation of groups in the driver.
+
+Problem solved!  (By inceasing group-group inhibition in driver and permitting modest semantic unlearning, i.e., slow loss of semantic weight when weight > semantic activation)
+
+7/1/07
+
+Reinstated props' pan-sp memory vis not subjecting them to between-sp refresh
+    1) Makes theoretical sense and helps with Bob's simulations
+    2) Look for trouble down the road
+
+Still need to dispose of the whole network plus the sequence between batch runs of
+*different* sym files.  DONE.  And it works!
+
+7/16/07
+
+WTF?? The version last updated 7/6/07 does not save parameters or mapping connections to file on a blind run and does not save notes to the .run file after the first run.
+
+7/24/07: It seems to save everything fine on the first run, blind or with graphics.
+
+It fails to save stuff on subsequent runs (I think) cause of where that other stuff is saved (e.g., in the case of Notes, in Build)
+
+7/24/07
+
+Launching Version Beta 4: Goal is to get SSL working w/ unlimited WM and to add help functions to the parameter menus... i.e., to turn these beta versions into the final LISA Version 1
+
+Success.  Saving as version 1.00
+
+That was premature.  It's still invoking graphics during batch run.
+
+Problem solved.  I *think* (hope?) it's really version 1 now.
+
+HOWEVER it's now fucking up on boys&dogs (has been for a while), and it's giving more errors than I would like on the love triangle.  I ask myself: Did you do anything fundamental to the code to cause this, and the answer (I now remember) is Yes I did!: For Bob's simulations, I reinstated the props' tendency to perseverate somewhat across SPs (a theoretically very reasonable position) (I did it by excusing them form the global inhibition created betweeh driver SPs).  This is fucking with its ability to solve these purely structural mappings.  Maaaaaybe this is a good thing... but then maaaaybe it's not.  This is a theoretical question.  Do people solve the love triangle by batching or by re-representation?  (Certainly in the case of boys&dogs, it's by re-representation.)  The current version of LISA says they do it by re-representation (unless they're lucky)... of course, this version of LISA also says it's Not Possible, in general, to solve it by batching, and this would be a major departure from our earlier theoretical position, and from Halford.  And it raises the major theoretical question of when and how we rerepresent.  (The answer to When is Whenever we would batch.  [An equally open question]  The answer to How is, well, much harder, but perhaps similar: Notice repetition of a relation over different arguments & predicate it.)  Ugh.  This fucking problem is supposed to be solved!
+
+OK, John, Here's your problem: The logic of sustained prop activation (in the recipient) is premised on the assumption that SPs in the driver fire in close temporal proximity to the extent that they belong to the same prop.  It also assumes some sort of between-prop inhibition signal to inhibit props in the recipient(s) to tell them that a new prop is coming.  But your code has neither of these ingredients: You fire SPs in the driver in a random (not prop-based) random order, meaning that when multiple props are put into batch, there's no telling which SPs will fire close to which AND you don't have a between-prop inhibition signal.  You need to correct both of these theory-to-code errors before you can expect your code to work properly.
+
+9/21/07
+
+Explanation LISA VersEx1.00, the first explanation version, generates mini (one causal link) explanations but it is "cheeky" because it's group retrieval routines are not particularly intelligent.  (Recall that on Karl&Renee/4.sym, which states "fall(glass)", and which LISA should explain by inferring "unsupported(glass)", along with all the cause groups, what LISA actually tends to infer is "not(fall(glass)) and "supported(glass", along with the relevant causal structures.)
+
+VersEx1.01 is the first attempt to build in more intelligent group retrieval routines.  I feel like I'm opening a huge can of worms here: I think doing this right is going to require me to implement the full-blown retrieval algorithm, along with the proposed schema-induction-like token inference routines.  Hence the new version number... if you fuck up, John, then go back to VersEx1.00 and start over.
+
+I put a Weber law BU input term on bottom-level groups and that seems to be helping (correct effect group now getting more active than incorrect one)
+
+More important changes:
+
+1) Group integrators: Groups no longer connect directly to their member props or child groups.  Instead, they have a list GroupConnector structures.  Each group connector has a pointer to a prop or child group and an integrator that retains a record of the highest activation achieved by that member (prop or child group) over some temporal integration period (whose duration is yet to be fully decided on).  Currently, the integrators are initialized to zero only at the beginning of a run or we a group actually gets retrieved based on its integrators.
+
+2) Input to group integrators: First-level groups (i.e., those that organize props, rather than other groups) set their integrators according to the corresponding props' retrieval status, not their activation.  Second level (e.g., cause-effect) groups get retrieved when either of their first-level (i.e., cause or effect) groups gets retrieved.
+
+9/24/07
+
+Vers Ex1.01 works pretty well, so I don't want to fuck it up.  Hence, I'm implementing the next changes in Vers Ex1.02.
+
+As of this writing (11:18, Mon. 9/24/07), I have not touched the code; i.e., Ex1.02 is still identical to Ex1.01.
+
+What I need to do is:  
+
+Tag groups as "processed" once they have been processed, i.e., once they have been mapped or used to drive inference.  This will allow LISA to volley intelligently, using newly inferred props (as yet "unprocessed") to drive retrieval from LTM and mapping, and thus to bootstrap the next inference.  At that point, they can be tagged as "processed".
+
+This tagging: Do it as a number (data field Refractory on a Group unit) rather than as a boolean: Then process stochastically, as in if Random > Refractory then allow processing.  Set refractory to 1.0 when group first processed and allow to decay over time to allow stochansic re-processing of stuff.
+
+10/25/07
+
+Still need to do the above.
+
+Another thing I need to do is work on the retrieval algorithm and work on the predication of semantics algorithm among about a billion other things.
+
+Yesterday I implemented the first version of the ministers and coke explanation (data/minister/easy1.sym), which worked remarkably well.  I also implemented a slightly harder version (data/minister/hard1.sym), which failed both predictably and informatively.  Use hard1.sym as a benchmark to remind you what you have yet to implement.
+
+10/30/07
+
+Vers Ex 1.03: Addition of intelligent semantics from conversation w/ David
+
+1/8/08 & 1/9/08:
+
+Version Ex1.04 from Ex1.03
+
+Working toward contradiction detection
+
+Added SP focus: the extent to which an SP responds to its role * its filler vs. its role 
++ its filler
+
+During contradiction dtection, SPs hve high focus (i.e., get input as function of role *
+filler) and inhibition in recip between props and between SPs greatly relaxed
+
+to this end, had to add variables such as default_prop_to_prop_inhib, etc.: These are
+set by the user and used by default by LISA.  When LISA goes into contradiction detection mode, it greadly reduces the effective inhibition.  When it leaves that mode, it returns to the default parameters.
+
+So far the results look good!
+
+Modified temporal integration properties of prop units
+-- SPs now have an output field that maintains a record of max activtion during the 
+   phase set.  Parent props get input from output rather than current act
+-- Prop's bu_input now divided by num SPs
+
+Tested the model on lovetri and it got 8/10 mappings right!  Better than I expected.
+
+-------------- 3/27/08 working on vers Ex 1.06 -----------------
+
+Ex 1.06 is working pretty well to date. Now we're futzing with little things.
+
+Among the "little" things we recently changed (which might later bite us in the ass) are:
+
+1) Increased delta (the decay constant for the activation function) in recipient analogs to 0.6 in the attempt to make activation more linear in a longer range of input values, and it worked.  Need to do the same thing fo dormant analogs
+
+2) Increased the Weber constant from 1 to 2 for the same reason and it worked
+
+3) Decreased the Hebb Bias from 5 to 3 (in order to decrease flutter in recipient activation) and it worked
+
+
+
+

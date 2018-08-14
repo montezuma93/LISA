@@ -1,0 +1,80 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: Verb 2: Attempt to implement past tense rule in LISA as a single proposition
+Note: This version treats the stem and suffix as separate propositions
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Walk    Recip : VerbRule    Fire control:props    Goals: NORMAL     Phase set: P1:STEM (GORBY)
+Seq. 1    Driver:VerbRule    Recip : Walk    Fire control:props    Goals: NORMAL     Phase set: P1:ADDENDING (VERB, ED)
+Seq. 2    Driver:VerbRule    Recip : Walk    Fire control:props    Goals: NORMAL     Phase set: P1:ADDENDING (VERB, ED)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From VerbRule to Walk:
+  Groups:
+  Props:
+    From P1 (IC = 0.619) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    'SP1' = 0.993
+  Preds:
+    From ADDENDING1 to:    STEM1 = 0.968
+    From ADDENDING2 to:    'ADDENDING2' = 0.968
+  Objs:
+    From VERB to:    GORBY = 0.968
+    From ED to:    'ED' = 0.968
+
+From Walk to VerbRule:
+  Groups:
+  Props:
+    From P1 (IC = 0.619) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From 'SP1' to:    SP1.2 = 0.993
+  Preds:
+    From STEM1 to:    ADDENDING1 = 0.968
+    From 'ADDENDING2' to:    ADDENDING2 = 0.968
+  Objs:
+    From GORBY to:    VERB = 0.968
+    From 'ED' to:    ED = 0.968
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Walk * * * * *
+
+Groups:
+
+Props:
+
+Preds:
+'ADDENDING2':
+   SUFFIX(1.000)
+   ENDING(1.000)
+
+
+Objs:
+'ED':
+   'E1'(1.000)
+   'D2'(1.000)
+

@@ -1,0 +1,163 @@
+Run of LISA Version Ex 1.15; last modified 10/21/09
+
+Note: FirstTry.sym: First attempt to use LISA to simulate moral reasoning
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P1:TRAVEL (FUMES, VENTS)
+Seq. 1    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P2:RUNAWAY (FUMES)
+Seq. 2    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P3:POISON (FUMES, MANY_PATIENTS)
+Seq. 3    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P4:DO_NOTHING (YOU)
+Seq. 4    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P5:KILL (FUMES, MANY_PATIENTS)
+Seq. 5    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P6:SAVE (YOU, FEW_PATIENTS)
+Seq. 6    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P7:PUSH (YOU, SWITCH)
+Seq. 7    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P8:DIVERT (SWITCH, FUMES)
+Seq. 8    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P9:POISON (FUMES, FEW_PATIENTS)
+Seq. 9    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P10:KILL (FUMES, FEW_PATIENTS)
+Seq. 10    Driver:Fumes    Recip : Trolly    Fire control:props    Goals: NORMAL     Phase set: P11:SAVE (YOU, MANY_PATIENTS)
+Seq. 11    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P1:TRAVEL (TROLLY, TRACKS)
+Seq. 12    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P2:RUNAWAY (TROLLY)
+Seq. 13    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P3:HIT (TROLLY, LARGE_GROUP)
+Seq. 14    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P4:DO_NOTHING (YOU)
+Seq. 15    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P5:KILL (TROLLY, LARGE_GROUP)
+Seq. 16    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P6:SAVE (YOU, SMALL_GROUP)
+Seq. 17    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P7:PUSH (YOU, SWITCH)
+Seq. 18    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P8:DIVERT (SWITCH, )
+Seq. 19    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P9:HIT (TROLLY, SMALL_GROUP)
+Seq. 20    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P10:KILL (TROLLY, SMALL_GROUP)
+Seq. 21    Driver:Trolly    Recip : Fumes Schema    Fire control:props    Goals: NORMAL     Phase set: P11:SAVE (YOU, LARGE_GROUP)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Trolly to Fumes:
+  Groups:
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.982
+    From P3 to:    P3 = 0.990
+    From P4 to:    P4 = 0.982
+    From P5 to:    P5 = 0.990
+    From P6 to:    P6 = 0.990
+    From P7 to:    P7 = 0.990
+    From P8 to:    P8 = 0.990
+    From P9 to:    P9 = 0.990
+    From P10 to:    P10 = 0.990
+    From P11 to:
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.992
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.993
+    From SP4.1 to:    SP4.1 = 0.992
+    From SP5.1 to:    SP5.1 = 0.993
+    From SP5.2 to:    SP5.2 = 0.993
+    From SP6.1 to:    SP6.1 = 0.993
+    From SP6.2 to:    SP6.2 = 0.993
+    From SP7.1 to:    SP7.1 = 0.993
+    From SP7.2 to:    SP7.2 = 0.993
+    From SP8.1 to:    SP8.1 = 0.993
+    From SP8.2 to:    SP8.2 = 0.990
+    From SP9.1 to:    SP9.1 = 0.993
+    From SP9.2 to:    SP9.2 = 0.993
+    From SP10.1 to:    SP10.1 = 0.993
+    From SP10.2 to:    SP10.2 = 0.993
+    From SP11.1 to:
+    From SP11.2 to:
+  Preds:
+    From TRAVEL1 to:    TRAVEL1 = 0.968
+    From TRAVEL2 to:    TRAVEL2 = 0.968
+    From RUNAWAY1 to:    RUNAWAY1 = 0.968
+    From HIT1 to:    POISON1 = 0.968
+    From HIT2 to:    POISON2 = 0.968
+    From DIVERT1 to:    DIVERT1 = 0.968
+    From DIVERT2 to:    DIVERT2 = 0.968
+    From PUSH1 to:    PUSH1 = 0.968
+    From PUSH2 to:    PUSH2 = 0.968
+    From DO_NOTHING1 to:    DO_NOTHING1 = 0.968
+    From KILL1 to:    KILL1 = 0.968
+    From KILL2 to:    KILL2 = 0.968
+    From SAVE1 to:    SAVE1 = 0.968
+    From SAVE2 to:    SAVE2 = 0.968
+  Objs:
+    From TROLLY to:    FUMES = 0.968
+    From TRACKS to:    VENTS = 0.968
+    From SWITCH to:    SWITCH = 0.968
+    From SMALL_GROUP to:    FEW_PATIENTS = 0.968
+    From LARGE_GROUP to:    MANY_PATIENTS = 0.968
+    From YOU to:    YOU = 0.968
+
+From Fumes to Trolly:
+  Groups:
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.982
+    From P3 to:    P3 = 0.990
+    From P4 to:    P4 = 0.982
+    From P5 to:    P5 = 0.990
+    From P6 to:    P6 = 0.990
+    From P7 to:    P7 = 0.990
+    From P8 to:    P8 = 0.990
+    From P9 to:    P9 = 0.990
+    From P10 to:    P10 = 0.990
+    From P11 to:
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.992
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.993
+    From SP4.1 to:    SP4.1 = 0.992
+    From SP5.1 to:    SP5.1 = 0.993
+    From SP5.2 to:    SP5.2 = 0.993
+    From SP6.1 to:    SP6.1 = 0.993
+    From SP6.2 to:    SP6.2 = 0.993
+    From SP7.1 to:    SP7.1 = 0.993
+    From SP7.2 to:    SP7.2 = 0.993
+    From SP8.1 to:    SP8.1 = 0.993
+    From SP8.2 to:    SP8.2 = 0.990
+    From SP9.1 to:    SP9.1 = 0.993
+    From SP9.2 to:    SP9.2 = 0.993
+    From SP10.1 to:    SP10.1 = 0.993
+    From SP10.2 to:    SP10.2 = 0.993
+    From SP11.1 to:
+    From SP11.2 to:
+  Preds:
+    From TRAVEL1 to:    TRAVEL1 = 0.968
+    From TRAVEL2 to:    TRAVEL2 = 0.968
+    From RUNAWAY1 to:    RUNAWAY1 = 0.968
+    From POISON1 to:    HIT1 = 0.968
+    From POISON2 to:    HIT2 = 0.968
+    From DIVERT1 to:    DIVERT1 = 0.968
+    From DIVERT2 to:    DIVERT2 = 0.968
+    From PUSH1 to:    PUSH1 = 0.968
+    From PUSH2 to:    PUSH2 = 0.968
+    From DO_NOTHING1 to:    DO_NOTHING1 = 0.968
+    From KILL1 to:    KILL1 = 0.968
+    From KILL2 to:    KILL2 = 0.968
+    From SAVE1 to:    SAVE1 = 0.968
+    From SAVE2 to:    SAVE2 = 0.968
+  Objs:
+    From FUMES to:    TROLLY = 0.968
+    From VENTS to:    TRACKS = 0.968
+    From SWITCH to:    SWITCH = 0.968
+    From FEW_PATIENTS to:    SMALL_GROUP = 0.968
+    From MANY_PATIENTS to:    LARGE_GROUP = 0.968
+    From YOU to:    YOU = 0.968
+

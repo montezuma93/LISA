@@ -1,0 +1,70 @@
+Run of LISA Version Ex 1.14; last modified 11/14/08
+
+Note: Semantic/birdlung.sym
+Note: Second attempt to do semantic verification (11/12/08)
+Note: Test of idea that vrification can be modeled As Explanation:
+Note: To verify whether, say birds have lungs or wheels, try to explain
+Note:   Why they have lungs or wheels
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:ToVerify    Recip :    Fire control:groups    Goals: EXPLAIN RETRIEVE     Phase set: P1:HAS (BIRD, LUNG)
+Seq. 1    Driver:ToVerify    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:HAS (BIRD, LUNG)
+
+Contradiction detected underANIMAL.  Active members are: MAMMAL, BIRD
+Simulation iteration (i.e., total RT) =528
+
+
+Truth verified! (I.e., Lack-of-anomaly detected)
+The assertion HAS (BIRD, LUNG) matches prop P16: HAS (MONKEY, LUNG)
+Iteration (RT) = 650
+
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From ToVerify to WorkSpace:
+  Groups:
+    From TOVERIFY to:
+  Props:
+    From P1 to:
+  SPs:
+    From SP1.1 to:
+    From SP1.2 to:
+  Preds:
+    From HAS1 to:
+    From HAS2 to:
+  Objs:
+    From BIRD to:
+    From LUNG to:
+
+From WorkSpace to ToVerify:
+  Groups:
+    From EFFECT3 to:
+  Props:
+    From P16 to:
+  SPs:
+    From SP16.1 to:
+    From SP16.2 to:
+  Preds:
+    From HAS1 to:
+    From HAS2 to:
+  Objs:
+    From MONKEY to:
+    From LUNG to:
+

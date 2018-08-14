@@ -1,0 +1,45 @@
+Note: Verb 1: First attempt to implement past tense rule in LISA
+Note: This version treats the stem and suffix as separate propositions
+
+Analog VerbRule { Analog 0
+  DefPreds
+    Stem 0 [ stem verb word ] ;
+    Suffix 0 [ suffix ending ] ;
+  end
+  DefObjs
+    Verb ;
+    ED 'E1' 'D2' ;
+  end
+  DefProps
+    P1 Stem ( Verb ) ;
+    P2 Suffix ( ED ) ;
+  end
+  DefGroups
+    Cause ( P1 ) ( P2 ) 1.0 ; { a faux cause group here because I cannot remember the syntax for generic groups
+  end
+done {
+
+Analog Walk { 
+  DefPreds
+    Stem 0 [ stem verb word ] ;
+  end
+  DefObjs
+    Walk W1 A2 L3 K4 ;
+  end
+  DefProps
+    P1 Stem ( Walk ) ;
+  end
+
+done
+
+Sequence { 
+  Driver=[ 1 ] 
+  Recip=[ 0 ] { 
+  Order=[ P1 h ]
+  
+  SSL_OK
+  Driver=[ 0 ] 
+  Recip=[ 1 ]
+  Order=[ CE-1 ( 2 1 ) ] { fire 2 props
+done.
+    

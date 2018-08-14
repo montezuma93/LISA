@@ -1,0 +1,34 @@
+Note: Semantic/test5.sym
+Note: Tell it: eat lamb plants; ask eats lamb flowers ?  (it ougta not detect a contradiction here)
+
+Parameters
+    SaveGroupHebbs False
+    SavePropHebbs False
+    SaveSPHebbs False
+    SaveOPHebbs False
+Done
+
+Include Semantics.inc
+
+Include WorldKnowledge.inc
+
+Analog ToVerify
+  DefPreds
+    eat [ has-ability consume1 destroy1 eat1 ] [ is-ability consume2 destroy2 eat2 ] ;
+  end
+  DefObjs
+    lamb lamb baby sheep ;
+    flower flower pretty ground ; 
+  end
+  DefProps
+    P1 eat ( lamb flower ) ;
+  end
+done { glass example
+
+Sequence { 
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  ContraDetect= On { turn contradiction detection on
+  Order=[ P1 h P1 h ]
+done.
+    

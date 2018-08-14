@@ -1,0 +1,22 @@
+Run of LISA Version Ex 1.15; last modified 10/14/09
+
+Note: LoveTri4  Made from lovetri
+Note: purpose is to test random and group-based fire control
+Note: using an analogy that is difficult to map
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Amy&Bill    Recip : Abe&Beth    Fire control:groups    Goals: NORMAL     Phase set: P1:LOVES (AMY, BILL) P2:LOVES (BILL, CAT)

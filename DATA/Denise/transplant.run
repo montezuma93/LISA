@@ -1,0 +1,48 @@
+Run of LISA Version Ex 1.15; last modified 10/02/13
+
+Note: transplant
+Note: made from fumes.sym
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P6:KILL (ONE_PATIENT)
+Seq. 1    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P3:DO_NOTHING (YOU)
+Seq. 2    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P8:SAVE (ONE_PATIENT)
+Seq. 3    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P9:BETTER (P7, P8)
+Seq. 4    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P3:DO_NOTHING (YOU)
+Seq. 5    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P5:KILL (MANY_PATIENTS)
+Seq. 6    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P3:DO_NOTHING (YOU)
+Seq. 7    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P7:SAVE (MANY_PATIENTS)
+Seq. 8    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P8:SAVE (ONE_PATIENT)
+Seq. 9    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P1:DYING (MANY_PATIENTS)
+Seq. 10    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P1:DYING (MANY_PATIENTS)
+Seq. 11    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P9:BETTER (P7, P8)
+Seq. 12    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P4:TRANSPLANT (YOU, ORGANS)
+Seq. 13    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P1:DYING (MANY_PATIENTS)
+Seq. 14    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P2:HEALTHY (ONE_PATIENT)
+Seq. 15    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P3:DO_NOTHING (YOU)
+Seq. 16    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P9:BETTER (P7, P8)
+Seq. 17    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P4:TRANSPLANT (YOU, ORGANS)
+Seq. 18    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P9:BETTER (P7, P8)
+Seq. 19    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P2:HEALTHY (ONE_PATIENT)
+Seq. 20    Driver:Trolly    Recip : Transplant Schema    Fire control:groups (CE-1)     Goals: NORMAL     Phase set: P3:HIT (TROLLY, LARGE_GROUP)
+Seq. 21    Driver:Trolly    Recip : Transplant Schema    Fire control:groups (CE-1)     Goals: NORMAL     Phase set: P1:TRAVEL (TROLLY, TRACKS)
+Seq. 22    Driver:Trolly    Recip : Transplant Schema    Fire control:groups (CE-1)     Goals: NORMAL     Phase set: P2:RUNAWAY (TROLLY)
+Seq. 23    Driver:Trolly    Recip : Transplant Schema    Fire control:groups (CE-1)     Goals: NORMAL     Phase set: P2:RUNAWAY (TROLLY)
+Seq. 24    Driver:Trolly    Recip : Transplant Schema    Fire control:groups (CE-1)     Goals: NORMAL     Phase set: P1:TRAVEL (TROLLY, TRACKS)
+Seq. 25    Driver:Trolly    Recip : Transplant Schema    Fire control:groups (CE-1)     Goals: NORMAL     Phase set: P1:TRAVEL (TROLLY, TRACKS)
+Seq. 26    Driver:Trolly    Recip : Transplant Schema    Fire control:groups (CE-2)     Goals: NORMAL     Phase set: P6:SAVE (YOU, SMALL_GROUP)
+Seq. 27    Driver:Trolly    Recip : Transplant Schema    Fire control:groups (CE-2)     Goals: NORMAL     Pha

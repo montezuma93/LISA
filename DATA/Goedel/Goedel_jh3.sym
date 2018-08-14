@@ -1,0 +1,47 @@
+Note: Goedel 3: Start with incompleteness and reason to self-reference
+
+Analog NatLang { Analog 0
+  DefPreds
+    selfRef 1 sr1 sr2 sr3 ;
+    hasUnprovableStatement 1 hus1 hus2 hus3 ;
+    incomplete 1 inc1 inc2 inc3 ;
+  end
+  DefObjs
+    NL isTheory isLanguage NL1 ;
+  end
+  DefProps
+    P1 selfRef ( NL ) ;
+    P2 hasUnprovableStatement ( NL ) ;
+    P3 incomplete ( NL ) ;
+  end
+  DefGroups
+    Cause ( P1 ) ( P2 ) 1.0 ;
+    Cause ( P2 ) ( P3 ) 1.0 ;
+  end
+done {
+
+Analog SOLogic { 
+  DefPreds
+    incomplete 1 inc1 inc2 inc3 ;
+  end
+  DefObjs
+    SOL isTheory isLanguage PA1 ;
+  end
+  DefProps
+    P1 incomplete ( SOL ) ;
+  end
+
+done
+
+Sequence { 
+  Driver=[ 1 ] 
+  Recip=[ 0 ] { 
+  Order=[ P1 h ]
+  
+  SSL_OK
+  Driver=[ 0 ] 
+  Recip=[ 1 ]
+  Order=[ CE-1 ( 4 1 ) ] { fire 5 props: give it time to think
+  Order=[ CE-2 ( 4 1 ) ] { fire 5 props: give it time to think
+done.
+    

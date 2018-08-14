@@ -1,0 +1,139 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: JEH edit of first Goedel sim, May 1
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:SOLogic    Recip : NatLang    Fire control:props    Goals: NORMAL     Phase set: P1:SELFREF (SOL)
+Seq. 1    Driver:NatLang    Recip : SOLogic    Fire control:groups    Goals: NORMAL     Phase set: P1:SELFREF (NL)
+Seq. 2    Driver:NatLang    Recip : SOLogic    Fire control:groups    Goals: NORMAL     Phase set: P1:SELFREF (NL)
+Seq. 3    Driver:NatLang    Recip : SOLogic    Fire control:groups    Goals: NORMAL     Phase set: P2:HASUNPROVABLESTATEMENT (NL)
+Seq. 4    Driver:NatLang    Recip : SOLogic    Fire control:groups    Goals: NORMAL     Phase set: P1:SELFREF (NL)
+Seq. 5    Driver:NatLang    Recip : SOLogic    Fire control:groups    Goals: NORMAL     Phase set: P3:INCOMPLETE (NL)
+Seq. 6    Driver:NatLang    Recip : SOLogic    Fire control:groups    Goals: NORMAL     Phase set: P2:HASUNPROVABLESTATEMENT (NL)
+Seq. 7    Driver:NatLang    Recip : SOLogic    Fire control:groups    Goals: NORMAL     Phase set: P3:INCOMPLETE (NL)
+Seq. 8    Driver:NatLang    Recip : SOLogic    Fire control:groups    Goals: NORMAL     Phase set: P3:INCOMPLETE (NL)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From NatLang to SOLogic:
+  Groups:
+    From Cause-1 to:    'Cause-3' = 0.879
+    From Effect-1 to:
+    From CE-1 (IC = 1.000) to:    'CE-0' = 0.879
+    From CE-2 (IC = 1.000) to:    'CE-4' = 0.879
+  Props:
+    From P1 (IC = 0.618) to:    P1 = 0.982
+    From P2 (IC = 0.500) to:    'P1' = 0.982
+    From P3 (IC = 0.500) to:    'P2' = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.992
+    From SP2.1 to:    'SP1' = 0.992
+    From SP3.1 to:    'SP2' = 0.992
+  Preds:
+    From SELFREF1 to:    SELFREF1 = 0.970
+    From HASUNPROVABLESTATEMENT1 to:    'HASUNPROVABLESTATEMENT1' = 0.970
+    From INCOMPLETE1 to:    'INCOMPLETE1' = 0.970
+  Objs:
+    From NL to:    SOL = 0.970
+
+From SOLogic to NatLang:
+  Groups:
+    From 'CE-0' (IC = 0.967) to:    CE-1 = 0.879
+    From 'Cause-1' to:
+    From 'Effect-2' to:
+    From 'Cause-3' to:    Cause-1 = 0.879
+    From 'CE-4' (IC = 0.858) to:    CE-2 = 0.879
+  Props:
+    From P1 (IC = 0.618) to:    P1 = 0.982
+    From 'P1' (IC = 0.809) to:    P2 = 0.982
+    From 'P2' (IC = 0.669) to:    P3 = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.992
+    From 'SP1' to:    SP2.1 = 0.992
+    From 'SP2' to:    SP3.1 = 0.992
+  Preds:
+    From SELFREF1 to:    SELFREF1 = 0.970
+    From 'HASUNPROVABLESTATEMENT1' to:    HASUNPROVABLESTATEMENT1 = 0.970
+    From 'INCOMPLETE1' to:    INCOMPLETE1 = 0.970
+  Objs:
+    From SOL to:    NL = 0.970
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog SOLogic * * * * *
+
+Groups:
+'CE-0' (index = 0 level =1):  
+	Inductive confidence = 0.967
+     Semantics: CAUSE-EFFECT (0.875) CS_1.0 (0.875) 
+
+     Groups: 
+     'Cause-1' (index = 1 level =0):  
+          Semantics: CAUSE (0.725) 
+          Props: P1) SELFREF (SOL) 
+
+     'Effect-2' (index = 2 level =0):  
+          Semantics: EFFECT (0.778) 
+          Props: 'P1') 'HASUNPROVABLESTATEMENT' (SOL) 
+
+     'Cause-3' (index = 3 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: P1) SELFREF (SOL) 
+
+
+'Cause-1' (index = 1 level =0):  
+     Semantics: CAUSE (0.725) 
+     Props: P1) SELFREF (SOL) 
+
+'Effect-2' (index = 2 level =0):  
+     Semantics: EFFECT (0.778) 
+     Props: 'P1') 'HASUNPROVABLESTATEMENT' (SOL) 
+
+'Cause-3' (index = 3 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: P1) SELFREF (SOL) 
+
+'CE-4' (index = 4 level =1):  
+	Inductive confidence = 0.858
+     Semantics: CAUSE-EFFECT (0.875) CS_1.0 (0.875) 
+
+
+
+Props:
+'P1':  [ 'HASUNPROVABLESTATEMENT1' + SOL ] 
+'P2':  [ 'INCOMPLETE1' + SOL ] 
+
+Preds:
+'HASUNPROVABLESTATEMENT1':
+   HUS11(1.000)
+   HUS21(1.000)
+   HUS31(1.000)
+
+'INCOMPLETE1':
+   INC11(1.000)
+   INC21(1.000)
+   INC31(1.000)
+
+
+Objs:

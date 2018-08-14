@@ -1,0 +1,26 @@
+Run of LISA Version Ex 1.06; last modified 3/12/08
+
+Note: Semantic/test12.sym
+Note: assert that a brick is an animal
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:ToVerify    Recip : WorldKnowledge    Fire control:props    Goals: NORMAL     Phase set: P1
+
+Truth verified! (I.e., Lack-of-anomaly detected)
+The assertion ISA (BRICK, ANIMAL) matches prop P14: ISA (BRICK, ARTIFACT)
+Iteration (RT) = 504
+

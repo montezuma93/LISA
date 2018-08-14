@@ -1,0 +1,99 @@
+Note: Minister/Hard3.sym (manufacture() prop exists in the schemas)
+Note: Made from Easy2 by addiing a garbage analog to LTM
+Note: This is 'hard' 'cause the relevant knowledge is split over two analogs 
+Note: However, there's still no distracting info.  Just the Most Basic test of whether LISA
+Note:  can do it at all.  If it succeeds on this, Then we'll branch out...
+Note: 4/21/08:
+Note: Removing the manufacture() prop from the schema
+
+Analog Garbage
+   DefPreds
+     has 2 state has1 has2 has3 ;
+     goto 2 ptrans goto1 goto2 goto3 ;
+     want 2 state want1 want2 want3 ;
+     driveto 3 ptrans goto drive vehicle drive2 drive3 ;
+   end ; { def preds
+   DefObjs
+     Bill human adult male bill1 bill2 bill3 ;
+     Jeep artifact vehicle car american shit jeep ;
+     Beach location beach commerce recreation ocean sand ;
+   end ; { def objs
+   DefProps
+     P1 has ( Bill Jeep ) ;
+     P2 goto ( Bill Beach ) ;
+     P3 want ( Bill P2 ) ;
+     P4 driveto ( Bill Jeep Beach ) ;
+   end ; { def props
+   DefGroups
+     Cause ( P3 ) ( P4 ) ;
+     Enable ( P1 ) ( P4 ) ; { will be called "Enables1"
+   end ;
+done ; { garbage analog
+
+
+Analog PreferSchema
+  DefPreds
+    prefer 2 mental =0.1 state =0.1 like likemore prefer ;
+    manufacture 2 activity =0.1 make produce manufacture ;
+    agree-with 2 mental =0.1 state =0.1 agree ;
+  end
+  DefObjs
+    person animate object =0.1 human person ;
+    product inanimate object =0.1 manufactured product ;
+    manufacturer company organization produce make manufacturer ;
+  end
+  DefProps
+    P1 prefer ( person product ) ;
+    P2 agree-with ( person manufacturer ) ;
+    P3 manufacture ( manufacturer product ) ;
+  end
+  DefGroups
+    Cause ( P2 P3 ) ( P1 ) 0.5 ;
+  end
+done { schema
+
+Analog AgreeSchema
+  DefPreds
+    support 2 activity =0.1 help facilitate support ;
+    agree-with 2 mental =0.1 state =0.1 agree ;
+  end
+  DefObjs
+    person animate object =0.1 human person ;
+    entity organization object =0.1 person ;
+    a-cause abstract goal desire work-toward ;
+  end
+  DefProps
+    P1 support ( person a-cause ) ;
+    P2 support ( entity a-cause ) ;
+    P3 agree-with ( person entity )
+  end
+  DefGroups
+    Cause ( P1 P2 ) ( P3 ) 1.0 ;
+  end
+done { schema
+
+Analog Minister
+  DefPreds
+    prefer 2 state =0.1 like likemore prefer ;
+  end
+  DefObjs
+    minister animate object human person minister religious ;
+    coke inanimate manufactured product beverage sweet coke ;
+  end
+  DefProps
+    P1 prefer ( minister coke ) ;
+  end
+  DefGroups
+    Explanandum
+      Props: P1 %
+      Semantics: Effect %
+      %%
+  end
+done { glass example
+
+Sequence { lots of hand-holding here
+  Driver=[ 3 ]
+  Goal= Explain   { turn on explanation mode just before last prop
+  Order=[ Explanandum ( 1 1 ) ]
+done.
+    

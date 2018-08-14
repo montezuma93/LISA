@@ -1,0 +1,76 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: Boys & Dogs analogy: Bad version
+Note: Does LISA fail w/ god-like WM but without volleying?
+Note: But be sure to set retrieval threshold to 0.3
+Note:   prior to running.
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 0.5000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Boys    Recip : Dogs    Fire control:props    Goals: NORMAL     Phase set: P1:SMART (BILL) P2:TALL (BILL) P3:SMART (STEVE) P4:TIMID (TOM) P5:TALL (TOM)
+Seq. 1    Driver:Dogs    Recip : Boys    Fire control:props    Goals: NORMAL     Phase set: P1:HUNGRY (ROVER) P2:FRIENDLY (ROVER) P3:HUNGRY (FIDO) P4:FRISKY (BLACKIE) P5:FRIENDLY (BLACKIE)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Boys to Dogs:
+  Groups:
+  Props:
+    From P1 (IC = 0.618) to:    P2 = 0.982
+    From P2 (IC = 0.588) to:    P3 = 0.889
+    From P3 (IC = 0.588) to:    P1 = 0.889
+    From P4 (IC = 0.500) to:
+    From P5 (IC = 0.500) to:
+  SPs:
+    From SP1.1 to:    SP2.1 = 0.992
+    From SP2.1 to:    SP1.1 = 0.981
+    From SP3.1 to:    SP5.1 = 0.979
+    From SP4.1 to:
+    From SP5.1 to:
+  Preds:
+    From SMART1 to:    FRIENDLY1 = 0.982
+    From TALL1 to:    FRISKY1 = 0.674
+    From TIMID1 to:
+  Objs:
+    From BILL to:    ROVER = 0.982
+    From STEVE to:    FIDO = 0.889
+    From TOM to:
+
+From Dogs to Boys:
+  Groups:
+  Props:
+    From P1 (IC = 0.588) to:    P3 = 0.889
+    From P2 (IC = 0.618) to:    P1 = 0.982
+    From P3 (IC = 0.588) to:    P2 = 0.889
+    From P4 (IC = 0.500) to:
+    From P5 (IC = 0.500) to:
+  SPs:
+    From SP1.1 to:    SP2.1 = 0.981
+    From SP2.1 to:    SP1.1 = 0.992
+    From SP3.1 to:
+    From SP4.1 to:
+    From SP5.1 to:    SP3.1 = 0.979
+  Preds:
+    From HUNGRY1 to:
+    From FRIENDLY1 to:    SMART1 = 0.982
+    From FRISKY1 to:    TALL1 = 0.674
+  Objs:
+    From ROVER to:    BILL = 0.982
+    From FIDO to:    STEVE = 0.889
+    From BLACKIE to:
+

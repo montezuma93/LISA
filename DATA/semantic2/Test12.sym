@@ -1,0 +1,34 @@
+Note: Semantic/test12.sym
+Note: assert that a brick is an animal
+
+Parameters
+    SaveGroupHebbs False
+    SavePropHebbs False
+    SaveSPHebbs False
+    SaveOPHebbs False
+Done
+
+Include semantics.inc
+
+Include WorldKnowledge.inc
+
+Analog ToVerify
+  DefPreds
+    isa [ isa1 exemplar ] [ isa2 category ] ;
+  end
+  DefObjs
+    brick artifact mud hard ;
+    animal breath move natural born will-die animal ;
+  end
+  DefProps
+    P1 isa ( brick animal ) ;
+  end
+done { glass example
+
+Sequence { 
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  ContraDetect= On { turn contradiction detection on
+  Order=[ P1 h P1 h ]
+done.
+    

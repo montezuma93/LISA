@@ -1,0 +1,90 @@
+{ A1toA2.sym
+{
+{ 10/27/10
+{ maps A1 onto A2 and induces schema
+{
+{ simulations will be constructed by placing various of these exemplars, along with schemas LISA has learned by comparing them,
+{  into LTM and letting LISA retrieve, map, infer and schema-induce.
+{
+{ Categorization will be inference: Category label from retrieved exemplar or schema will be inferred into rep'n of
+{  to-be-categorized item
+
+{ Make one analog for all exemplars and use groups to represent individual exemplars (?)
+
+{ Category A exemplars: prototype is [1, 1, 1, 1]: Circle is larger, darker, above and in front
+
+Analog A2
+    DefPreds
+        Larger [ rel_size larger ] [ rel_size smaller ] ;
+        Darker [ rel_shade darker ] [ rel_shade lighter ] ;
+        Above [ rel_loc above ] [ rel_loc below ] ;
+        InFront [ rel_depth in_front ] [ rel_depth behind ] ;
+        Category [ cat label ] ;
+    end
+    DefObjs
+        Circle part circle ;
+        Square part square ;
+        A label A ;
+    end
+    DefProps
+        { Category A
+        { exemplar A2: 1011
+        P6 Larger ( Circle Square ) ;
+        P7 Darker ( Square Circle ) ;
+        P8 Above ( Circle Square ) ;
+        P9 InFront ( Circle Square ) ;
+        P10 Category ( A ) ;
+    end { def props
+        
+    { now group the props together into exemplars
+    DefGroups
+        A2
+            Props: P6 P7 P8 P9 P10 %
+            %% end of group
+    end { def groups
+        
+done { analog 1: AllExemplars
+
+Analog A1
+    { the to-be-categorized exemplar
+    DefPreds
+        Larger [ rel_size larger ] [ rel_size smaller ] ;
+        Darker [ rel_shade darker ] [ rel_shade lighter ] ;
+        Above [ rel_loc above ] [ rel_loc below ] ;
+        InFront [ rel_depth in_front ] [ rel_depth behind ] ;
+    end
+    DefObjs
+        Circle part circle ;
+        Square part square ;
+    end
+    DefProps
+        { make this one an A1, sans category label
+        P1 Larger ( Square Circle ) ;
+        P2 Darker ( Circle Square ) ;
+        P3 Above ( Circle Square ) ;
+        P4 InFront ( Circle Square ) ;
+    end { defprops
+    { amke a group out of 'em
+    DefGroups
+        A1
+            Props: P1 P2 P3 P4 %
+            %% end of group
+    end { def groups
+done { analog 2: Test
+
+Analog Schema
+done { analog schema
+
+Sequence
+    Driver=[ 1 ]
+    Recip=[ 0 ]
+    Order=[ P1 h P2 h P3 h P4 h ]
+    SSL_OK { let LISA decide whether to make inferences
+    Driver=[ 0 ]
+    Recip=[ 1 2 ]
+    Order=[ P6 h P7 h P8 h P9 h P10 h ]
+Done
+        
+        
+        
+        

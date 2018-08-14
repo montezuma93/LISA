@@ -1,0 +1,106 @@
+From: John Licato <respeckknuckles1@gmail.com>
+Subject: Re: simulations update
+Date: May 9, 2014 8:23:21 PM CDT
+To: John Hummel <jehummel@illinois.edu>
+Cc: Selmer Bringsjord <selmerbringsjord@gmail.com>
+
+Hi John,
+
+Sorry I didn't notice this earlier, but the version of the Goedel simulation you sent has the axioms and conclusion the other way around: In my original, I had selfReferable(NL) causes hasUnprovableStatement(NL) causes incomplete(NL), and in the target, incomplete(PA) is given and LISA is asked to infer the cause-effect relations and the other two propositions. In the working version you sent, selfReferable() is instead given in the target, which is interesting anyway, but in a different way: when analogy allows the reasoner to work backwards from conclusion to axioms it offers something more powerful than deductive reasoning alone, which is what I hoped to demonstrate. Is the change necessary to get the simulation to work?
+
+John
+
+John Licato
+Graduate Student, Rensselaer Polytechnic Institute
+
+
+On Thu, May 1, 2014 at 12:43 PM, John Hummel <jehummel@illinois.edu> wrote:
+Hi John and Selmer,
+
+I have changed both the code and the first simulation. You will find both in the dropbox folder.
+
+But for quick reference, the simulation is attached:
+
+
+
+
+Along with one result (I think this is the right result):
+
+
+
+
+To note in the .run file (below I have stripped out all but the important parts and commented on those; comments denoted by **** ):
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog SOLogic * * * * *
+
+Groups:
+
+**** In this Cause-Effect group, LISA has inferred that self-reference (SOL) causes has-unprovable-statement (SOL) (where SOL is second-order logic)
+
+'CE-0' (index = 0 level =1):
+        Inductive confidence = 0.967
+     Semantics: CAUSE-EFFECT (0.875) CS_1.0 (0.875)
+
+     Groups:
+     'Effect-1' (index = 1 level =0):
+          Semantics: EFFECT (0.778)
+          Props: 'P1') 'HASUNPROVABLESTATEMENT' (SOL)
+
+     'Cause-2' (index = 2 level =0):
+          Semantics: CAUSE (0.778)
+          Props: P1) SELFREF (SOL)
+
+**** In this Cause-Effect group, LISA has inferred that has-unprovable-statement (SOL) causes incomplete (SOL)
+
+'CE-3' (index = 3 level =1):
+        Inductive confidence = 0.858
+     Semantics: CAUSE-EFFECT (0.875) CS_1.0 (0.875)
+
+     Groups:
+     'Effect-4' (index = 4 level =0):
+          Semantics: EFFECT (0.778)
+          Props: 'P2') 'INCOMPLETE' (SOL)
+
+     'Cause-5' (index = 5 level =0):
+          Semantics: CAUSE (0.778)
+          Props: 'P1') 'HASUNPROVABLESTATEMENT' (SOL)
+
+
+**** here are the inferred propositions
+
+Props:
+'P1':  [ 'HASUNPROVABLESTATEMENT1' + SOL ]
+'P2':  [ 'INCOMPLETE1' + SOL ]
+
+**** And here are the semantics of the inferred predicates
+
+Preds:
+'HASUNPROVABLESTATEMENT1':
+   HUS11(1.000)
+   HUS21(1.000)
+   HUS31(1.000)
+
+'INCOMPLETE1':
+   INC11(1.000)
+   INC21(1.000)
+   INC31(1.000)
+
+For what it's worth (since it's not going into the paper) its inductive confidence in all these inferences is quite high.
+
+So this is a happy little first result.
+
+Are there other aspects of Goedel's reasoning that we need to simulate?
+
+Thanks for getting this started, John.
+
+-- John
+
+
+
+
+
+

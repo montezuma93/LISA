@@ -1,0 +1,36 @@
+Note: Semantic/birdwheels.sym
+Note: Second attempt to do semantic verification (11/12/08)
+Note: Test of idea that vrification can be modeled As Explanation:
+Note: To verify whether, say birds have lungs or wheels, try to explain
+Note:   Why they have lungs or wheels
+
+Include Semantics.inc
+
+Include WorldKnowledge.inc
+
+Analog ToVerify
+  DefPreds
+    has 2 state possess has1 has2 ;
+  end
+  DefObjs
+    bird bird living fly small sing nest ;
+    wheels wheels round roll ; 
+  end
+  DefProps
+    P1 has ( bird wheels ) ;
+  end
+  DefGroups
+    ToVerify
+      Semantics: Effect %
+      Props: P1 %
+    %%
+  end
+done { glass example
+
+Sequence { 
+  Driver=[ 1 ]
+  ContraDetect= On { turn contradiction detection on
+  Goal= Explain
+  Order=[ ToVerify ( 1 1 ) ]
+done.
+    

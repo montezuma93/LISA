@@ -1,0 +1,65 @@
+Note: fds
+
+Analog NL { Analog 0
+  DefPreds
+    B 1 prov1 prov2 prov3 ;
+    Not 1 not1 not2 not3 ;
+    Eq 2 eq1 eq2 eq3 ;
+  end
+  DefObjs
+    p isProposition ;
+    contradiction isContradiction ;
+  end
+  DefProps
+    S01 B ( p ) ;
+    S02 Not ( S01 ) ;
+    S03 Eq ( p S02 ) ;
+    S1 B ( S03 ) ;
+    S3 B ( S01 ) ;
+    S4 B ( S02 ) ;
+    S5 B ( contradiction ) ;
+  end
+  DefGroups
+    Cause ( S01 ) ( S3 ) 1.0 ;
+    Cause ( S1 S2 ) ( S4 ) 1.0 ;
+    Cause ( S3 S4 ) ( S5 ) 1.0 ;
+  end
+done {
+
+Analog PA {
+  DefPreds
+    Rho 1 prov1 prov2 prov3 ;
+    Neg 1 not1 not2 not3 ;
+    Iff 2 eq1 eq2 eq3 ;
+  end
+  DefObjs
+    p isProposition ;
+    contradiction isContradiction ;
+  end
+  DefProps
+    S01 Rho ( p ) ;
+    S02 Neg ( S01 ) ;
+    S03 Iff ( p S02 ) ;
+    S1 Rho ( S03 ) ; 
+    S3 Rho ( S01 ) ;
+    S4 Rho ( S02 ) ;
+    S5 Rho ( contradiction ) ;
+  end
+  DefGroups
+  end
+done
+
+Sequence { 
+  Driver=[ 1 ] 
+  Recip=[ 0 ] { 
+  Order=[ S1 h S3 h S4 h S5 h ]
+  
+  SSL_OK
+  Driver=[ 0 ] 
+  Recip=[ 1 ]
+  Order=[ CE-1 ( 4 1 ) ] { fire 5 props: give it time to think
+  Order=[ CE-2 ( 4 1 ) ] { fire 5 props: give it time to think
+  Order=[ CE-3 ( 4 1 ) ] { fire 5 props: give it time to think
+  SaveSym=[ 2 ] { save the resulting schema as a .sym file
+done.
+    

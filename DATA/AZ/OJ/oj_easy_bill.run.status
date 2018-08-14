@@ -1,0 +1,64 @@
+
+================================
+Sequence element0
+    Driver:Bill
+    Recip: 
+
+    Fire control: groups
+    Goals: EXPLAIN RETRIEVE 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+
+retrieved group EFFECT2 on iteration 243
+
+================================
+Sequence element1
+    Driver:Bill
+    Recip: WorkSpace  
+
+    Fire control: groups-d
+    Goals: EXPLAIN MAP 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+
+================================
+Sequence element2
+    Driver:WorkSpace
+    Recip: Bill  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P9 
+
+* * * Switching from LISA mode to DORA mode
+
+================================
+Sequence element3
+    Driver:WorkSpace
+    Recip: Bill  
+
+    Fire control: groups-d
+    Goals: EXPLAIN INFER 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P8 
+
+
+* * * * * * * * * *
+Simulation is done.
+* * * * * * * * * *
+

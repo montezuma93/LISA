@@ -1,0 +1,84 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: part inference.sym
+Note: Can LISA infer just part of a proposition?
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Part    Recip : Whole    Fire control:props    Goals: NORMAL     Phase set: P1:LOVER (BILL)
+Seq. 1    Driver:Whole    Recip : Part    Fire control:props    Goals: NORMAL     Phase set: P1:LOVES (JOHN, MARY)
+Seq. 2    Driver:Part    Recip : Whole    Fire control:props    Goals: NORMAL     Phase set: P1:LOVER (BILL)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Whole to Part:
+  Groups:
+  Props:
+    From P1 (IC = 0.619) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    'SP1' = 0.993
+  Preds:
+    From LOVES1 to:    LOVER1 = 0.968
+    From LOVES2 to:    'LOVES2' = 0.968
+  Objs:
+    From JOHN to:    BILL = 0.968
+    From MARY to:    'MARY' = 0.968
+
+From Part to Whole:
+  Groups:
+  Props:
+    From P1 (IC = 0.619) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From 'SP1' to:    SP1.2 = 0.993
+  Preds:
+    From LOVER1 to:    LOVES1 = 0.968
+    From 'LOVES2' to:    LOVES2 = 0.968
+  Objs:
+    From BILL to:    JOHN = 0.968
+    From 'MARY' to:    MARY = 0.968
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Part * * * * *
+
+Groups:
+
+Props:
+
+Preds:
+'LOVES2':
+   EMOTION2(1.000)
+   STRONG2(1.000)
+   POSITIVE2(1.000)
+   LOVE2(1.000)
+
+
+Objs:
+'MARY':
+   ADULT(1.000)
+   HUMAN(1.000)
+   FEMALE(1.000)
+   MARY(1.000)
+

@@ -1,0 +1,83 @@
+Run of LISA Version Ex 1.15; last modified 3/2/11
+
+Note: group_hebb_test: minimal sym file to test creation of hebb-hebb connections for groups
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:A1    Recip : A0    Fire control:groups    Goals: NORMAL     Phase set: P2:REL (OBJ2, OBJ3)
+Seq. 1    Driver:A1    Recip : A0    Fire control:groups    Goals: NORMAL     Phase set: P2:REL (OBJ2, OBJ3)
+Seq. 2    Driver:A1    Recip : A0    Fire control:groups    Goals: NORMAL     Phase set: P2:REL (OBJ2, OBJ3)
+Seq. 3    Driver:A1    Recip : A0    Fire control:groups    Goals: NORMAL     Phase set: P3:REL (OBJ3, OBJ4)
+Seq. 4    Driver:A1    Recip : A0    Fire control:groups    Goals: NORMAL     Phase set: P2:REL (OBJ2, OBJ3)
+Seq. 5    Driver:A1    Recip : A0    Fire control:groups    Goals: NORMAL     Phase set: P3:REL (OBJ3, OBJ4)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From A0 to A1:
+  Groups:
+    From CAUSE1 to:    CAUSE1 = 0.979
+    From EFFECT1 to:    EFFECT1 = 0.982
+    From CE-1 to:    CE-1 = 0.982
+    From CAUSE2 to:    CAUSE2 = 0.979
+    From EFFECT2 to:    EFFECT2 = 0.982
+    From CE-2 to:    CE-2 = 0.982
+  Props:
+    From P2 to:    P2 = 0.990
+    From P3 to:    P3 = 0.990
+  SPs:
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.993
+  Preds:
+    From REL21 to:    REL21 = 0.968
+    From REL22 to:    REL22 = 0.968
+    From REL31 to:    REL31 = 0.968
+    From REL32 to:    REL32 = 0.968
+  Objs:
+    From OBJ2 to:    OBJ2 = 0.968
+    From OBJ3 to:    OBJ3 = 0.968
+    From OBJ4 to:    OBJ4 = 0.968
+
+From A1 to A0:
+  Groups:
+    From CAUSE1 to:    CAUSE1 = 0.979
+    From EFFECT1 to:    EFFECT1 = 0.982
+    From CE-1 to:    CE-1 = 0.982
+    From CAUSE2 to:    CAUSE2 = 0.979
+    From EFFECT2 to:    EFFECT2 = 0.982
+    From CE-2 to:    CE-2 = 0.982
+  Props:
+    From P2 to:    P2 = 0.990
+    From P3 to:    P3 = 0.990
+  SPs:
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.993
+  Preds:
+    From REL21 to:    REL21 = 0.968
+    From REL22 to:    REL22 = 0.968
+    From REL31 to:    REL31 = 0.968
+    From REL32 to:    REL32 = 0.968
+  Objs:
+    From OBJ2 to:    OBJ2 = 0.968
+    From OBJ3 to:    OBJ3 = 0.968
+    From OBJ4 to:    OBJ4 = 0.968
+

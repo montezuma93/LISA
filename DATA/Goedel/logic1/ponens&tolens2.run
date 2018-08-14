@@ -1,0 +1,106 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: ponens&tolens.sym
+Note: an attempt to implement deductive logic in LISA
+Note: implement modus ponens and modus tollens as groups; add foil groups to catch partial matches?
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 0.5000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Ponens    Recip :    Fire control:groups (G1)     Goals: EXPLAIN RETRIEVE     Phase set: P4:TRUE (P1)
+Retrieved group CE-1 in analog Logic.
+Seq. 1    Driver:Ponens    Recip :    Fire control:groups (G1)     Goals: EXPLAIN     Phase set: P3:IMPLIES (P1, P2)
+Seq. 2    Driver:Ponens    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P3:IMPLIES (P1, P2)
+Seq. 3    Driver:Ponens    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P4:TRUE (P1)
+Seq. 4    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:P (X)
+Seq. 5    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P2:Q (Y)
+Seq. 6    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P3:IMPLIES (P1, P2)
+Seq. 7    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P4:TRUE (P1)
+Seq. 8    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P5:TRUE (P2)
+Seq. 9    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:P (X)
+Seq. 10    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P2:Q (Y)
+Seq. 11    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P3:IMPLIES (P1, P2)
+Seq. 12    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P4:TRUE (P1)
+Seq. 13    Driver:WorkSpace    Recip : Ponens    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P5:TRUE (P2)
+
+
+* * * Current Mapping Connections From Ponens to WorkSpace * * *
+  Groups:
+    From G1 to:    Cause-1 = 0.879
+  Props:
+    From P1 (IC = 0.618) to:    P1 = 0.982
+    From P2 (IC = 0.618) to:    P2 = 0.981
+    From P3 (IC = 0.621) to:    P3 = 0.990
+    From P4 (IC = 0.618) to:    P4 = 0.982
+    From 'P4' (IC = 0.809) to:    P5 = 0.982
+  SPs:
+    From SP1.1 to:
+    From SP1.2 to:
+    From SP2.1 to:
+    From SP2.2 to:
+    From SP3.1 to:    SP3.1 = 0.992
+    From SP3.2 to:    SP3.2 = 0.992
+    From SP4.1 to:    SP4.1 = 0.990
+    From 'SP7' to:    SP1.1 = 0.987
+    From 'SP8' to:    SP2.1 = 0.987
+    From 'SP9' to:    SP5.1 = 0.990
+  Preds:
+    From TRUE1 to:    TRUE1 = 0.969
+    From IMPLIES1 to:    IMPLIES1 = 0.968
+    From IMPLIES2 to:    IMPLIES2 = 0.968
+    From LIKE1 to:
+    From LIKE2 to:
+    From INGEST1 to:
+    From INGEST2 to:
+    From 'P1' to:    P1 = 0.968
+    From 'Q1' to:    Q1 = 0.968
+  Objs:
+    From OJ to:
+    From BILL to:
+
+
+
+* * * * Inferred Groups and Props in Explanandum * * * *
+
+Groups:
+
+Props:
+'P4':  [ TRUE1 + P2 ] 
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Ponens * * * * *
+
+Groups:
+
+Props:
+'P4':  [ TRUE1 + P2 ] 
+
+Preds:
+'P1':
+
+'Q1':
+
+
+Objs:

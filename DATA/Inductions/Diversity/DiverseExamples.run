@@ -1,0 +1,70 @@
+Run of LISA Version Ex 1.12; last modified 10/08/08
+
+Note: Diverse examples for diversity simulations
+Note: Tell LISA that mice and elephants have enzyme & let it induce schema
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Elephant    Recip : Mouse Schema    Fire control:props    Goals: NORMAL     Phase set: P1:HAS (ELEPHANT, ENZYME)
+Seq. 1    Driver:Elephant    Recip : Mouse Schema    Fire control:groups    Goals: NORMAL     Phase set: P1:HAS (ELEPHANT, ENZYME)
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+'NEWFACT0' (index = 0 level =0):  
+     Semantics: GENERIC (0.690) 
+     Props: 'P0')  
+
+
+Props:
+'P0':  [ 'HAS1' + 'ELEPHANT' ] [ 'HAS2' + 'ENZYME' ] 
+
+Preds:
+'HAS1':
+   STATE1(1.000)
+   POSSESS1(1.000)
+   HAS11(1.000)
+   HAS21(1.000)
+
+'HAS2':
+   STATE2(1.000)
+   POSSESS2(1.000)
+   HAS12(1.000)
+   HAS22(1.000)
+
+
+Objs:
+'ELEPHANT':
+         ELEPHANT(0.449)
+   ANIMAL(1.000)
+   MAMMAL(1.000)
+            TINY(0.131)
+         SMART(0.449)
+         DOMESTIC(0.449)
+       MOUSE(0.562)
+       CUTE(0.562)
+       PEST(0.562)
+
+'ENZYME':
+   CHEMICAL(1.000)
+   BIO(1.000)
+   ENZYME(1.000)
+

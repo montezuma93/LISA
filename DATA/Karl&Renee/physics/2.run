@@ -1,0 +1,25 @@
+Run of LISA Version Ex 1.03; last modified 10/30/07
+
+Note: karl&renee/physics/1.sym
+Note: First earnest attempt to simulate an aspect of naive physics
+Note: This is a simulation of a kid who understands that an inanimate object needs to have its supporter under it
+Note:   in order to be supported
+Note: Situation is glass (inanimate) with a table beside it --> unsupported (Glass) --> fall (Glass)
+Note: Made from karl&renee/toy2c.sym
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:SupportedGlass    Recip : NaivePhysics    Fire control:props    Operating mode:NORMAL    Phase set: P1

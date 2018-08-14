@@ -1,0 +1,62 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: Minister/Easy1.sym
+Note: First earnest attempt to simulate explanation of why ministers prefer Coke
+Note: This is easy 'cause all the relevant knowledge is in one analog and 'cause
+Note:  there is no distracting info.  Just the Most Basic test of whether LISA
+Note:  can do it at all.  If it succeeds on this, Then we'll branch out...
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 0.5000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Minister    Recip :    Fire control:groups (EXPLANANDUM)     Goals: EXPLAIN RETRIEVE     Phase set: P1:PREFER (MINISTER, COKE)
+Retrieved group Effect-1 in analog Schema.
+Seq. 1    Driver:Minister    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:PREFER (MINISTER, COKE)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Minister to WorkSpace:
+  Groups:
+    From EXPLANANDUM to:    Effect-1 = 0.879
+  Props:
+    From P1 (IC = 0.621) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+  Preds:
+    From PREFER1 to:    PREFER1 = 0.970
+    From PREFER2 to:    PREFER2 = 0.970
+  Objs:
+    From MINISTER to:    PERSON = 0.970
+    From COKE to:    PRODUCT = 0.970
+
+From WorkSpace to Minister:
+  Groups:
+    From Effect-1 to:    EXPLANANDUM = 0.879
+  Props:
+    From P1 (IC = 0.621) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+  Preds:
+    From PREFER1 to:    PREFER1 = 0.970
+    From PREFER2 to:    PREFER2 = 0.970
+  Objs:
+    From PERSON to:    MINISTER = 0.970
+    From PRODUCT to:    COKE = 0.970
+

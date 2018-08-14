@@ -1,0 +1,109 @@
+Note: Andrei&Zack/OJ_easy4_mike.sym
+Note: Why do we drink OJ for breakfast?
+Note: Low-hanging fruit (or so John thinks)
+Note: Semantics carefully controlled for overlap
+Note: Easy4 breaks the separate generic explanations apart
+Analog LTM { put all of knowledge, both generics and specifics, into a single LTM: Analog 0
+  DefPreds
+    { generic reasons
+    delicious 1 taste good yum delicious tasty refreshing tangy citrus tart ;
+    has 2 state possess has contains includes ;
+    drink 2 ingest consume liquid swallow liquid ;
+    part_of 2 part constituent component element content ;
+    smells 2 odor scent smell olfaction aroma fragrance ;
+    alerting 1 awake morning sleepy awake wakes ;
+    extrinsic_cause1 1 history crops florida growers history ;  
+    extrinsic_cause2 1 history conspiracy nazis ufos crazy ;  
+    { larry, the fetishist
+    { joan the mechanic
+    isa 2 kind class set isa ;
+    { sally the divorcee
+    { add new irrelevant knowledge
+    wears 2 clothing fashion wears ;
+  end
+  DefObjs
+    { common objects
+    OJ orange juice liquid breakfast morning ;
+    vitC health vitamin OJ breakfast immune ;
+    breakfast food morning meal breakfast ;
+    refreshing state fresh yum alert refreshing ;
+    history crops florida growers history ; 
+    person human person animate alive ; 4 features in common with everyone
+    { larry, the fetishist
+    larry human person animate alive male banker deserves death 1% fetishist ;
+    fetish desire unusual freaky sexual strong unusual compulsion ;
+    { joan the mechanic
+    Joan human person animate alive female old nice mom mechanic knitter ;
+    mechanic human person profession cars machines skill talent blue_collar ;
+    { sally the divorcee
+    Sally human person animate alive female young tired divorcee teen_mom gamer ;
+    divorcee human person married_once divorced single angry ;
+  end
+  DefProps
+    { generic schema
+    P1 drink ( person OJ ) ;
+    P2 part_of ( OJ breakfast ) ;
+    P3 has ( OJ vitC ) ;
+    P4 delicious ( OJ ) ;
+    P5 smells ( OJ refreshing ) ;
+    P6 alerting ( OJ ) ;
+    P7 extrinsic_cause1 ( OJ ) ; 
+    P8 extrinsic_cause2 ( OJ ) ; 
+    { larry, the fetishist
+    P9 has ( larry fetish ) ;
+    P10 drink ( larry OJ ) ;
+    { joan the mechanic
+    P11 isa ( Joan mechanic ) ;
+    P12 drink ( Joan OJ ) ;
+    { sally the divorcee
+    P13 isa ( Sally divorcee ) ;
+    P14 drink ( Sally OJ ) ;
+
+  end
+  DefGroups
+    { generic schemas
+    { intrinsic generic causes
+    Cause ( P2 ) ( P1 ) 1.0 ;
+    Cause ( P3 ) ( P1 ) 1.0 ;
+    Cause ( P4 ) ( P1 ) 1.0 ;
+    Cause ( P5 ) ( P1 ) 1.0 ;
+    Cause ( P6 ) ( P1 ) 1.0 ;
+    { extrinsic generic causes
+    Cause ( P7 ) ( P1 ) 1.0 ;
+    Cause ( P8 ) ( P1 ) 1.0 ;
+    { the multitude of reasons larry, the fetishist, drinks OJ
+    Cause ( P9 ) ( P10 ) ;
+    { joan the mechanic
+    Cause ( P11 ) ( P12 ) ;
+    { sally the divorcee
+    Cause ( P13 ) ( P14 ) ;
+    
+  end
+done { LTM: Analog 0
+
+Analog ThisBoy2 { A vaguely, but not specifically, specific other person
+  DefPreds
+    drink 2 ingest consume liquid swallow liquid ;
+  end
+  DefObjs
+    OJ orange juice liquid breakfast morning ;
+    ThisBoy2 human person animate alive male 0.5 banker 0.5 knitter 0.5 gamer 0.5 fetishist 0.5 1% 0.5 ;
+  end
+  DefProps
+    P1 drink ( ThisBoy2 OJ ) ;
+  end
+  DefGroups
+    Question
+      Props: P1 %
+      Semantics: Effect %
+      %%
+  end
+done { 
+
+Sequence { 
+  Driver=[ 1 ] { Analog 1: The generic, Mike
+  { Recip=[ 0 ] { LTM: try to set it to be the (sole) recipient (don't know whether this'll work)
+  Goal= Explain   { turn on explanation mode just before last prop
+  Order=[ Question ( 1 1 ) ]
+done.
+    

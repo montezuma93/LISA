@@ -1,0 +1,90 @@
+Run of LISA Version Ex 1.02; last modified 9/25/07
+
+Note: Attempt to illustrate how (child) LISA can generate explanations
+Note: This time, LISA must figure out why the glass fell
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:FallGlass    Recip : NaivePhysics    Fire control:props    Operating mode:PREDICT    Goal:RETRIEVE    Phase set: P1
+Seq. 1    Driver:NaivePhysics    Recip : FallGlass    Fire control:groups    Operating mode:PREDICT    Goal:INFER    Phase set: P2
+Seq. 2    Driver:NaivePhysics    Recip : FallGlass    Fire control:groups    Operating mode:PREDICT    Goal:INFER    Phase set: P4
+Seq. 3    Driver:NaivePhysics    Recip : FallGlass    Fire control:groups    Operating mode:PREDICT    Goal:INFER    Phase set: P2
+Seq. 4    Driver:FallGlass    Recip : FallGlass    Fire control:groups    Operating mode:PREDICT    Goal:RETRIEVE    Phase set: "P4"
+Seq. 5    Driver:FallGlass    Recip : FallGlass    Fire control:groups    Operating mode:PREDICT    Goal:RETRIEVE    Phase set: "P4"
+Seq. 6    Driver:FallGlass    Recip : FallGlass    Fire control:groups    Operating mode:PREDICT    Goal:RETRIEVE    Phase set: "P4"
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From NaivePhysics to FallGlass:
+  Groups:
+    From Effect1 to:
+    From CE-1 to:
+    From Effect4 to:
+    From CE-4 to:
+  Props:
+    From P2 to:    P1 = 0.982
+    From P4 to:    "P4" = 0.982
+  SPs:
+    From SP2.1 to:    SP1.1 = 0.992
+    From SP4.1 to:    "SP4.1" = 0.987
+  Preds:
+    From FALL1 to:    FALL1 = 0.970
+    From UNSUPPORTED1 to:    "UNSUPPORTED1" = 0.969
+  Objs:
+    From SUPPORTED to:    GLASS = 0.970
+
+From FallGlass to NaivePhysics:
+  Groups:
+    From "Effect2" to:    Effect2 = 0.876
+    From "CE-2" to:    CE-2 = 0.880
+    From "Cause2" to:    Cause2 = 0.873
+  Props:
+    From P1 to:    P2 = 0.982
+    From "P4" to:    P4 = 0.982
+  SPs:
+    From SP1.1 to:    SP2.1 = 0.992
+    From "SP4.1" to:    SP4.1 = 0.987
+  Preds:
+    From FALL1 to:    FALL1 = 0.970
+    From "UNSUPPORTED1" to:    UNSUPPORTED1 = 0.969
+  Objs:
+    From GLASS to:    SUPPORTED = 0.970
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog FallGlass * * * * *
+
+Groups:
+"Effect2"(0):  P1 EFFECT (0.911) 
+"CE-2"(1):  "Effect2" "Cause2" 
+"Cause2"(2):  "P4" 
+
+Props:
+"P4":  [ "UNSUPPORTED1" + GLASS ] 
+
+Preds:
+"UNSUPPORTED1":
+   FALL1(1.000)
+
+
+Objs:

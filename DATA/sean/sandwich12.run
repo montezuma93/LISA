@@ -1,0 +1,943 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: Auto-Generated Sym File
+Note: "Jill wants a sandwich.  She knows Sam has one.  She asks him for a sandwich."
+Note: "Bob wants a ride.  He knows Jen has a car.  He asks her for a ride."
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 0.5000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Ride    Recip : Sandwich    Fire control:props    Goals: NORMAL     Phase set: P1:WANT (BOB, RIDE)
+Seq. 1    Driver:Ride    Recip : Sandwich    Fire control:props    Goals: NORMAL     Phase set: P2:HAVE (JEN, CAR)
+Seq. 2    Driver:Ride    Recip : Sandwich    Fire control:props    Goals: NORMAL     Phase set: P3:KNOW (BOB, P2)
+Seq. 3    Driver:Sandwich    Recip : Ride Schema    Fire control:props    Goals: NORMAL     Phase set: P1:WANT (JILL, SANDWICH)
+Seq. 4    Driver:Sandwich    Recip : Ride Schema    Fire control:props    Goals: NORMAL     Phase set: P2:HAVE (SAM, SANDWICH)
+Seq. 5    Driver:Sandwich    Recip : Ride Schema    Fire control:props    Goals: NORMAL     Phase set: P3:KNOW (JILL, P2)
+Seq. 6    Driver:Sandwich    Recip : Ride Schema    Fire control:props    Goals: NORMAL     Phase set: P4:ASK (JILL, SAM, SANDWICH)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Sandwich to Ride:
+  Groups:
+  Props:
+    From P1 (IC = 0.621) to:    P1 = 0.990
+    From P2 (IC = 0.620) to:    P2 = 0.982
+    From P3 (IC = 0.621) to:    P3 = 0.990
+    From P4 (IC = 0.500) to:    'P3' = 0.993
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.992
+    From SP4.1 to:    'SP6' = 0.992
+    From SP4.2 to:    'SP7' = 0.992
+    From SP4.3 to:    'SP8' = 0.992
+  Preds:
+    From WANT1 to:    WANT1 = 0.968
+    From WANT2 to:    WANT2 = 0.968
+    From KNOW1 to:    KNOW1 = 0.970
+    From KNOW2 to:    KNOW2 = 0.970
+    From HAVE1 to:    HAVE1 = 0.970
+    From HAVE2 to:    HAVE2 = 0.970
+    From ASK1 to:    'ASK1' = 0.970
+    From ASK2 to:    'ASK2' = 0.970
+    From ASK3 to:    'ASK3' = 0.970
+  Objs:
+    From JILL to:    BOB = 0.970
+    From SAM to:    JEN = 0.970
+    From SANDWICH to:    RIDE = 0.968    CAR = 0.970
+
+From Sandwich to Schema:
+  Groups:
+  Props:
+    From P1 (IC = 0.621) to:    'P0' = 0.990
+    From P2 (IC = 0.620) to:    'P1' = 0.981
+    From P3 (IC = 0.621) to:    'P2' = 0.990
+    From P4 (IC = 0.500) to:    'P3' = 0.993
+  SPs:
+    From SP1.1 to:    'SP0' = 0.993
+    From SP1.2 to:    'SP1' = 0.993
+    From SP2.1 to:    'SP2' = 0.982
+    From SP2.2 to:    'SP3' = 0.990
+    From SP3.1 to:    'SP4' = 0.982
+    From SP3.2 to:    'SP5' = 0.992
+    From SP4.1 to:    'SP6' = 0.988
+    From SP4.2 to:    'SP7' = 0.988
+    From SP4.3 to:    'SP8' = 0.992
+  Preds:
+    From WANT1 to:    'WANT1' = 0.970
+    From WANT2 to:    'WANT2' = 0.970
+    From KNOW1 to:    'KNOW1' = 0.879
+    From KNOW2 to:    'KNOW2' = 0.970
+    From HAVE1 to:    'HAVE1' = 0.879
+    From HAVE2 to:    'HAVE2' = 0.969
+    From ASK1 to:    'ASK1' = 0.879
+    From ASK2 to:    'ASK2' = 0.879
+    From ASK3 to:    'ASK3' = 0.970
+  Objs:
+    From JILL to:    'JILL' = 0.970
+    From SAM to:    'SAM' = 0.879
+    From SANDWICH to:    'SANDWICH' = 0.970
+
+From Ride to Sandwich:
+  Groups:
+  Props:
+    From P1 (IC = 0.621) to:    P1 = 0.990
+    From P2 (IC = 0.621) to:    P2 = 0.982
+    From P3 (IC = 0.621) to:    P3 = 0.990
+    From 'P3' (IC = 0.247) to:    P4 = 0.993
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.992
+    From 'SP6' to:    SP4.1 = 0.992
+    From 'SP7' to:    SP4.2 = 0.992
+    From 'SP8' to:    SP4.3 = 0.992
+  Preds:
+    From WANT1 to:    WANT1 = 0.968
+    From WANT2 to:    WANT2 = 0.968
+    From KNOW1 to:    KNOW1 = 0.970
+    From KNOW2 to:    KNOW2 = 0.970
+    From HAVE1 to:    HAVE1 = 0.970
+    From HAVE2 to:    HAVE2 = 0.970
+    From 'ASK1' to:    ASK1 = 0.970
+    From 'ASK2' to:    ASK2 = 0.970
+    From 'ASK3' to:    ASK3 = 0.970
+  Objs:
+    From BOB to:    JILL = 0.970
+    From JEN to:    SAM = 0.970
+    From RIDE to:    SANDWICH = 0.968
+    From CAR to:    SANDWICH = 0.970
+
+From Schema to Sandwich:
+  Groups:
+  Props:
+    From 'P0' (IC = 0.766) to:    P1 = 0.990
+    From 'P1' (IC = 0.658) to:    P2 = 0.981
+    From 'P2' (IC = 0.517) to:    P3 = 0.990
+    From 'P3' (IC = 0.247) to:    P4 = 0.993
+  SPs:
+    From 'SP0' to:    SP1.1 = 0.993
+    From 'SP1' to:    SP1.2 = 0.993
+    From 'SP2' to:    SP2.1 = 0.982
+    From 'SP3' to:    SP2.2 = 0.990
+    From 'SP4' to:    SP3.1 = 0.982
+    From 'SP5' to:    SP3.2 = 0.992
+    From 'SP6' to:    SP4.1 = 0.988
+    From 'SP7' to:    SP4.2 = 0.988
+    From 'SP8' to:    SP4.3 = 0.992
+  Preds:
+    From 'WANT1' to:    WANT1 = 0.970
+    From 'WANT2' to:    WANT2 = 0.970
+    From 'HAVE1' to:    HAVE1 = 0.879
+    From 'HAVE2' to:    HAVE2 = 0.969
+    From 'KNOW1' to:    KNOW1 = 0.879
+    From 'KNOW2' to:    KNOW2 = 0.970
+    From 'ASK1' to:    ASK1 = 0.879
+    From 'ASK2' to:    ASK2 = 0.879
+    From 'ASK3' to:    ASK3 = 0.970
+  Objs:
+    From 'JILL' to:    JILL = 0.970
+    From 'SANDWICH' to:    SANDWICH = 0.970
+    From 'SAM' to:    SAM = 0.879
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Ride * * * * *
+
+Groups:
+
+Props:
+'P3':  [ 'ASK1' + BOB ] [ 'ASK2' + JEN ] [ 'ASK3' + RIDE ] 
+
+Preds:
+'ASK1':
+   ORGANISM(1.000)
+         PERSON(0.398)
+   SOUL(1.000)
+   LIVING_THING(1.000)
+   BEING(1.000)
+   MORTAL(1.000)
+   INDIVIDUAL(1.000)
+   SOMEONE(1.000)
+   SOMEBODY(1.000)
+   ANIMATE_THING(1.000)
+            APPREHENDER(0.115)
+            KNOWER(0.115)
+         MALE(0.351)
+      BODY(0.654)
+           QUESTIONER(0.234)
+           ARTICULATOR(0.234)
+           QUERIER(0.234)
+           COMMUNICATOR(0.234)
+           UTTERER(0.234)
+           TALKER(0.234)
+           INQUIRER(0.234)
+           SPEAKER(0.234)
+           VERBALISER(0.234)
+           ASKER(0.234)
+           VERBALIZER(0.234)
+           ENQUIRER(0.234)
+      1(0.654)
+      FIGURE(0.654)
+      FLESH(0.654)
+      GRAMMATICAL_CATEGORY(0.654)
+      FRAME(0.654)
+      PHYSICAL_STRUCTURE(0.654)
+      SHAPE(0.654)
+      HUMAN_BODY(0.654)
+      CATEGORY(0.654)
+      SYNTACTIC_CATEGORY(0.654)
+      FORM(0.654)
+      PHYSIQUE(0.654)
+      SOMA(0.654)
+      BUILD(0.654)
+      ORGANIC_STRUCTURE(0.654)
+      FAMILY(0.654)
+      NATURAL_OBJECT(0.654)
+      COLLECTION(0.654)
+      AGGREGATION(0.654)
+      ANATOMY(0.654)
+      CHASSIS(0.654)
+      PHYSICAL_BODY(0.654)
+      CLASS(0.654)
+      MATERIAL_BODY(0.654)
+      BOD(0.654)
+      ACCUMULATION(0.654)
+          FEMALE(0.322)
+
+'ASK2':
+         NEED(0.360)
+         REQUIRE(0.360)
+   CONVEY10(1.000)
+   PASS1(1.000)
+   PUT_ACROSS(1.000)
+   PASS_ON(1.000)
+   COMMUNICATE1(1.000)
+   TRANSFER1(1.000)
+   DISPLACE2(1.000)
+   TRANSMIT10(1.000)
+   MOVE1(1.000)
+   REQUEST1(1.000)
+   COMMUNICATE10(1.000)
+   BESPEAK(1.000)
+   QUEST1(1.000)
+   DEMAND(1.000)
+   CALL_FOR4(1.000)
+   PASS_ALONG(1.000)
+         STATIVE(0.360)
+   ACT(1.000)
+          COMMUNICATION(0.333)
+          TAKE(0.333)
+   INTERACT(1.000)
+   MOVE(1.000)
+          LEAVE2(0.333)
+   INTERCOMMUNICATE(1.000)
+          ASK9(0.333)
+          GIVE9(0.333)
+          CALL_FOR(0.333)
+          NECESSITATE(0.333)
+          IMPART(0.333)
+          INVOLVE7(0.333)
+          INQUIRE1(0.333)
+          TELL(0.333)
+          FORMULATE(0.333)
+          SHOW2(0.333)
+          CONVEY(0.333)
+          PHRASE(0.333)
+          GIVE_VOICE(0.333)
+          EXPECT(0.333)
+          ASK(0.333)
+          REQUIRE1(0.333)
+          POSTULATE(0.333)
+          ADDRESS(0.333)
+   COMMUNICATE(1.000)
+          INFORM(0.333)
+          ARTICULATE2(0.333)
+          ENQUIRE(0.333)
+          EXPRESS1(0.333)
+          EVINCE(0.333)
+          PASS_ON3(0.333)
+          WORD(0.333)
+          ASK1(0.333)
+          ASK2(0.333)
+          ASK4(0.333)
+          TURN_TO1(0.333)
+          ASK5(0.333)
+
+'ASK3':
+   ASK_ROLE_3(1.000)
+   OBJECT(1.000)
+
+
+Objs:
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+
+Props:
+'P0':  [ 'WANT1' + 'JILL' ] [ 'WANT2' + 'SANDWICH' ] 
+'P1':  [ 'WANT1' + 'JILL' ] [ 'HAVE2' + 'SANDWICH' ] 
+'P2':  [ 'WANT1' + 'JILL' ] [ 'KNOW2' + 'P1' ] 
+'P3':  [ 'WANT1' + 'JILL' ] [ 'WANT2' + 'SAM' ] [ 'ASK3' + 'SANDWICH' ] 
+
+Preds:
+'WANT1':
+   ORGANISM(1.000)
+   PERSON(1.000)
+   SOUL(1.000)
+   LIVING_THING(1.000)
+   WANTER(1.000)
+   BEING(1.000)
+   MORTAL(1.000)
+   INDIVIDUAL(1.000)
+   SOMEONE(1.000)
+   SOMEBODY(1.000)
+   ANIMATE_THING(1.000)
+   NEEDER(1.000)
+
+'WANT2':
+        EMOTION(0.500)
+        NEED(0.500)
+        REQUIRE(0.500)
+        WANT(0.500)
+        CONVEY10(0.500)
+        PASS1(0.500)
+        PUT_ACROSS(0.500)
+        CONSUMPTION(0.500)
+        DESIRE(0.500)
+        PASS_ON(0.500)
+        COMMUNICATE1(0.500)
+        TRANSFER1(0.500)
+        LOOK_FOR(0.500)
+        DISPLACE2(0.500)
+        TRANSMIT10(0.500)
+        SEEK(0.500)
+        MOVE1(0.500)
+        REQUEST1(0.500)
+        MISS(0.500)
+        COMMUNICATE10(0.500)
+        BESPEAK(0.500)
+   WANT1(1.000)
+        QUEST1(0.500)
+        DEMAND(0.500)
+        COGNITION(0.500)
+        CALL_FOR4(0.500)
+        PASS_ALONG(0.500)
+        STATIVE(0.500)
+        SEARCH(0.500)
+        CONTACT(0.500)
+        BE3(0.500)
+        LACK(0.500)
+
+'HAVE1':
+   ORGANISM(1.000)
+    PERSON(0.927)
+   SOUL(1.000)
+   LIVING_THING(1.000)
+   BEING(1.000)
+       MORTAL(0.572)
+   INDIVIDUAL(1.000)
+   SOMEONE(1.000)
+   SOMEBODY(1.000)
+   ANIMATE_THING(1.000)
+        MALE(0.509)
+        JUVENILE(0.464)
+        GROWNUP(0.464)
+        TYKE(0.464)
+        IMPLEMENT(0.464)
+        INSTRUMENTALITY(0.464)
+        JUVENILE_PERSON(0.464)
+        YOUNGSTER(0.464)
+        MINOR(0.464)
+        MALE_PERSON(0.464)
+        CUTTING_TOOL(0.464)
+        NIPPER(0.464)
+        TIKE(0.464)
+        TOOL(0.464)
+        SHAVER(0.464)
+        SMALL_FRY(0.464)
+        MAN(0.464)
+        KID(0.464)
+        CUTLERY(0.464)
+        ELECTRIC_RAZOR(0.464)
+        ARTIFACT(0.464)
+        EDGE_TOOL(0.464)
+        ELECTRIC_SHAVER(0.464)
+        NESTLING(0.464)
+        ARTEFACT(0.464)
+        ADULT(0.464)
+        TIDDLER(0.464)
+        RAZOR(0.464)
+        CUTTER(0.464)
+        ADULT_MALE(0.464)
+        FRY(0.464)
+        INSTRUMENTATION(0.464)
+        CHILD(0.464)
+        CUTTING_IMPLEMENT(0.464)
+            BODY(0.121)
+            1(0.121)
+            FIGURE(0.121)
+            FLESH(0.121)
+            GRAMMATICAL_CATEGORY(0.121)
+            FRAME(0.121)
+            PHYSICAL_STRUCTURE(0.121)
+            SHAPE(0.121)
+            HUMAN_BODY(0.121)
+            CATEGORY(0.121)
+            SYNTACTIC_CATEGORY(0.121)
+            FORM(0.121)
+            PHYSIQUE(0.121)
+            SOMA(0.121)
+            BUILD(0.121)
+            ORGANIC_STRUCTURE(0.121)
+            FAMILY(0.121)
+            NATURAL_OBJECT(0.121)
+            COLLECTION(0.121)
+            AGGREGATION(0.121)
+            ANATOMY(0.121)
+            CHASSIS(0.121)
+            PHYSICAL_BODY(0.121)
+            CLASS(0.121)
+            MATERIAL_BODY(0.121)
+            BOD(0.121)
+            ACCUMULATION(0.121)
+
+'HAVE2':
+           CONSUMPTION(0.200)
+           STATIVE(0.200)
+           CONTACT(0.200)
+           BE3(0.200)
+           COUPLE(0.200)
+         UNDERGO4(0.400)
+           JAZZ(0.200)
+           KNOW(0.200)
+           HAVE_IT_OFF(0.200)
+           SLEEP_TOGETHER(0.200)
+           SCREW4(0.200)
+           SLEEP_WITH(0.200)
+           BED(0.200)
+       EXPERIENCE(0.600)
+           TIE1(0.200)
+           HAVE_SEX(0.200)
+           CONNECT(0.200)
+           HAVE_IT_AWAY(0.200)
+           PAIR(0.200)
+           MAKE_LOVE(0.200)
+           LINK_UP(0.200)
+           COPULATE(0.200)
+           LIE_WITH(0.200)
+           BE_INTIMATE(0.200)
+           ROLL_IN_THE_HAY(0.200)
+           DO_IT(0.200)
+           EFF(0.200)
+           GET_LAID(0.200)
+           CONJOIN(0.200)
+           LINK(0.200)
+           GET_IT_ON(0.200)
+           LOVE(0.200)
+           HAVE_A_GO_AT_IT(0.200)
+     CHANGE(0.800)
+           HUMP(0.200)
+           MAKE_OUT(0.200)
+           HAVE_INTERCOURSE(0.200)
+           BONK1(0.200)
+           JOIN(0.200)
+           BANG4(0.200)
+           ACCEPT(0.200)
+           MATE(0.200)
+           FUCK(0.200)
+           FEATURE(0.200)
+           PRODUCE2(0.200)
+           HIT2(0.200)
+           HAVE_GOT(0.200)
+           CARE11(0.200)
+           STIMULATE1(0.200)
+           BIRTH(0.200)
+           LET1(0.200)
+           HAVE4(0.200)
+           BRING_FORTH(0.200)
+           PULL_AHEAD(0.200)
+           MODIFY10(0.200)
+           RACK_UP1(0.200)
+           CAUSE(0.200)
+           HANDLE(0.200)
+           THROW8(0.200)
+           ADVANCE(0.200)
+           DIRECT(0.200)
+   GET(1.000)
+         HOLD(0.400)
+           BEAR1(0.200)
+           INDUCE(0.200)
+           CREATION(0.200)
+           SUFFER1(0.200)
+           MAKE2(0.200)
+         GET1(0.400)
+           TAKE14(0.200)
+           TAKE_IN(0.200)
+           ACT(0.200)
+       MAKE(0.600)
+           DELIVER1(0.200)
+           BODY(0.200)
+           PERCEPTION(0.200)
+           HAVE12(0.200)
+         HAVE2(0.400)
+         RECEIVE3(0.400)
+           CREATE(0.200)
+           HURT2(0.200)
+           GIVE2(0.200)
+           MANAGE(0.200)
+           SOCIAL(0.200)
+           RECEIVE(0.200)
+           CONSUME(0.200)
+           TALLY(0.200)
+           POSSESS(0.200)
+           COMMUNICATION(0.200)
+           GET2(0.200)
+         ACQUIRE(0.400)
+           GET_AHEAD(0.200)
+           GAIN_GROUND(0.200)
+           GIVE_BIRTH(0.200)
+           WIN1(0.200)
+           MAKE_HEADWAY(0.200)
+           POSSESSION(0.200)
+           TAKE(0.200)
+         HAVE6(0.400)
+           HAVE3(0.200)
+         HAVE1(0.400)
+           ALTER1(0.200)
+           GAIN(0.200)
+           GET11(0.200)
+           SCORE(0.200)
+           DEAL13(0.200)
+           OWN(0.200)
+           SUSTAIN(0.200)
+           COMMAND(0.200)
+           HAVE(0.200)
+           INTERACT(0.200)
+           SUFFER(0.200)
+           INGEST(0.200)
+           MAKE4(0.200)
+         HAVE5(0.400)
+           TAKE5(0.200)
+           CONTROL(0.200)
+           CHANGE1(0.200)
+           MOVE(0.200)
+
+'KNOW1':
+   ORGANISM(1.000)
+        PERSON(0.523)
+   SOUL(1.000)
+   LIVING_THING(1.000)
+   BEING(1.000)
+   MORTAL(1.000)
+   INDIVIDUAL(1.000)
+   SOMEONE(1.000)
+   SOMEBODY(1.000)
+   ANIMATE_THING(1.000)
+        APPREHENDER(0.507)
+        KNOWER(0.507)
+          MALE(0.272)
+        BODY(0.507)
+        1(0.507)
+        FIGURE(0.507)
+        FLESH(0.507)
+        GRAMMATICAL_CATEGORY(0.507)
+        FRAME(0.507)
+        PHYSICAL_STRUCTURE(0.507)
+        SHAPE(0.507)
+        HUMAN_BODY(0.507)
+        CATEGORY(0.507)
+        SYNTACTIC_CATEGORY(0.507)
+        FORM(0.507)
+        PHYSIQUE(0.507)
+        SOMA(0.507)
+        BUILD(0.507)
+        ORGANIC_STRUCTURE(0.507)
+        FAMILY(0.507)
+        NATURAL_OBJECT(0.507)
+        COLLECTION(0.507)
+        AGGREGATION(0.507)
+        ANATOMY(0.507)
+        CHASSIS(0.507)
+        PHYSICAL_BODY(0.507)
+        CLASS(0.507)
+        MATERIAL_BODY(0.507)
+        BOD(0.507)
+        ACCUMULATION(0.507)
+           FEMALE(0.249)
+
+'KNOW2':
+        COGNITION(0.500)
+        CONTACT(0.500)
+        SECERNATE(0.500)
+        KNOW12(0.500)
+        TELL1(0.500)
+        SET4(0.500)
+        COUPLE(0.500)
+   COGNIZE(1.000)
+        TELL_APART(0.500)
+        REMEMBER(0.500)
+        THINK(0.500)
+        CEREBRATE(0.500)
+        REALISE1(0.500)
+        UNDERGO4(0.502)
+        JAZZ(0.500)
+        SEPARATE1(0.500)
+        RECOGNIZE1(0.500)
+        RECOGNIZE2(0.500)
+        LIVE(0.500)
+        KNOW(0.500)
+        HAVE_IT_OFF(0.500)
+        GO_THROUGH(0.500)
+        RECALL(0.500)
+        SLEEP_TOGETHER(0.500)
+        SCREW4(0.500)
+        EXPERIENCE1(0.500)
+        AGNIZE(0.500)
+        SLEEP_WITH(0.500)
+        BED(0.500)
+        EXPERIENCE(0.506)
+        TIE1(0.500)
+        HAVE_SEX(0.500)
+        KNOW14(0.500)
+        CONNECT(0.500)
+        RECOLLECT(0.500)
+        SEVERALIZE(0.500)
+        REALIZE1(0.500)
+        HAVE_IT_AWAY(0.500)
+        RETRIEVE(0.500)
+        PAIR(0.500)
+        EVALUATE1(0.500)
+        RECOGNISE2(0.500)
+        DETERMINE1(0.500)
+        KNOW11(0.500)
+        PLACE(0.500)
+        CALL_UP4(0.500)
+        MAKE_LOVE(0.500)
+        LINK_UP(0.500)
+   KNOW1(1.000)
+        CALL_BACK(0.500)
+        THINK2(0.500)
+        KNOW6(0.500)
+        COPULATE(0.500)
+        LIE_WITH(0.500)
+        BE_INTIMATE(0.500)
+        ROLL_IN_THE_HAY(0.500)
+        DO_IT(0.500)
+        ACKNOWLEDGE9(0.500)
+        RECOGNISE1(0.500)
+        EFF(0.500)
+        GET_LAID(0.500)
+        IDENTIFY(0.500)
+        JUDGE(0.500)
+        KNOW4(0.500)
+        KNOW15(0.500)
+        CONJOIN(0.500)
+        LINK(0.500)
+        KNOW2(0.500)
+        GET_IT_ON(0.500)
+        LOVE(0.500)
+        HAVE_A_GO_AT_IT(0.500)
+        KNOW3(0.500)
+        AGNISE(0.500)
+        CHANGE(0.510)
+        HUMP(0.500)
+   COGNISE(1.000)
+        DIFFERENTIATE1(0.500)
+        DISTINGUISH(0.500)
+        MAKE_OUT(0.500)
+        SEE12(0.500)
+        SEVERALISE(0.500)
+        HAVE_INTERCOURSE(0.500)
+        PASS_JUDGMENT(0.500)
+        BONK1(0.500)
+        SECERN1(0.500)
+        JOIN(0.500)
+        COGITATE(0.500)
+        BANG4(0.500)
+        ACCEPT(0.500)
+        MATE(0.500)
+        FUCK(0.500)
+
+'ASK1':
+   ORGANISM(1.000)
+         PERSON(0.398)
+   SOUL(1.000)
+   LIVING_THING(1.000)
+   BEING(1.000)
+   MORTAL(1.000)
+   INDIVIDUAL(1.000)
+   SOMEONE(1.000)
+   SOMEBODY(1.000)
+   ANIMATE_THING(1.000)
+            APPREHENDER(0.115)
+            KNOWER(0.115)
+         MALE(0.351)
+      BODY(0.654)
+           QUESTIONER(0.234)
+           ARTICULATOR(0.234)
+           QUERIER(0.234)
+           COMMUNICATOR(0.234)
+           UTTERER(0.234)
+           TALKER(0.234)
+           INQUIRER(0.234)
+           SPEAKER(0.234)
+           VERBALISER(0.234)
+           ASKER(0.234)
+           VERBALIZER(0.234)
+           ENQUIRER(0.234)
+      1(0.654)
+      FIGURE(0.654)
+      FLESH(0.654)
+      GRAMMATICAL_CATEGORY(0.654)
+      FRAME(0.654)
+      PHYSICAL_STRUCTURE(0.654)
+      SHAPE(0.654)
+      HUMAN_BODY(0.654)
+      CATEGORY(0.654)
+      SYNTACTIC_CATEGORY(0.654)
+      FORM(0.654)
+      PHYSIQUE(0.654)
+      SOMA(0.654)
+      BUILD(0.654)
+      ORGANIC_STRUCTURE(0.654)
+      FAMILY(0.654)
+      NATURAL_OBJECT(0.654)
+      COLLECTION(0.654)
+      AGGREGATION(0.654)
+      ANATOMY(0.654)
+      CHASSIS(0.654)
+      PHYSICAL_BODY(0.654)
+      CLASS(0.654)
+      MATERIAL_BODY(0.654)
+      BOD(0.654)
+      ACCUMULATION(0.654)
+          FEMALE(0.322)
+
+'ASK2':
+         NEED(0.360)
+         REQUIRE(0.360)
+   CONVEY10(1.000)
+   PASS1(1.000)
+   PUT_ACROSS(1.000)
+   PASS_ON(1.000)
+   COMMUNICATE1(1.000)
+   TRANSFER1(1.000)
+   DISPLACE2(1.000)
+   TRANSMIT10(1.000)
+   MOVE1(1.000)
+   REQUEST1(1.000)
+   COMMUNICATE10(1.000)
+   BESPEAK(1.000)
+   QUEST1(1.000)
+   DEMAND(1.000)
+   CALL_FOR4(1.000)
+   PASS_ALONG(1.000)
+         STATIVE(0.360)
+   ACT(1.000)
+          COMMUNICATION(0.333)
+          TAKE(0.333)
+   INTERACT(1.000)
+   MOVE(1.000)
+          LEAVE2(0.333)
+   INTERCOMMUNICATE(1.000)
+          ASK9(0.333)
+          GIVE9(0.333)
+          CALL_FOR(0.333)
+          NECESSITATE(0.333)
+          IMPART(0.333)
+          INVOLVE7(0.333)
+          INQUIRE1(0.333)
+          TELL(0.333)
+          FORMULATE(0.333)
+          SHOW2(0.333)
+          CONVEY(0.333)
+          PHRASE(0.333)
+          GIVE_VOICE(0.333)
+          EXPECT(0.333)
+          ASK(0.333)
+          REQUIRE1(0.333)
+          POSTULATE(0.333)
+          ADDRESS(0.333)
+   COMMUNICATE(1.000)
+          INFORM(0.333)
+          ARTICULATE2(0.333)
+          ENQUIRE(0.333)
+          EXPRESS1(0.333)
+          EVINCE(0.333)
+          PASS_ON3(0.333)
+          WORD(0.333)
+          ASK1(0.333)
+          ASK2(0.333)
+          ASK4(0.333)
+          TURN_TO1(0.333)
+          ASK5(0.333)
+
+'ASK3':
+   ASK_ROLE_3(1.000)
+   OBJECT(1.000)
+
+
+Objs:
+'JILL':
+   ORGANISM(1.000)
+   SOUL(1.000)
+   LIVING_THING(1.000)
+   BEING(1.000)
+   MORTAL(1.000)
+   INDIVIDUAL(1.000)
+   SOMEONE(1.000)
+   SOMEBODY(1.000)
+   ANIMATE_THING(1.000)
+       MALE(0.576)
+   BODY(1.000)
+   1(1.000)
+   FIGURE(1.000)
+   FLESH(1.000)
+   GRAMMATICAL_CATEGORY(1.000)
+   FRAME(1.000)
+   PHYSICAL_STRUCTURE(1.000)
+   SHAPE(1.000)
+   HUMAN_BODY(1.000)
+   CATEGORY(1.000)
+   SYNTACTIC_CATEGORY(1.000)
+   FORM(1.000)
+   PHYSIQUE(1.000)
+   SOMA(1.000)
+   BUILD(1.000)
+   ORGANIC_STRUCTURE(1.000)
+   FAMILY(1.000)
+   NATURAL_OBJECT(1.000)
+   COLLECTION(1.000)
+   AGGREGATION(1.000)
+   ANATOMY(1.000)
+   CHASSIS(1.000)
+   PHYSICAL_BODY(1.000)
+   CLASS(1.000)
+   MATERIAL_BODY(1.000)
+   BOD(1.000)
+   ACCUMULATION(1.000)
+        FEMALE(0.451)
+
+'SANDWICH':
+         CHANGE(0.365)
+      INSTRUMENTALITY(0.727)
+      ARTIFACT(0.727)
+      ARTEFACT(0.727)
+      INSTRUMENTATION(0.727)
+         ACT(0.365)
+         MOVE(0.365)
+   1(1.000)
+          NUTRITION(0.281)
+          NOURISHMENT(0.281)
+          ALIMENT(0.281)
+          NUTRIMENT(0.281)
+          SUSTENANCE(0.281)
+          ALIMENTATION(0.281)
+          DISH(0.281)
+          SNACK_FOOD(0.281)
+          VICTUALS(0.281)
+         MECHANICAL_DEVICE(0.365)
+         TRAVEL(0.365)
+         HUMAN_ACTION(0.365)
+         DRIVE(0.365)
+         MECHANISM(0.365)
+         MOTION(0.365)
+         DEVICE(0.365)
+         JOURNEY(0.365)
+         TRAVELING(0.365)
+         ACTION(0.365)
+         TRAVELLING(0.365)
+         DEED(0.365)
+         JOURNEYING(0.365)
+         MOVEMENT(0.365)
+         RAILROAD_CAR(0.362)
+         SELF-PROPELLED_VEHICLE(0.362)
+         ELEVATOR_CAR(0.362)
+         TRANSPORT(0.362)
+         CONTAINER(0.362)
+         AREA(0.362)
+         AUTOMOBILE(0.362)
+         MACHINE(0.362)
+         WHEELED_VEHICLE(0.362)
+         VEHICLE(0.362)
+         COMPARTMENT(0.362)
+         RAILCAR(0.362)
+         AUTO(0.362)
+         MOTORCAR(0.362)
+         CONSTRUCTION(0.362)
+         MOTOR_VEHICLE(0.362)
+         AUTOMOTIVE_VEHICLE(0.362)
+         CABLE_CAR(0.362)
+         STRUCTURE(0.362)
+         ROOM(0.362)
+         RAILWAY_CAR(0.362)
+         CONVEYANCE(0.362)
+         GONDOLA(0.362)
+
+'SAM':
+   ORGANISM(1.000)
+   SOUL(1.000)
+   LIVING_THING(1.000)
+   BEING(1.000)
+   MORTAL(1.000)
+   INDIVIDUAL(1.000)
+   SOMEONE(1.000)
+   SOMEBODY(1.000)
+   ANIMATE_THING(1.000)
+        MALE(0.497)
+   BODY(1.000)
+   1(1.000)
+   FIGURE(1.000)
+   FLESH(1.000)
+   GRAMMATICAL_CATEGORY(1.000)
+   FRAME(1.000)
+   PHYSICAL_STRUCTURE(1.000)
+   SHAPE(1.000)
+   HUMAN_BODY(1.000)
+   CATEGORY(1.000)
+   SYNTACTIC_CATEGORY(1.000)
+   FORM(1.000)
+   PHYSIQUE(1.000)
+   SOMA(1.000)
+   BUILD(1.000)
+   ORGANIC_STRUCTURE(1.000)
+   FAMILY(1.000)
+   NATURAL_OBJECT(1.000)
+   COLLECTION(1.000)
+   AGGREGATION(1.000)
+   ANATOMY(1.000)
+   CHASSIS(1.000)
+   PHYSICAL_BODY(1.000)
+   CLASS(1.000)
+   MATERIAL_BODY(1.000)
+   BOD(1.000)
+   ACCUMULATION(1.000)
+        FEMALE(0.532)
+

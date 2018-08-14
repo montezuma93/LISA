@@ -1,0 +1,40 @@
+Note: Verb 2: Attempt to implement past tense rule in LISA as a single proposition
+Note: This version treats the stem and suffix as separate propositions
+
+Analog VerbRule { Analog 0
+  DefPreds
+    AddEnding 0 [ stem verb word ] [ suffix ending ] ;
+  end
+  DefObjs
+    Verb ;
+    ED 'E1' 'D2' ;
+  end
+  DefProps
+    P1 AddEnding ( Verb ED ) ;
+  end
+done {
+
+Analog Walk { 
+  DefPreds
+    Stem 0 [ stem verb word ] ;
+  end
+  DefObjs
+    Gorby W1 A2 L3 K4 ;
+  end
+  DefProps
+    P1 Stem ( Gorby ) ;
+  end
+
+done
+
+Sequence { 
+  Driver=[ 1 ] 
+  Recip=[ 0 ] { 
+  Order=[ P1 h ]
+  
+  SSL_OK
+  Driver=[ 0 ] 
+  Recip=[ 1 ]
+  Order=[ P1 h P1 h ] { fire 2 props
+done.
+    

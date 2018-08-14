@@ -1,0 +1,116 @@
+Run of LISA Version Ex 2.01; last modified 12/18/13
+
+Note: fds
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:NL    Recip : PA    Fire control:props    Goals: NORMAL     Phase set: P1:SELFREFERABLE (NL) P2:HASUNPROVABLESTATEMENT (NL) P3:INCOMPLETE (NL) P2:HASUNPROVABLESTATEMENT (NL) P3:INCOMPLETE (NL) P1:SELFREFERABLE (NL)
+Seq. 1    Driver:PA    Recip : NL    Fire control:props    Goals: NORMAL     Phase set: P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA)
+Seq. 2    Driver:NL    Recip : PA    Fire control:props    Goals: NORMAL     Phase set: P1:SELFREFERABLE (NL) P2:HASUNPROVABLESTATEMENT (NL) P3:INCOMPLETE (NL) P2:HASUNPROVABLESTATEMENT (NL) P3:INCOMPLETE (NL) P1:SELFREFERABLE (NL)
+Seq. 3    Driver:NL    Recip : PA    Fire control:props    Goals: NORMAL     Phase set: P1:SELFREFERABLE (NL) P2:HASUNPROVABLESTATEMENT (NL) P3:INCOMPLETE (NL) P2:HASUNPROVABLESTATEMENT (NL) P3:INCOMPLETE (NL) P1:SELFREFERABLE (NL)
+Seq. 4    Driver:PA    Recip : NL    Fire control:props    Goals: NORMAL     Phase set: P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA) P1:INCOMPLETE (PA)
+Seq. 5    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P1:SELFREFERABLE (NL)
+Seq. 6    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P2:HASUNPROVABLESTATEMENT (NL)
+Seq. 7    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P1:SELFREFERABLE (NL)
+Seq. 8    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P1:SELFREFERABLE (NL)
+Seq. 9    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P1:SELFREFERABLE (NL)
+Seq. 10    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P2:HASUNPROVABLESTATEMENT (NL)
+Seq. 11    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P2:HASUNPROVABLESTATEMENT (NL)
+Seq. 12    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P3:INCOMPLETE (NL)
+Seq. 13    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P2:HASUNPROVABLESTATEMENT (NL)
+Seq. 14    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P2:HASUNPROVABLESTATEMENT (NL)
+Seq. 15    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P3:INCOMPLETE (NL)
+Seq. 16    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: P3:INCOMPLETE (NL)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From NL to PA:
+  Groups:
+    From Cause-1 to:
+    From Effect-1 to:
+    From CE-1 (IC = 1.000) to:    'CE-0' = 0.879
+    From CE-2 (IC = 1.000) to:    'CE-4' = 0.879
+  Props:
+  SPs:
+  Preds:
+  Objs:
+
+From PA to NL:
+  Groups:
+    From 'CE-0' (IC = 0.997) to:    CE-1 = 0.879
+    From 'Cause-1' to:
+    From 'Effect-2' to:
+    From 'Cause-3' to:
+    From 'CE-4' (IC = 0.947) to:    CE-2 = 0.879
+  Props:
+  SPs:
+  Preds:
+  Objs:
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog PA * * * * *
+
+Groups:
+'CE-0' (index = 0 level =1):  
+	Inductive confidence = 0.997
+     Semantics: CAUSE-EFFECT (0.875) CS_1.0 (0.875) 
+
+     Groups: 
+     'Cause-1' (index = 1 level =0):  
+          Semantics: CAUSE (0.778) 
+
+
+     'Effect-2' (index = 2 level =0):  
+          Semantics: EFFECT (0.778) 
+
+
+     'Cause-3' (index = 3 level =0):  
+          Semantics: CAUSE (0.778) 
+
+
+
+'Cause-1' (index = 1 level =0):  
+     Semantics: CAUSE (0.778) 
+
+
+'Effect-2' (index = 2 level =0):  
+     Semantics: EFFECT (0.778) 
+
+
+'Cause-3' (index = 3 level =0):  
+     Semantics: CAUSE (0.778) 
+
+
+'CE-4' (index = 4 level =1):  
+	Inductive confidence = 0.947
+     Semantics: CAUSE-EFFECT (0.875) CS_1.0 (0.875) 
+
+     Groups: 
+
+
+Props:
+
+Preds:
+
+Objs:

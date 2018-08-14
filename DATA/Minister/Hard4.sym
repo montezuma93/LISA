@@ -1,0 +1,133 @@
+Note: Minister/Hard4.sym 
+Note: First attempt to produce the “Coke used to contain cocaine” explanation
+Note: Same difficulties as Hard3 and then some:
+Note: Coke containing cocaine is an Instantiation of a more general
+Note:   kind of situation… and one that ministers might disapprove of
+Note: This need to appreciate x as an instantiation of y, where ministers
+Note:   might not like any kind f y, is a new problem I’m not sure we’re
+Note:   prepared to solve (aiee!)
+
+Analog Garbage { index = 0
+   DefPreds
+     has 2 state has1 has2 has3 ;
+     goto 2 ptrans goto1 goto2 goto3 ;
+     want 2 state want1 want2 want3 ;
+     driveto 3 ptrans goto drive vehicle drive2 drive3 ;
+   end ; { def preds
+   DefObjs
+     Bill human adult male bill1 bill2 bill3 ;
+     Jeep artifact vehicle car american shit jeep ;
+     Beach location beach commerce recreation ocean sand ;
+   end ; { def objs
+   DefProps
+     P1 has ( Bill Jeep ) ;
+     P2 goto ( Bill Beach ) ;
+     P3 want ( Bill P2 ) ;
+     P4 driveto ( Bill Jeep Beach ) ;
+   end ; { def props
+   DefGroups
+     Cause ( P3 ) ( P4 ) ;
+     Enable ( P1 ) ( P4 ) ; { will be called "Enables1"
+   end ;
+done ; { garbage analog
+
+Analog Coke&Cocaine { 1
+  DefPreds
+    contained [ time=past container holder product ] 
+              [ time=past containee held ingredient ] ;
+    illegal [ law illegal not-legal immoral ] ;
+    was-immoral [ time=past ethics evil negative immoral -moral ] ;
+    manufacture 2 activity =0.1 make produce manufacture ;
+  end
+  DefObjs
+    Coke inanimate =0.1 manufactured =0.1 product =0.1 beverage sweet coke ;
+    cocaine inanimate =0.1 manufactured =0.1 drug illegal cocaine opiate addictive ;
+    Coke-corp manufacturer company make coke coke-corp ;
+  end
+  DefProps
+    P1 contained ( Coke cocaine ) ;
+    P2 illegal ( cocaine ) ;
+    P3 was-immoral ( Coke ) ;
+    P4 manufacture ( Coke-corp Coke ) ;
+    P5 was-immoral ( Coke-corp ) ;
+  end
+  DefGroups
+    Cause ( P1 P2 ) ( P3 ) 0.5 ;
+    Cause ( P3 P4 ) ( P5 ) 1.0 ;
+  end
+done { schema
+
+Analog DisagreeSchema { 2
+  DefPreds
+    support 2 activity =0.1 help facilitate support ;
+    oppose 2 activity =0.1 -help -facilitate -support dislike oppose ; 
+    disagree-with 2 mental =0.1 state =0.1 -agree –like dislike disagree ;
+  end
+  DefObjs
+    person animate object =0.1 human person ;
+    entity organization object =0.1 person ;
+    a-cause abstract goal desire work-toward a-cause ;
+  end
+  DefProps
+    P1 oppose ( person a-cause ) ;
+    P2 support ( entity a-cause ) ;
+    P3 disagree-with ( person entity ) ;
+  end
+  DefGroups
+    Cause ( P1 P2 ) ( P3 ) 1.0 ;
+  end
+done { schema
+
+Analog MinisterSchema { tells all about ministers; index = 3
+  DefPreds
+    dislike 2 state =0.1 disposition -like -prefer dislike ;
+    like 2 state =0.1 disposition like -dislike prefer ;
+    conservative [ state =0.1 political conservative old-school -liberal -modern ] ;
+    uptight [ state =0.1 old-school -relaxed uptight ] ;
+    religious [ state =0.1 religion ethics morals religious ignorant willful old-school ] ;
+    immoral [ property =0.1 ethics morals evil negative -moral -good immoral ] ;
+  end
+  DefObjs
+    minister animate =0.1 human =0.1 person minister religious moral ;
+    immoral-stuff object =0.1 ethics morals evil -moral -good immoral immoral-stuff ;
+  end
+  DefProps
+    P1 uptight ( minister ) ;
+    P2 conservative ( minister ) ;
+    P3 religious ( minister ) ;
+    P4 immoral ( immoral-stuff ) ;
+    P5 dislike ( minister immoral-stuff ) ;
+  end
+  DefGroups
+    { Cause ( P1 P4 ) ( P5 ) ;
+    { Cause ( P2 P4 ) ( P5 ) ;
+    { Cause ( P3 P4 ) ( P5 ) ;
+    Cause ( P4 ) ( P5 ) ;
+  end
+done { minister schema
+
+Analog Explanandum { index = 4
+  DefPreds
+    dislike 2 state =0.1 disposition -like -prefer dislike ;
+  end
+  DefObjs
+    minister animate =0.1 human =0.1 person minister religious moral ;
+    Coke inanimate =0.1 manufactured -0.1 product =0.1 beverage sweet coke ;
+  end
+  DefProps
+    P1 dislike ( minister coke ) ;
+  end
+  DefGroups
+    Explanandum
+      Props: P1 %
+      Semantics: Effect %
+      %%
+  end
+done { explandum
+
+Sequence { no hand-holding here
+  Driver=[ 4 ]
+  Goal= Explain   { turn on explanation mode just before last prop
+  Order=[ Explanandum ( 1 1 ) ]
+done.
+    

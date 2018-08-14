@@ -1,0 +1,113 @@
+Run of LISA Version Ex 1.09; last modified 4/19/08
+
+Note: Minister/Easy2.sym
+Note: First earnest attempt to simulate explanation of why ministers prefer Coke
+Note: This is easy 'cause all the relevant knowledge is in one analog and 'cause
+Note:  there is no distracting info.  Just the Most Basic test of whether LISA
+Note:  can do it at all.  If it succeeds on this, Then we'll branch out...
+Note: 4/18/08:
+Note: Removing the manufacture() prop from the schema
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Minister    Recip :    Fire control:groups    Goals: EXPLAIN RETRIEVE     Phase set: P1
+Seq. 1    Driver:Minister    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1
+Seq. 2    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1
+Seq. 3    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P5
+Seq. 4    Driver:Minister    Recip :    Fire control:groups-d    Goals: EXPLAIN RETRIEVE     Phase set: "P5"
+Seq. 5    Driver:Minister    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: "P5"
+Seq. 6    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P5
+Seq. 7    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P3
+Seq. 8    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P4
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Minister * * * * *
+
+Groups:
+"CE-1"(1):  EXPLANANDUM "CAUSE1" CAUSE-EFFECT (0.668) CS_0.5 (0.668) 
+"CAUSE1"(2):  "P5" CAUSE (0.668) 
+EFFECT2(3):  "P5" EFFECT (1.000) 
+"EFFECT2"(4):  "P5" EFFECT (0.690) 
+"CE-2"(5):  "EFFECT2" "CAUSE2" CAUSE-EFFECT (0.668) CS_1.0 (0.668) 
+"CAUSE2"(6):  "P3" "P4" CAUSE (0.668) 
+EFFECT3(7):  "P5" EFFECT (1.000) 
+
+Props:
+"P5":  [ "AGREE-WITH1" + MINISTER ] [ "AGREE-WITH2" + "MANUFACTURER" ] 
+"P5":  [ "AGREE-WITH1" + "PERSON" ] [ "AGREE-WITH2" + "MANUFACTURER" ] 
+"P3":  [ "SUPPORT1" + "MANUFACTURER" ] [ "SUPPORT2" + "A-CAUSE" ] 
+"P4":  [ "SUPPORT1" + "PERSON" ] [ "SUPPORT2" + "A-CAUSE" ] 
+
+Preds:
+"AGREE-WITH1":
+   AGREE1(1.000)
+
+"AGREE-WITH2":
+   AGREE2(1.000)
+
+"AGREE-WITH1":
+   AGREE1(1.000)
+
+"AGREE-WITH2":
+   AGREE2(1.000)
+
+"SUPPORT1":
+   HELP1(1.000)
+   FACILITATE1(1.000)
+   SUPPORT1(1.000)
+
+"SUPPORT2":
+   HELP2(1.000)
+   FACILITATE2(1.000)
+   SUPPORT2(1.000)
+
+
+Objs:
+"MANUFACTURER":
+   COMPANY(1.000)
+   ORGANIZATION(1.000)
+   PRODUCE(1.000)
+   MAKE(1.000)
+   MANUFACTURER(1.000)
+
+"PERSON":
+   ANIMATE(1.000)
+   HUMAN(1.000)
+   PERSON(1.000)
+
+"MANUFACTURER":
+   COMPANY(1.000)
+   ORGANIZATION(1.000)
+   PRODUCE(1.000)
+   MAKE(1.000)
+   MANUFACTURER(1.000)
+
+"A-CAUSE":
+   ABSTRACT(1.000)
+   GOAL(1.000)
+   DESIRE(1.000)
+   WORK-TOWARD(1.000)
+

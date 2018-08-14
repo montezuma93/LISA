@@ -1,0 +1,77 @@
+Run of LISA Version Ex 2.01; last modified 12/18/13
+
+Note: modus_ponens.sym
+Note: A present for Selmer: First (recent) attempt to implement deductive logic in LISA
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Example    Recip : ModusPonens    Fire control:props    Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 1    Driver:Example    Recip : ModusPonens    Fire control:props    Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 2    Driver:Example    Recip : ModusPonens    Fire control:props    Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 3    Driver:Example    Recip : ModusPonens    Fire control:props    Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 4    Driver:ModusPonens    Recip : Example    Fire control:groups    Goals: NORMAL     Phase set: P5:TRUE (P2)
+Seq. 5    Driver:ModusPonens    Recip : Example    Fire control:groups    Goals: NORMAL     Phase set: P5:TRUE (P2)
+Seq. 6    Driver:ModusPonens    Recip : Example    Fire control:groups    Goals: NORMAL     Phase set: P5:TRUE (P2)
+Seq. 7    Driver:ModusPonens    Recip : Example    Fire control:groups    Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 8    Driver:ModusPonens    Recip : Example    Fire control:groups    Goals: NORMAL     Phase set: P4:TRUE (P1)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From ModusPonens to Example:
+  Groups:
+  Props:
+    From P1 (IC = 0.806) to:    P1 = 0.979
+    From P2 (IC = 0.618) to:
+    From P3 (IC = 0.621) to:    P3 = 0.990
+    From P4 (IC = 0.619) to:    P4 = 0.982
+    From P5 (IC = 0.616) to:    P2 = 0.968
+  SPs:
+    From SP1.1 to:    SP4.1 = 0.987
+    From SP3.1 to:    SP3.1 = 0.992
+    From SP3.2 to:    SP3.2 = 0.992
+    From SP4.1 to:    SP4.1 = 0.989
+    From SP5.1 to:    SP2.1 = 0.218    SP2.2 = 0.218
+  Preds:
+    From TRUE1 to:    INGEST1 = 0.082    INGEST2 = 0.082    TRUE1 = 0.957
+    From IMPLIES1 to:    IMPLIES1 = 0.968
+    From IMPLIES2 to:    IMPLIES2 = 0.968
+    From P1 to:    TRUE1 = 0.969
+  Objs:
+
+From Example to ModusPonens:
+  Groups:
+  Props:
+    From P1 (IC = 0.826) to:    P1 = 0.979
+    From P2 (IC = 0.691) to:    P5 = 0.968
+    From P3 (IC = 0.621) to:    P3 = 0.990
+    From P4 (IC = 0.693) to:    P4 = 0.982
+  SPs:
+    From SP2.1 to:    SP5.1 = 0.218
+    From SP2.2 to:    SP5.1 = 0.218
+    From SP3.1 to:    SP3.1 = 0.992
+    From SP3.2 to:    SP3.2 = 0.992
+    From SP4.1 to:    SP1.1 = 0.987    SP4.1 = 0.989
+  Preds:
+    From TRUE1 to:    P1 = 0.969    TRUE1 = 0.957
+    From IMPLIES1 to:    IMPLIES1 = 0.968
+    From IMPLIES2 to:    IMPLIES2 = 0.968
+    From INGEST1 to:    TRUE1 = 0.082
+    From INGEST2 to:    TRUE1 = 0.082
+  Objs:
+

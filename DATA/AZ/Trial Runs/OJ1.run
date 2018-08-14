@@ -1,0 +1,133 @@
+Run of LISA Version Ex 1.16; last modified 9/30/13
+
+Note: Andrei&Zack/OJ1.sym
+Note: Why do we drink OJ for breakfast?
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Minister    Recip :    Fire control:groups (EXPLANANDUM)     Goals: EXPLAIN RETRIEVE     Phase set: P1:DRINK (LARRY, OJ)
+Seq. 1    Driver:Minister    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:DRINK (LARRY, OJ)
+Seq. 2    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:DRINK (PERSON, OJ)
+Seq. 3    Driver:WorkSpace    Recip : Minister    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P3:HAS (OJ, VITC)
+
+
+* * * Current Mapping Connections From Minister to WorkSpace * * *
+  Groups:
+    From EXPLANANDUM to:    EFFECT2 = 0.969
+    From 'CE-1' to:    CE-2 = 0.969
+    From 'CAUSE2' to:    CAUSE2 = 0.967
+  Props:
+    From P1 to:    P1 = 0.990
+    From 'P1' to:    P3 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From 'SP2' to:    SP3.1 = 0.990
+    From 'SP3' to:    SP3.2 = 0.993
+  Preds:
+    From DRINK1 to:    DRINK1 = 0.968
+    From DRINK2 to:    DRINK2 = 0.968
+    From 'HAS1' to:    HAS1 = 0.969
+    From 'HAS2' to:    HAS2 = 0.970
+  Objs:
+    From OJ to:    OJ = 0.968
+    From LARRY to:    PERSON = 0.968
+    From 'VITC' to:    VITC = 0.970
+
+
+
+* * * * Inferred Groups and Props in Explanandum * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_1.0 (0.725) 
+
+     Groups: 
+     EXPLANANDUM (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DRINK (LARRY, OJ) 
+
+     'CAUSE2' (index = 2 level =0):  
+          Semantics: CAUSE (0.725) 
+          Props: 'P1')  
+
+
+'CAUSE2' (index = 2 level =0):  
+     Semantics: CAUSE (0.725) 
+     Props: 'P1')  
+
+
+Props:
+'P1':  [ 'HAS1' + OJ ] [ 'HAS2' + 'VITC' ] 
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Minister * * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_1.0 (0.725) 
+
+     Groups: 
+     EXPLANANDUM (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DRINK (LARRY, OJ) 
+
+     'CAUSE2' (index = 2 level =0):  
+          Semantics: CAUSE (0.725) 
+          Props: 'P1')  
+
+
+'CAUSE2' (index = 2 level =0):  
+     Semantics: CAUSE (0.725) 
+     Props: 'P1')  
+
+EFFECT2 (index = 3 level =0):  
+     Semantics: EFFECT (1.000) 
+     Props: 'P1')  
+
+
+Props:
+'P1':  [ 'HAS1' + OJ ] [ 'HAS2' + 'VITC' ] 
+
+Preds:
+'HAS1':
+   STATE1(1.000)
+   POSSESS1(1.000)
+   HAS1(1.000)
+
+'HAS2':
+   STATE2(1.000)
+   POSSESS2(1.000)
+   HAS2(1.000)
+
+
+Objs:
+'VITC':
+   BREAKFAST(1.000)
+   HEALTH(1.000)
+   VITAMIN(1.000)
+   OJ(1.000)
+

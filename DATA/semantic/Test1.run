@@ -1,0 +1,28 @@
+Run of LISA Version Ex 1.12; last modified 10/08/08
+
+Note: Semantic/test1.sym
+Note: First attempt to fuck with semantic relations and detect contradictions
+Note: has (bird wheels )
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:ToVerify    Recip :    Fire control:groups    Goals: VERIFY RETRIEVE     Phase set: P1:HAS (BIRD, WHEELS)
+Seq. 1    Driver:ToVerify    Recip : WorkSpace    Fire control:groups-d    Goals: VERIFY MAP     Phase set: P1:HAS (BIRD, WHEELS)
+Seq. 2    Driver:ToVerify    Recip : WorkSpace    Fire control:groups-d    Goals: VERIFY MAP     Phase set: P1:HAS (BIRD, WHEELS)
+
+Contradiction detected underTHING.  Active members are: LIVING, NON-LIVING
+Simulation iteration (i.e., total RT) =1345
+

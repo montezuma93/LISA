@@ -1,0 +1,20 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: This is an attempt to make a REAL sym file for MatLab LISA
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 0.5000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Abe&Beth    Recip : Amy&Bill    Fire control:props    Goals: NORMAL     Phase set: P1:LOVES (ABE, BETH) P2:LOVES (BETH, CHAD)

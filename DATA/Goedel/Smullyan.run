@@ -1,0 +1,63 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: fds
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S3:B (S01)
+Seq. 1    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S3:B (S01)
+Seq. 2    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S3:B (S01)
+Seq. 3    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S01:B (P)
+Seq. 4    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S4:B (S02)
+Seq. 5    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S4:B (S02)
+Seq. 6    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S1:B (S03)
+Seq. 7    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S1:B (S03)
+Seq. 8    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S5:B (CONTRADICTION)
+Seq. 9    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S5:B (CONTRADICTION)
+Seq. 10    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S5:B (CONTRADICTION)
+Seq. 11    Driver:NL    Recip : PA    Fire control:groups    Goals: NORMAL     Phase set: S4:B (S02)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From NL to PA:
+  Groups:
+  Props:
+    From S3 (IC = 0.618) to:    S01 = 0.982
+    From S5 (IC = 0.618) to:    S5 = 0.982
+  SPs:
+    From SS3.1 to:    SS01.1 = 0.987
+    From SS5.1 to:    SS5.1 = 0.992
+  Preds:
+    From B1 to:    RHO1 = 0.968
+  Objs:
+    From CONTRADICTION to:    CONTRADICTION = 0.968
+
+From PA to NL:
+  Groups:
+  Props:
+    From S01 (IC = 0.618) to:    S3 = 0.982
+    From S5 (IC = 0.618) to:    S5 = 0.982
+  SPs:
+    From SS01.1 to:    SS3.1 = 0.987
+    From SS5.1 to:    SS5.1 = 0.992
+  Preds:
+    From RHO1 to:    B1 = 0.968
+  Objs:
+    From CONTRADICTION to:    CONTRADICTION = 0.968
+

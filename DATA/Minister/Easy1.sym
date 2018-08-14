@@ -1,0 +1,57 @@
+Note: Minister/Easy1.sym
+Note: First earnest attempt to simulate explanation of why ministers prefer Coke
+Note: This is easy 'cause all the relevant knowledge is in one analog and 'cause
+Note:  there is no distracting info.  Just the Most Basic test of whether LISA
+Note:  can do it at all.  If it succeeds on this, Then we'll branch out...
+
+Analog Schema
+  DefPreds
+    prefer 2 mental =0.1 state =0.1 like likemore prefer ;
+    manufacture 2 activity =0.1 make produce manufacture ;
+    support 2 activity =0.1 help facilitate support ;
+    agree-with 2 mental =0.1 state =0.1 agree ;
+  end
+  DefObjs
+    person animate object =0.1 human person ;
+    product inanimate object =0.1 manufactured product ;
+    manufacturer company organization produce make manufacturer ;
+    a-cause abstract goal desire work-toward ;
+  end
+  DefProps
+    P1 prefer ( person product ) ;
+    P2 manufacture ( manufacturer product ) ;
+    P3 support ( manufacturer a-cause ) ;
+    P4 support ( person a-cause ) ;
+    P5 agree-with ( person manufacturer )
+  end
+  DefGroups
+    Cause ( P5 P2 ) ( P1 ) 0.5 ;
+    Cause ( P3 P4 ) ( P5 ) 1.0 ;
+  end
+done { schema
+
+Analog Minister
+  DefPreds
+    prefer 2 state =0.1 like likemore prefer ;
+  end
+  DefObjs
+    minister animate object human person minister religious ;
+    coke inanimate manufactured product beverage sweet coke ;
+  end
+  DefProps
+    P1 prefer ( minister coke ) ;
+  end
+  DefGroups
+    Explanandum
+      Props: P1 %
+      Semantics: Effect %
+      %%
+  end
+done { glass example
+
+Sequence { lots of hand-holding here
+  Driver=[ 1 ]
+  Goal= Explain   { turn on explanation mode just before last prop
+  Order=[ Explanandum ( 1 1 ) ]
+done.
+    

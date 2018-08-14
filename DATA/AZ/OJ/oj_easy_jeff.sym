@@ -1,0 +1,93 @@
+Note: Andrei&Zack/OJ_easy.sym
+Note: Why do we drink OJ for breakfast?
+Note: Low-hanging fruit (or so John thinks)
+
+Analog LTM { put all of knowledge, both generics and specifics, into a single LTM: Analog 0
+  DefPreds
+    { common preds
+    delicious 1 taste good yum delicious tasty refreshing tangy citrus tart ;
+    has 2 state possess has contains includes ;
+    drink 2 ingest consume liquid swallow liquid ;
+    part_of 2 part constituent component element content ;
+    smells 2 odor scent smell olfaction aroma fragrance ;
+    alerting 1 awake morning sleepy awake wakes ;
+    extrinsic_cause 1 history crops florida growers history ;  
+    { larry, the fetishist
+    { joan the mechanic
+    isa 2 kind class set isa ;
+    { sally the divorcee
+  end
+  DefObjs
+    { common objects
+    OJ orange juice liquid breakfast morning ;
+    vitC health vitamin OJ breakfast immune ;
+    breakfast food morning meal breakfast ;
+    refreshing state fresh yum alert refreshing ;
+    history crops florida growers history ; 
+    person human person animate alive ;
+    { larry, the fetishist
+    larry human person animate alive male banker deserves_death 1% larry ;
+    fetish desire unusual freaky sexual strong unusual compulsion ;
+    { joan the mechanic
+    Joan human person animate alive female old nice mom mechanic joan ;
+    mechanic human person profession cars machines skill talent blue_collar ;
+    { sally the divorcee
+    Sally human person animate alive female young tired divorcee teen_mom sally ;
+    divorcee human person married_once divorced single angry ;
+  end
+  DefProps
+    { generic schema
+    P1 drink ( person OJ ) ;
+    P2 part_of ( OJ breakfast ) ;
+    P3 has ( OJ vitC ) ;
+    P4 delicious ( OJ ) ;
+    P5 smells ( OJ refreshing ) ;
+    P6 alerting ( OJ ) ;
+    P7 extrinsic_cause ( OJ ) ; 
+    { larry, the fetishist
+    P8 has ( larry fetish ) ;
+    P9 drink ( larry OJ ) ;
+    { joan the mechanic
+    P10 isa ( Joan mechanic ) ;
+    P11 drink ( Joan OJ ) ;
+    { sally the divorcee
+    P12 isa ( Sally divorcee ) ;
+    P13 drink ( Sally OJ ) ;
+  end
+  DefGroups
+    { generic schema
+    Cause ( P2 P3 P4 P5 P6 P7 ) ( P1 ) 1.0 ;
+    { larry, the fetishist
+    Cause ( P8 ) ( P9 ) ;
+    { joan the mechanic
+    Cause ( P10 ) ( P11 ) ;
+    { sally the divorcee
+    Cause ( P12 ) ( P13 ) ;
+  end
+done { LTM: Analog 0
+
+Analog Jeff { the other mechanic: Analog 1
+  DefPreds
+    drink 2 ingest consume liquid swallow liquid ;
+  end
+  DefObjs
+    OJ orange juice liquid breakfast morning ;
+    Jeff human person male nice mechanic old ;
+  end
+  DefProps
+    P1 drink ( Jeff OJ ) ;
+  end
+  DefGroups
+    Question
+      Props: P1 %
+      Semantics: Effect %
+      %%
+  end
+done { 
+
+Sequence { 
+  Driver=[ 1 ] { Analog 1: The generic, Mike
+  Goal= Explain   { turn on explanation mode just before last prop
+  Order=[ Question ( 1 1 ) ]
+done.
+    

@@ -1,0 +1,16 @@
+(LISA,About)
+
+---------------------------------------
+LISA/DORA Vers. Ex 1.15
+
+Complete LISA code augmented
+ with routines from DORA for the
+ purpose of generatng explanations.
+
+Last modified 10/10/09
+---------------------------------------
+
+(File,Path)
+(File,Open)
+(Run Parameters,Driver Inhib.)
+(File,Save Status Window)

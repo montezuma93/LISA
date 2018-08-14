@@ -1,0 +1,182 @@
+Run of LISA Version Ex 1.15; last modified 3/2/11
+
+Note: transplant
+Note: made from fumes.sym
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P1:DYING (MANY_PATIENTS)
+Seq. 1    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P1:DYING (MANY_PATIENTS)
+Seq. 2    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P5:KILL (MANY_PATIENTS)
+Seq. 3    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P1:DYING (MANY_PATIENTS)
+Seq. 4    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P2:HEALTHY (ONE_PATIENT)
+Seq. 5    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P8:SAVE (ONE_PATIENT)
+Seq. 6    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P1:DYING (MANY_PATIENTS)
+Seq. 7    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P9:BETTER (P7, P8)
+Seq. 8    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P5:KILL (MANY_PATIENTS)
+Seq. 9    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P2:HEALTHY (ONE_PATIENT)
+Seq. 10    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P9:BETTER (P7, P8)
+Seq. 11    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P9:BETTER (P7, P8)
+Seq. 12    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P4:TRANSPLANT (YOU, ORGANS)
+Seq. 13    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P2:HEALTHY (ONE_PATIENT)
+Seq. 14    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P1:DYING (MANY_PATIENTS)
+Seq. 15    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P8:SAVE (ONE_PATIENT)
+Seq. 16    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P3:DO_NOTHING (YOU)
+Seq. 17    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P4:TRANSPLANT (YOU, ORGANS)
+Seq. 18    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P2:HEALTHY (ONE_PATIENT)
+Seq. 19    Driver:Transplant    Recip : Trolly    Fire control:random    Goals: NORMAL     Phase set: P1:DYING (MANY_PATIENTS)
+Seq. 20    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P4:DO_NOTHING (YOU)
+Seq. 21    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P1:TRAVEL (TROLLY, TRACKS)
+Seq. 22    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P2:RUNAWAY (TROLLY)
+Seq. 23    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P4:DO_NOTHING (YOU)
+Seq. 24    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P2:RUNAWAY (TROLLY)
+Seq. 25    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P2:RUNAWAY (TROLLY)
+Seq. 26    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P6:SAVE (YOU, SMALL_GROUP)
+Seq. 27    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P5:KILL (TROLLY, LARGE_GROUP)
+Seq. 28    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P5:KILL (TROLLY, LARGE_GROUP)
+Seq. 29    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P6:SAVE (YOU, SMALL_GROUP)
+Seq. 30    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P7:PUSH (YOU, SWITCH)
+Seq. 31    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P7:PUSH (YOU, SWITCH)
+Seq. 32    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P7:PUSH (YOU, SWITCH)
+Seq. 33    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P7:PUSH (YOU, SWITCH)
+Seq. 34    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P8:DIVERT (SWITCH, TROLLY)
+Seq. 35    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P9:HIT (TROLLY, SMALL_GROUP)
+Seq. 36    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P9:HIT (TROLLY, SMALL_GROUP)
+Seq. 37    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P8:DIVERT (SWITCH, TROLLY)
+Seq. 38    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P8:DIVERT (SWITCH, TROLLY)
+Seq. 39    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P9:HIT (TROLLY, SMALL_GROUP)
+Seq. 40    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P11:SAVE (YOU, LARGE_GROUP)
+Seq. 41    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P9:HIT (TROLLY, SMALL_GROUP)
+Seq. 42    Driver:Trolly    Recip : Transplant Schema    Fire control:groups    Goals: NORMAL     Phase set: P11:SAVE (YOU, LARGE_GROUP)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Trolly to Transplant:
+  Groups:
+    From CAUSE1 to:    EFFECT2 = 0.979    CAUSE2 = 0.982
+    From EFFECT1 to:    EFFECT2 = 0.979    CAUSE2 = 0.979
+    From CE-1 to:    CE-2 = 0.990
+    From CAUSE2 to:    CAUSE3 = 0.979
+    From EFFECT2 to:    EFFECT3 = 0.982
+    From CE-2 to:    CE-3 = 0.982
+    From CAUSE3 to:    CAUSE1 = 0.979
+    From EFFECT3 to:    EFFECT1 = 0.982
+    From CE-3 to:    CE-1 = 0.982
+    From CAUSE5 to:
+    From EFFECT5 to:
+    From CE-5 to:
+  Props:
+    From P1 to:    P2 = 0.880
+    From P2 to:    P3 = 0.982
+    From P4 to:    P4 = 0.898
+    From P5 to:    P6 = 0.982
+    From P6 to:    P8 = 0.982
+    From P7 to:    P1 = 0.982
+    From P8 to:    P5 = 0.982
+    From P9 to:    P2 = 0.982
+    From P11 to:    P7 = 0.982
+    From P12 to:    P9 = 0.990
+  SPs:
+    From SP2.1 to:    SP3.1 = 0.992
+    From SP4.1 to:    SP3.1 = 0.990
+    From SP5.1 to:    SP6.1 = 0.992
+    From SP5.2 to:
+    From SP6.1 to:    SP8.1 = 0.987
+    From SP6.2 to:
+    From SP7.1 to:
+    From SP7.2 to:    SP1.1 = 0.992
+    From SP8.1 to:    SP5.1 = 0.992
+    From SP8.2 to:
+    From SP9.1 to:
+    From SP9.2 to:    SP2.1 = 0.992
+    From SP11.1 to:    SP7.1 = 0.992
+    From SP11.2 to:
+    From SP12.1 to:    SP9.1 = 0.992
+    From SP12.2 to:    SP9.2 = 0.992
+  Preds:
+    From BETTER1 to:    BETTER1 = 0.968
+    From BETTER2 to:    BETTER2 = 0.968
+    From RUNAWAY1 to:    DO_NOTHING1 = 0.968
+    From HIT1 to:
+    From HIT2 to:    HEALTHY1 = 0.968
+    From DIVERT1 to:    KILL1 = 0.968
+    From DIVERT2 to:
+    From PUSH1 to:
+    From PUSH2 to:    DYING1 = 0.968
+    From DO_NOTHING1 to:    DO_NOTHING1 = 0.969
+    From KILL1 to:    KILL1 = 0.968
+    From KILL2 to:
+    From SAVE1 to:    SAVE1 = 0.968
+    From SAVE2 to:
+  Objs:
+    From TROLLY to:    YOU = 0.968
+    From SWITCH to:    MANY_PATIENTS = 0.968
+    From SMALL_GROUP to:    ONE_PATIENT = 0.968
+    From LARGE_GROUP to:
+    From YOU to:    YOU = 0.969    MANY_PATIENTS = 0.968
+
+From Transplant to Trolly:
+  Groups:
+    From CAUSE1 to:    CAUSE3 = 0.979
+    From EFFECT1 to:    EFFECT3 = 0.982
+    From CE-1 to:    CE-3 = 0.982
+    From CAUSE2 to:    EFFECT1 = 0.979    CAUSE1 = 0.982
+    From EFFECT2 to:    EFFECT1 = 0.979    CAUSE1 = 0.979
+    From CE-2 to:    CE-1 = 0.990
+    From CAUSE3 to:    CAUSE2 = 0.979
+    From EFFECT3 to:    EFFECT2 = 0.982
+    From CE-3 to:    CE-2 = 0.982
+  Props:
+    From P1 to:    P7 = 0.982
+    From P2 to:    P1 = 0.880    P9 = 0.982
+    From P3 to:    P2 = 0.982
+    From P4 to:    P4 = 0.898
+    From P5 to:    P8 = 0.982
+    From P6 to:    P5 = 0.982
+    From P7 to:    P11 = 0.982
+    From P8 to:    P6 = 0.982
+    From P9 to:    P12 = 0.990
+  SPs:
+    From SP1.1 to:    SP7.2 = 0.992
+    From SP2.1 to:    SP9.2 = 0.992
+    From SP3.1 to:    SP4.1 = 0.990    SP2.1 = 0.992
+    From SP4.1 to:
+    From SP4.2 to:
+    From SP5.1 to:    SP8.1 = 0.992
+    From SP6.1 to:    SP5.1 = 0.992
+    From SP7.1 to:    SP11.1 = 0.992
+    From SP8.1 to:    SP6.1 = 0.987
+    From SP9.1 to:    SP12.1 = 0.992
+    From SP9.2 to:    SP12.2 = 0.992
+  Preds:
+    From BETTER1 to:    BETTER1 = 0.968
+    From BETTER2 to:    BETTER2 = 0.968
+    From DYING1 to:    PUSH2 = 0.968
+    From HEALTHY1 to:    HIT2 = 0.968
+    From TRANSPLANT1 to:
+    From TRANSPLANT2 to:
+    From DO_NOTHING1 to:    DO_NOTHING1 = 0.969    RUNAWAY1 = 0.968
+    From KILL1 to:    KILL1 = 0.968    DIVERT1 = 0.968
+    From SAVE1 to:    SAVE1 = 0.968
+  Objs:
+    From ONE_PATIENT to:    SMALL_GROUP = 0.968
+    From MANY_PATIENTS to:    YOU = 0.968    SWITCH = 0.968
+    From YOU to:    YOU = 0.969    TROLLY = 0.968
+    From ORGANS to:
+

@@ -1,0 +1,54 @@
+Note: Auto-Generated Sym File
+Note: "Jill wants a sandwich.  She knows Sam has one.  She asks him for a sandwich."
+Note: "Bob wants a ride.  He knows Jen has a car.  He asks her for a ride."
+
+Analog Sandwich
+  DefPreds
+    want [  organism  person  soul  living_thing  wanter  being  mortal  individual  someone  somebody  animate_thing  needer  ] [ emotion  need  require  want  convey10  pass1  put_across  consumption  desire  pass_on  communicate1  transfer1  look_for  displace2  transmit10  seek  move1  request1  miss  communicate10  bespeak  want1  want1  quest1  demand  cognition  call_for4  pass_along  stative  search  contact  be3  lack  ] ;
+    know [  organism  soul  someone  person  living_thing  mortal  being  animate_thing  apprehender  knower  somebody  individual  ] [ secernate  know12  tell1  set4  couple  cognize  tell_apart  cognize  remember  think  cerebrate  realise1  undergo4  jazz  separate1  recognize1  recognize2  live  know  have_it_off  cognition  go_through  recall  sleep_together  screw4  experience1  agnize  sleep_with  bed  experience  tie1  have_sex  know14  connect  recollect  severalize  realize1  have_it_away  retrieve  pair  evaluate1  recognise2  determine1  know11  place  call_up4  make_love  link_up  know1  call_back  know1  think2  know6  copulate  lie_with  be_intimate  roll_in_the_hay  do_it  acknowledge9  recognise1  eff  get_laid  identify  judge  know4  know15  conjoin  link  know2  get_it_on  love  have_a_go_at_it  know3  agnise  change  hump  cognise  differentiate1  cognise  distinguish  make_out  see12  severalise  have_intercourse  pass_judgment  bonk1  secern1  join  cogitate  bang4  accept  mate  fuck  contact  ] ;
+    have [  male  juvenile  grownup  tyke   mortal  being  somebody  somebody  living_thing  implement  instrumentality  juvenile_person  organism  person  person  youngster  living_thing  minor  male_person  cutting_tool  nipper  tike  tool  shaver  small_fry  man  kid  organism  soul  cutlery  soul  animate_thing  electric_razor  animate_thing  individual  individual  artifact  edge_tool  electric_shaver  nestling  someone  artefact  adult  tiddler  someone  being  razor  cutter  adult_male  fry  instrumentation  child  cutting_implement  ] [ have_it_away  couple  make_love  feature  produce2  hit2  have_got  care11  stimulate1  have_a_go_at_it  birth  let1  make_out  have4  bring_forth  mate  undergo4  pull_ahead  modify10  rack_up1  roll_in_the_hay  link_up  accept  cause  handle  throw8  advance  know  experience  experience  direct  jazz  get  hold  hump  get_it_on  sleep_together  hold  bear1  pair  induce  creation  suffer1  have_it_off  make2  get1  connect  take14  be_intimate  take_in  bed  join  act  make  deliver1  screw4  body  perception  have12  have2  receive3  have_intercourse  change  create  hurt2  give2  manage  make  social  receive  consume  tally  possess  communication  get2  acquire  acquire  make  get_ahead  gain_ground  give_birth  consumption  bang4  win1  make_headway  stative  get  fuck  get  get  get  possession  take  have6  copulate  have3  have1  alter1  gain  get11  score  have2  experience  deal13  have6  link  get1  own  conjoin  sustain  undergo4  tie1  change  do_it  command  have  interact  bonk1  suffer  change  change  ingest  love  make4  receive3  have5  take5  lie_with  eff  have_sex  get_laid  control  be3  have1  change1  contact  have5  move  sleep_with  ] ;
+    ask [  questioner  articulator  querier  mortal  communicator  somebody  utterer  organism  person  living_thing  talker  soul  inquirer  animate_thing  someone  speaker  verbaliser  individual  asker  being  verbalizer  enquirer  ] [ leave2  act  transfer1  displace2  pass_on  intercommunicate  ask9  give9  displace2  intercommunicate  request1  request1  request1  call_for  communicate10  pass_on  necessitate  impart  involve7  quest1  quest1  quest1  call_for4  inquire1  call_for4  call_for4  pass_along  pass_along  pass_along  tell  formulate  need  pass1  show2  pass1  convey10  convey10  convey10  convey  act  phrase  give_voice  act  communicate1  communicate1  communicate1  intercommunicate  expect  move1  move1  move1  require  ask  require1  postulate  address  communication  communicate  communicate  communicate  put_across  put_across  inform  put_across  stative  articulate2  take  bespeak  bespeak  bespeak  communicate10  enquire  demand  demand  demand  pass1  communicate10  express1  interact  interact  interact  pass_on  transfer1  move  transfer1  displace2  transmit10  transmit10  transmit10  evince  pass_on3  word  ask1  ask2  move  ask4  move  turn_to1  ask5  ]  [ ask_role_3 object ] ;
+  end ;
+  DefObjs
+     Jill  1 figure  flesh  being  grammatical_category  frame  physical_structure  shape  individual  human_body  category  syntactic_category  form  physique  soma  build  organic_structure  body  family  someone  somebody  living_thing  natural_object  collection  aggregation  anatomy  animate_thing  chassis  physical_body  class  organism  soul  material_body  mortal  bod  accumulation  female  ;
+     Sam  1  figure  flesh  being  grammatical_category  frame  physical_structure  shape  individual  human_body  category  syntactic_category  form  physique  soma  build  organic_structure  body  family  someone  somebody  living_thing  natural_object  collection  aggregation  anatomy  animate_thing  chassis  physical_body  class  organism  soul  material_body  mortal  bod  accumulation  male  ;
+     sandwich  1  nutrition  nourishment  aliment  nutriment  sustenance  alimentation  dish  snack_food  victuals  ;
+  end ;
+   DefProps
+    P1 want (  Jill sandwich  ) ;
+    P2 have (  Sam sandwich  ) ;
+    P3 know (  Jill  P2  ) ;
+    P4 ask (  Jill Sam sandwich ) ;
+  end ;
+done
+
+Analog Ride
+  DefPreds
+    want [  organism  person  soul  living_thing  wanter  being  mortal  individual  someone  somebody  animate_thing  needer  ] [ emotion  need  require  want  convey10  pass1  put_across  consumption  desire  pass_on  communicate1  transfer1  look_for  displace2  transmit10  seek  move1  request1  miss  communicate10  bespeak  want1  want1  quest1  demand  cognition  call_for4  pass_along  stative  search  contact  be3  lack  ] ;
+    know [  organism  soul  someone  person  living_thing  mortal  being  animate_thing  apprehender  knower  somebody  individual  ] [ secernate  know12  tell1  set4  couple  cognize  tell_apart  cognize  remember  think  cerebrate  realise1  undergo4  jazz  separate1  recognize1  recognize2  live  know  have_it_off  cognition  go_through  recall  sleep_together  screw4  experience1  agnize  sleep_with  bed  experience  tie1  have_sex  know14  connect  recollect  severalize  realize1  have_it_away  retrieve  pair  evaluate1  recognise2  determine1  know11  place  call_up4  make_love  link_up  know1  call_back  know1  think2  know6  copulate  lie_with  be_intimate  roll_in_the_hay  do_it  acknowledge9  recognise1  eff  get_laid  identify  judge  know4  know15  conjoin  link  know2  get_it_on  love  have_a_go_at_it  know3  agnise  change  hump  cognise  differentiate1  cognise  distinguish  make_out  see12  severalise  have_intercourse  pass_judgment  bonk1  secern1  join  cogitate  bang4  accept  mate  fuck  contact  ] ;
+    have [  male  juvenile  grownup  tyke   mortal  being  somebody  somebody  living_thing  implement  instrumentality  juvenile_person  organism  person  person  youngster  living_thing  minor  male_person  cutting_tool  nipper  tike  tool  shaver  small_fry  man  kid  organism  soul  cutlery  soul  animate_thing  electric_razor  animate_thing  individual  individual  artifact  edge_tool  electric_shaver  nestling  someone  artefact  adult  tiddler  someone  being  razor  cutter  adult_male  fry  instrumentation  child  cutting_implement  ] [ have_it_away  couple  make_love  feature  produce2  hit2  have_got  care11  stimulate1  have_a_go_at_it  birth  let1  make_out  have4  bring_forth  mate  undergo4  pull_ahead  modify10  rack_up1  roll_in_the_hay  link_up  accept  cause  handle  throw8  advance  know  experience  experience  direct  jazz  get  hold  hump  get_it_on  sleep_together  hold  bear1  pair  induce  creation  suffer1  have_it_off  make2  get1  connect  take14  be_intimate  take_in  bed  join  act  make  deliver1  screw4  body  perception  have12  have2  receive3  have_intercourse  change  create  hurt2  give2  manage  make  social  receive  consume  tally  possess  communication  get2  acquire  acquire  make  get_ahead  gain_ground  give_birth  consumption  bang4  win1  make_headway  stative  get  fuck  get  get  get  possession  take  have6  copulate  have3  have1  alter1  gain  get11  score  have2  experience  deal13  have6  link  get1  own  conjoin  sustain  undergo4  tie1  change  do_it  command  have  interact  bonk1  suffer  change  change  ingest  love  make4  receive3  have5  take5  lie_with  eff  have_sex  get_laid  control  be3  have1  change1  contact  have5  move  sleep_with  ] ;
+  end ;
+  DefObjs
+     Bob  1  figure  flesh  being  grammatical_category  frame  physical_structure  shape  individual  human_body  category  syntactic_category  form  physique  soma  build  organic_structure  body  family  someone  somebody  living_thing  natural_object  collection  aggregation  anatomy  animate_thing  chassis  physical_body  class  organism  soul  material_body  mortal  bod  accumulation  male  ;
+     Jen  1  figure  flesh  being  grammatical_category  frame  physical_structure  shape  individual  human_body  category  syntactic_category  form  physique  soma  build  organic_structure  body  family  someone  somebody  living_thing  natural_object  collection  aggregation  anatomy  animate_thing  chassis  physical_body  class  organism  soul  material_body  mortal  bod  accumulation  female  ;
+     car  1  artefact  railroad_car  self-propelled_vehicle  elevator_car  transport  instrumentation  container  area  automobile  machine  wheeled_vehicle  vehicle  compartment  railcar  auto  motorcar  artifact  construction  motor_vehicle  automotive_vehicle  cable_car  structure  room  railway_car  conveyance  gondola  instrumentality  ;
+     ride  1  instrumentation  artefact  artifact  mechanical_device  instrumentality  travel  move  human_action  drive  mechanism  motion  device  journey  traveling  act  action  travelling  change  deed  journeying  movement  ;
+  end ;
+   DefProps
+    P1 want (  Bob ride  ) ;
+    P2 have (  Jen car  ) ;
+    P3 know (  Bob  P2  ) ;
+    { P4 ask (  Bob Jen  ) ;
+  end ;
+done
+
+Sequence
+  Driver=[ 1 ] { Analog 1: Ride
+  Recip=[ 0 ] { analog 0: FirstGuy
+  Order=[ P1 h P2 h P3 h ]
+  SSL_OK ;
+  Driver=[ 0 ] { Analog 1: Ride
+  Recip=[ 1 ] { analog 0: FirstGuy
+  Order=[ P1 h P2 h P3 h P4 h ]
+done.
+

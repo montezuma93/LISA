@@ -1,0 +1,165 @@
+Run of LISA Version Ex 1.15; last modified 10/02/13
+
+Note: Andrei&Zack/OJ1.sym
+Note: Why do we drink OJ for breakfast?
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Larry    Recip :    Fire control:groups (QUESTION)     Goals: EXPLAIN RETRIEVE     Phase set: P1:DRINK (LARRY, OJ)
+Seq. 1    Driver:Larry    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:DRINK (LARRY, OJ)
+Seq. 2    Driver:WorkSpace    Recip : Larry    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:DRINK (PERSON, OJ)
+Seq. 3    Driver:WorkSpace    Recip : Larry    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P4:DELICIOUS (OJ)
+Seq. 4    Driver:WorkSpace    Recip : Larry    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P7:EXTRINSIC_CAUSE (OJ)
+
+
+* * * Current Mapping Connections From Larry to WorkSpace * * *
+  Groups:
+    From QUESTION to:    EFFECT3 = 0.969
+    From 'CE-1' to:    CE-3 = 0.969
+    From 'CAUSE2' to:    CAUSE3 = 0.967
+    From 'CAUSE3' to:    CAUSE6 = 0.967
+    From 'CE-4' to:    CE-6 = 0.967
+  Props:
+    From P1 to:    P1 = 0.990
+    From 'P1' to:    P4 = 0.982
+    From 'P2' to:    P7 = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From 'SP2' to:    SP4.1 = 0.987
+    From 'SP3' to:    SP7.1 = 0.987
+  Preds:
+    From DRINK1 to:    DRINK1 = 0.968
+    From DRINK2 to:    DRINK2 = 0.968
+    From 'DELICIOUS1' to:    DELICIOUS1 = 0.969
+    From 'EXTRINSIC_CAUSE1' to:    EXTRINSIC_CAUSE1 = 0.969
+  Objs:
+    From OJ to:    OJ = 0.968
+    From LARRY to:    PERSON = 0.968
+
+
+
+* * * * Inferred Groups and Props in Explanandum * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_1.0 (0.778) 
+
+     Groups: 
+     QUESTION (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DRINK (LARRY, OJ) 
+
+     'CAUSE2' (index = 2 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P1') 'DELICIOUS' (OJ) 
+
+
+'CAUSE2' (index = 2 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P1') 'DELICIOUS' (OJ) 
+
+'CAUSE3' (index = 3 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P2')  
+
+'CE-4' (index = 4 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_0.3 (0.389) CS_0.4 (0.389) 
+
+     Groups: 
+     'CAUSE3' (index = 3 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P2')  
+
+
+
+Props:
+'P1':  [ 'DELICIOUS1' + OJ ] 
+'P2':  [ 'EXTRINSIC_CAUSE1' + OJ ] 
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Larry * * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_1.0 (0.778) 
+
+     Groups: 
+     QUESTION (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DRINK (LARRY, OJ) 
+
+     'CAUSE2' (index = 2 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P1') 'DELICIOUS' (OJ) 
+
+
+'CAUSE2' (index = 2 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P1') 'DELICIOUS' (OJ) 
+
+'CAUSE3' (index = 3 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: 'P2')  
+
+'CE-4' (index = 4 level =1):  
+     Semantics: CAUSE-EFFECT (0.778) CS_0.3 (0.389) CS_0.4 (0.389) 
+
+     Groups: 
+     'CAUSE3' (index = 3 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: 'P2')  
+
+
+EFFECT1 (index = 5 level =0):  
+     Semantics: EFFECT (1.000) 
+     Props: 'P1') 'DELICIOUS' (OJ) 
+
+
+Props:
+'P1':  [ 'DELICIOUS1' + OJ ] 
+'P2':  [ 'EXTRINSIC_CAUSE1' + OJ ] 
+
+Preds:
+'DELICIOUS1':
+   TASTE1(1.000)
+   GOOD1(1.000)
+   YUM1(1.000)
+   DELICIOUS1(1.000)
+   TASTY1(1.000)
+   REFRESHING1(1.000)
+   TANGY1(1.000)
+   CITRUS1(1.000)
+   TART1(1.000)
+
+'EXTRINSIC_CAUSE1':
+   HISTORY1(1.000)
+        CROPS1(0.500)
+        FLORIDA1(0.500)
+        GROWERS1(0.500)
+
+
+Objs:

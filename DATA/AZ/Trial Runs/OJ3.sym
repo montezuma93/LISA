@@ -1,0 +1,84 @@
+Note: Andrei&Zack/OJ3.sym
+Note: Why do we drink OJ for breakfast?
+Note: This time, there is a freaky possible reason
+
+Analog OJSchema { 0
+  DefPreds
+    delicious 1 taste good yum delicious ;
+    has 2 state possess has ;
+    drink 2 ingest consume liquid ;
+    part_of 2 part constituent subset component ;
+    smells 2 odor scent smell olfaction ;
+  end
+  DefObjs
+    OJ orange juice liquid breakfast ;
+    vitC health vitamin OJ breakfast ;
+    person human person animate ;
+    breakfast food morning meal breakfast ;
+    refreshing state fresh yum refreshing1 ;
+  end
+  DefProps
+    P1 drink ( person OJ ) ;
+    P2 part_of ( OJ breakfast ) ;
+    P3 has ( OJ vitC ) ;
+    P4 delicious ( OJ ) ;
+    P5 smells ( OJ refreshing ) ;
+  end
+  DefGroups
+    Cause ( P2 ) ( P1 ) 1.0 ;
+    Cause ( P3 ) ( P1 ) 1.0 ;
+    Cause ( P4 ) ( P1 ) 1.0 ;
+    Cause ( P5 ) ( P1 ) 1.0 ;
+    Cause ( P3 ) ( P2 ) 1.0 ;
+    Cause ( P4 ) ( P2 ) 1.0 ;
+    Cause ( P5 ) ( P2 ) 1.0 ;
+end
+done { schema
+
+Analog FreakyBill { 1
+  DefPreds
+    has 2 state possess has ;
+    drink 2 ingest consume liquid ;
+  end
+  DefObjs
+    OJ orange juice liquid breakfast ;
+    Bill human person animate Bill banker deserves_death 1% ;
+    fetish bizarre freaky dontgothere ;
+  end
+  DefProps
+    P1 drink ( Bill OJ ) ;
+    P2 has ( Bill fetish ) ;
+  end
+  DefGroups
+    Cause ( P2 ) ( P1 ) 1.0 ;
+  end
+done { schema
+
+Analog Larry { 2
+  DefPreds
+    drink 2 ingest consume liquid ;
+    has 2 state possess has ;
+end
+  DefObjs
+    OJ orange juice liquid breakfast ;
+    Larry human person animate larry banker deserves_death 1% ;
+    fetish bizarre freaky dontgothere ;
+  end
+  DefProps
+    P1 has ( Larry fetish ) ;
+    P2 drink ( Larry OJ ) ;
+  end
+  DefGroups
+    Question
+      Props: P1 P2 %
+      Semantics: Effect %
+      %%
+  end
+done {  example
+
+Sequence { 
+  Driver=[ 2 ]
+  Goal= Explain   { turn on explanation mode just before last prop
+  Order=[ Question ( 2 2 ) ]
+done.
+    

@@ -1,0 +1,107 @@
+Note: Andrei&Zack/OJ_zh.sym
+Note: Why do we drink OJ for breakfast?
+Note: This is my first try at putting multiple traces of the same prop in LTM. Looks like this correlates highly with likelihood of retrieval. 
+
+Analog OJ1
+  DefPreds
+    delicious 1 taste good yum delicious tasty refreshing tangy citrus tart ;
+    has 2 state possess has contains includes ;
+    drink 2 ingest consume liquid swallow liquid ;
+    part_of 2 part constituent component element content ;
+    smells 2 odor scent smell olfaction aroma fragrance ;
+    alerting 1 awake morning sleepy awake wakes ;
+    extrinsic_cause 1 history crops florida growers history ;  
+  end
+  DefObjs
+    OJ orange juice liquid breakfast morning ;
+    vitC health vitamin OJ breakfast immune ;
+    person human person animate alive ;
+    breakfast food morning meal breakfast ;
+    refreshing state fresh yum alert refreshing ;
+    history crops florida growers history ; 
+  end
+  DefProps
+    P1 drink ( person OJ ) ;
+    P2 part_of ( OJ breakfast ) ;
+    P3 has ( OJ vitC ) ;
+    P4 delicious ( OJ ) ;
+    P5 smells ( OJ refreshing ) ;
+    P6 alerting ( OJ ) ;
+	P7 smells ( OJ refreshing ) ;
+    P8 alerting ( OJ ) ;
+	P9 smells ( OJ refreshing ) ;
+    P10 alerting ( OJ ) ;
+	P11 smells ( OJ refreshing ) ;
+    P12 alerting ( OJ ) ;
+    P13 smells ( OJ refreshing ) ;
+    P14 alerting ( OJ ) ;
+    P15 extrinsic_cause ( OJ ) ; 
+	P16 extrinsic_cause ( OJ ) ; 
+	P17 extrinsic_cause ( OJ ) ; 
+	P18 extrinsic_cause ( OJ ) ; 
+	P19 has ( OJ vitC ) ;
+	P20 has ( OJ vitC ) ;
+	P21 has ( OJ vitC ) ;
+	P22 has ( OJ vitC ) ;
+	P23 has ( OJ vitC ) ;
+	P24 has ( OJ vitC ) ;
+	P25 has ( OJ vitC ) ;
+	P26 has ( OJ vitC ) ;
+	P27 has ( OJ vitC ) ;
+	
+  end
+  DefGroups
+    Cause ( P2 ) ( P1 ) 1.0 ;
+    Cause ( P3 ) ( P1 ) 1.0 ;
+    Cause ( P4 ) ( P1 ) 1.0 ;
+    Cause ( P5 ) ( P1 ) 1.0 ;
+    Cause ( P6 ) ( P1 ) 1.0 ;
+    Cause ( P7 ) ( P1 ) 1.0 ; 
+    Cause ( P8 ) ( P1 ) 1.0 ;
+    Cause ( P9 ) ( P1 ) 1.0 ;
+    Cause ( P10 ) ( P1 ) 1.0 ;
+    Cause ( P11 ) ( P1 ) 1.0 ;
+    Cause ( P12 ) ( P1 ) 1.0 ;
+    Cause ( P13 ) ( P1 ) 1.0 ; 
+    Cause ( P14 ) ( P1 ) 1.0 ;
+    Cause ( P15 ) ( P1 ) 1.0 ;
+    Cause ( P16 ) ( P1 ) 1.0 ;
+    Cause ( P17 ) ( P1 ) 1.0 ;
+    Cause ( P18 ) ( P1 ) 1.0 ;
+    Cause ( P19 ) ( P1 ) 1.0 ; 
+	Cause ( P20 ) ( P1 ) 1.0 ;
+    Cause ( P21 ) ( P1 ) 1.0 ; 
+    Cause ( P22 ) ( P1 ) 1.0 ;
+    Cause ( P23 ) ( P1 ) 1.0 ;
+    Cause ( P24 ) ( P1 ) 1.0 ;
+    Cause ( P25 ) ( P1 ) 1.0 ;
+    Cause ( P26 ) ( P1 ) 1.0 ;
+    Cause ( P27 ) ( P1 ) 1.0 ; 
+  end
+done { schema
+
+Analog Larry
+  DefPreds
+    drink 2 ingest consume liquid swallow liquid ;
+  end
+  DefObjs
+    OJ orange juice liquid breakfast morning ;
+    Larry human person animate larry banker deserves_death 1% ;
+  end
+  DefProps
+    P1 drink ( Larry OJ ) ;
+  end
+  DefGroups
+    Question
+      Props: P1 %
+      Semantics: Effect %
+      %%
+  end
+done { 
+
+Sequence { lots of hand-holding here
+  Driver=[ 1 ]
+  Goal= Explain   { turn on explanation mode just before last prop
+  Order=[ Question ( 1 1 ) ]
+done.
+    

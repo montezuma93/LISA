@@ -1,0 +1,183 @@
+Run of LISA Version Ex 1.16; last modified 10/07/13
+
+Note: Andrei&Zack/OJ_easy.sym
+Note: Why do we drink OJ for breakfast?
+Note: Low-hanging fruit (or so John thinks)
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Mary    Recip :    Fire control:groups (QUESTION)     Goals: EXPLAIN RETRIEVE     Phase set: P1:DRINK (MARY, OJ)
+Seq. 1    Driver:Mary    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:DRINK (MARY, OJ)
+Seq. 2    Driver:WorkSpace    Recip : Mary    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P11:DRINK (JOAN, OJ)
+Seq. 3    Driver:WorkSpace    Recip : Mary    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P10:ISA (JOAN, MECHANIC)
+Seq. 4    Driver:WorkSpace    Recip : Mary    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P13:DRINK (SALLY, OJ)
+Seq. 5    Driver:WorkSpace    Recip : Mary    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P12:ISA (SALLY, DIVORCEE)
+
+
+* * * Current Mapping Connections From Mary to WorkSpace * * *
+  Groups:
+    From QUESTION to:    EFFECT4 = 0.969
+    From 'CE-1' to:    CE-3 = 0.879
+    From 'CE-2' to:    CE-4 = 0.969
+    From 'CAUSE3' to:    CAUSE4 = 0.967
+  Props:
+    From P1 to:    P13 = 0.990
+    From 'P1' to:    P11 = 0.990
+    From 'P2' to:    P10 = 0.990
+    From 'P3' to:    P12 = 0.990
+  SPs:
+    From SP1.1 to:    SP13.1 = 0.993
+    From SP1.2 to:    SP13.2 = 0.993
+    From 'SP2' to:    SP11.1 = 0.990
+    From 'SP3' to:    SP11.2 = 0.982
+    From 'SP4' to:    SP10.1 = 0.990
+    From 'SP5' to:    SP10.2 = 0.993
+    From 'SP6' to:    SP12.1 = 0.982
+    From 'SP7' to:    SP12.2 = 0.990
+  Preds:
+    From DRINK1 to:    DRINK1 = 0.968
+    From DRINK2 to:    DRINK2 = 0.968
+    From 'ISA1' to:    ISA1 = 0.969
+    From 'ISA2' to:    ISA2 = 0.970
+  Objs:
+    From OJ to:    OJ = 0.968
+    From MARY to:    SALLY = 0.968
+    From 'JOAN' to:    JOAN = 0.969
+    From 'MECHANIC' to:    MECHANIC = 0.970
+    From 'DIVORCEE' to:    DIVORCEE = 0.969
+
+
+
+* * * * Inferred Groups and Props in Explanandum * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_1.0 (0.725) 
+
+
+'CE-2' (index = 2 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_1.0 (0.725) 
+
+     Groups: 
+     QUESTION (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DRINK (MARY, OJ) 
+
+     'CAUSE3' (index = 3 level =0):  
+          Semantics: CAUSE (0.725) 
+          Props: 'P3')  
+
+
+'CAUSE3' (index = 3 level =0):  
+     Semantics: CAUSE (0.725) 
+     Props: 'P3')  
+
+
+Props:
+'P1':  [ DRINK1 + 'JOAN' ] [ DRINK2 + OJ ] 
+'P2':  [ 'ISA1' + 'JOAN' ] [ 'ISA2' + 'MECHANIC' ] 
+'P3':  [ 'ISA1' + MARY ] [ 'ISA2' + 'DIVORCEE' ] 
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Mary * * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_1.0 (0.725) 
+
+
+'CE-2' (index = 2 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_1.0 (0.725) 
+
+     Groups: 
+     QUESTION (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DRINK (MARY, OJ) 
+
+     'CAUSE3' (index = 3 level =0):  
+          Semantics: CAUSE (0.725) 
+          Props: 'P3')  
+
+
+'CAUSE3' (index = 3 level =0):  
+     Semantics: CAUSE (0.725) 
+     Props: 'P3')  
+
+EFFECT1 (index = 4 level =0):  
+     Semantics: EFFECT (1.000) 
+     Props: 'P3')  
+
+
+Props:
+'P1':  [ DRINK1 + 'JOAN' ] [ DRINK2 + OJ ] 
+'P2':  [ 'ISA1' + 'JOAN' ] [ 'ISA2' + 'MECHANIC' ] 
+'P3':  [ 'ISA1' + MARY ] [ 'ISA2' + 'DIVORCEE' ] 
+
+Preds:
+'ISA1':
+   KIND1(1.000)
+   CLASS1(1.000)
+   SET1(1.000)
+   ISA1(1.000)
+
+'ISA2':
+   KIND2(1.000)
+   CLASS2(1.000)
+   SET2(1.000)
+   ISA2(1.000)
+
+
+Objs:
+'JOAN':
+   HUMAN(1.000)
+   PERSON(1.000)
+   ANIMATE(1.000)
+   ALIVE(1.000)
+   FEMALE(1.000)
+   OLD(1.000)
+   NICE(1.000)
+   MOM(1.000)
+   MECHANIC(1.000)
+   JOAN(1.000)
+
+'MECHANIC':
+   HUMAN(1.000)
+   PERSON(1.000)
+   PROFESSION(1.000)
+   CARS(1.000)
+   MACHINES(1.000)
+   SKILL(1.000)
+   TALENT(1.000)
+   BLUE_COLLAR(1.000)
+
+'DIVORCEE':
+   HUMAN(1.000)
+   PERSON(1.000)
+   MARRIED_ONCE(1.000)
+   DIVORCED(1.000)
+   SINGLE(1.000)
+   ANGRY(1.000)
+

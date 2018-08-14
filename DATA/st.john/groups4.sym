@@ -1,0 +1,74 @@
+Note: st.john/groups4.sym  
+SemanticRelations:
+  Objs
+    place ( airport beach )
+    car ( civic jeep )
+  end { objs
+done { with semantic relations
+{
+Analog Target-Joan
+   DefPreds
+     has 2 state has1 has2 has3 ;
+     goto 2 ptrans goto1 goto2 goto3 ;
+     want 2 state want1 want2 want3 ;
+   end ; { def preds
+   DefObjs
+     Joan human adult female joan1 joan2 joan3 ;
+     Civic artifact vehicle car japanese good civic ;
+     LAX location airport commerce transport flight ;
+   end ; { def objs
+   DefProps
+     P1 has ( Joan Civic ) ;
+     P2 goto ( Joan LAX ) ;
+     P3 want ( Joan P2 ) ;
+   end ; { def props
+   DefGroups
+     Not P1 %
+     end
+done ; { analog 1
+{
+Analog Source-Bill&Tom
+   DefPreds
+     has 2 state has1 has2 has3 ;
+     goto 2 ptrans goto1 goto2 goto3 ;
+     want 2 state want1 want2 want3 ;
+     driveto 3 ptrans goto drive vehicle drive2 drive3 ;
+     rideto 3 ptrans goto ride vehicle ride2 ride3 ;
+   end ; { def preds
+   DefObjs
+     Bill human adult male bill1 bill2 bill3 ;
+     Tom human adult male tom1 tom2 tom3 ;
+     Jeep artifact vehicle car american shit jeep ;
+     Taxi artifact vehicle car taxi1 taxi2 ;
+     Beach location beach commerce recreation ocean sand ;
+   end ; { def objs
+   DefProps
+     P1 has ( Bill Jeep ) ;
+     P2 goto ( Bill Beach ) ;
+     P3 want ( Bill P2 ) ;
+     P4 driveto ( Bill Jeep Beach ) ;
+     P5 has ( Tom Jeep ) ;
+     P6 goto ( Tom Beach ) ;
+     P7 want ( Tom P6 ) ;
+     P8 rideto ( Tom Taxi Beach ) ;
+   end ; { def props
+   DefGroups
+     Cause ( P2 P3 ) ( P4 ) ;
+     Enable ( P1 ) ( P4 ) ; { will be called "Enables1"
+     Not P5 %   { Tom, like Joan, has no car
+     Cause ( P6 P7 ) ( P8 ) ;
+   end ;
+done ; { analog 1
+Analog Schema
+done ; { analog 2
+{
+Sequence
+   Driver=[ 0 ] { set target to driver
+   Recip=[ 1 ]  { set source to recip
+   Order=[ P1 h P2 h P3 h ] { and fire all three props
+   { volley: turn control over to source
+   Driver=[ 1 ]
+   Recip=[ 0 2 ]
+   SSL_OK  { let LISA figure out whether to turn on ssl
+   Order=[ NOT1 ( 1 1 ) CE-2 ( 4 1 ) ] { try inference
+done ;

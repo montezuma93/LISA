@@ -1,0 +1,41 @@
+Note: Semantic/test2.sym
+Note: First attempt to fuck with semantic relations and detect contradictions
+Note: Has bird lungs?  (it ougta not detect a contradiction here)
+
+{ Parameters
+{    SaveGroupHebbs False
+{    SavePropHebbs False
+{    SaveSPHebbs False
+{    SaveOPHebbs False
+{ Done
+
+Include Semantics.inc
+
+Include WorldKnowledge.inc
+
+Analog ToVerify
+  DefPreds
+    has 2 state possess has1 has2 ;
+  end
+  DefObjs
+    bird bird animal living fly small sing nest ;
+    lungs organ biological breathe ;
+  end
+  DefProps
+    P1 has ( bird lungs ) ;
+  end
+  DefGroups
+    ToVerify
+      Props: P1 %
+      Semantics: Generic %  { a new "generic" group 10/2/08
+      %%
+  end
+done { example
+
+Sequence { 
+  Driver=[ 1 ]
+  ContraDetect= On { turn contradiction detection on  
+  Goal= Verify   { turn on explanation mode just before last prop
+  Order=[ ToVerify ( 1 1 ) ]
+done.
+    

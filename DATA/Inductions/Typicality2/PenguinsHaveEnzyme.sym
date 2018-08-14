@@ -1,0 +1,58 @@
+Note: PenguinsHaveEnzyme
+Note: Tell LISA penguins have enzyme; ask it whether birds do
+
+Parameters
+    SaveGroupHebbs False
+    SavePropHebbs False
+    SaveSPHebbs False
+    SaveOPHebbs False
+Done
+
+Include semantics.inc
+
+Include worldknowledge.inc
+
+Analog Penguin
+  DefPreds
+    has 2 state possess has1 has2 ;
+    isa [ isa1 exemplar ] [ isa2 category ] ;
+  end
+  DefObjs
+    penguin penguin bird antarctic swimmer black-and-white cold ;
+    enzyme chemical bio enzyme ;
+  end
+  DefProps
+    P1 has ( penguin enzyme ) ;
+    P2 isa ( penguin penguin ) ;
+  end
+  DefGroups
+    Cause ( P2 ) ( P1 ) ;
+  end
+done
+
+Analog ToVerify
+  DefPreds
+    has 2 state possess has1 has2 ;
+  end
+  DefObjs
+    bird bird fly small sing nest ;
+    enzyme chemical bio enzyme ;
+  end
+  DefProps
+    P1 has ( bird enzyme ) ;
+  end
+  DefGroups
+    ToVerify
+      Props: P1 %
+      Semantics: Effect %
+      %%
+  end
+done { to verify
+
+Sequence { 
+  Driver=[ 2 ]
+  ContraDetect= On { turn contradiction detection on
+  Goal= Verify   { turn on explanation mode just before last prop
+  Order=[ ToVerify ( 1 1 ) ]
+done.
+    

@@ -1,0 +1,64 @@
+Run of LISA Version Ex 1.15; last modified 10/10/09
+
+Note: Lovetri3.sym the Very easy version of lovetri: no x-mapping and sex helps
+Note: This is an attempt to make a REAL sym file for MatLab LISA
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Abe&Beth    Recip : Amy&Bill    Fire control:props    Goals: NORMAL     Phase set: P1:LOVES (ABE, BETH)
+Seq. 1    Driver:Abe&Beth    Recip : Amy&Bill    Fire control:props    Goals: NORMAL     Phase set: P2:LOVES (BETH, CHAD)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Amy&Bill to Abe&Beth:
+  Groups:
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+  Preds:
+    From LOVES1 to:    LOVES1 = 0.968
+    From LOVES2 to:    LOVES2 = 0.968
+  Objs:
+    From ALEX to:    ABE = 0.968
+    From BETTY to:    BETH = 0.968
+    From CHUCK to:    CHAD = 0.968
+
+From Abe&Beth to Amy&Bill:
+  Groups:
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+  Preds:
+    From LOVES1 to:    LOVES1 = 0.968
+    From LOVES2 to:    LOVES2 = 0.968
+  Objs:
+    From ABE to:    ALEX = 0.968
+    From BETH to:    BETTY = 0.968
+    From CHAD to:    CHUCK = 0.968
+

@@ -1,0 +1,54 @@
+Note: modus_ponens.sym
+Note: A present for Selmer: First (recent) attempt to implement deductive logic in LISA
+
+Analog ModusPonens { a representation of Modus Ponens, highly variablized for generic use; i.e., version as instantiated in expert
+  DefPreds
+	true 1 true -false ;
+	implies 2 implication implies ;
+	p 0 [ ] ;
+	q 0 [ ] ;
+  end
+  DefObjs
+	x ;
+	y ;
+  end
+  DefProps
+	P1 p ( x ) ;
+	P2 q ( y ) ;
+	{ axioms
+	P3 implies ( P1 P2 ) ;
+	P4 true ( P1 ) ;
+	{ conclusion
+	P5 true ( P2 ) ;
+  end
+done { LTM: Analog 0
+
+Analog Example { the other banker: Analog 1
+  DefPreds
+	true 1 true -false ;
+	implies 2 implication implies ;
+     like 2 like prefer enjoy ;
+	ingest 2 ingest eat drink consume ;
+  end
+  DefObjs
+    	OJ orange juice liquid breakfast morning ;
+    	Bill human person bill banker deserves_death 1% ;
+  end
+  DefProps
+    	P1 like ( Bill OJ ) ;
+	P2 ingest ( Bill OJ ) ;
+	P3 implies ( P1 P2 ) ;
+	P4 true ( P2 ) ;
+  end
+done { 
+
+Sequence { 
+  	Driver=[ 1 ] 
+	Recip=[ 0 ] 
+	Order=[ P3 h P4 h P3 h P4 h ]
+	SSL_ON
+	Driver=[ 0 ]
+	Recip=[ 1 ]
+  	Order=[ P5 h P5 h ]
+done.
+    

@@ -1,0 +1,85 @@
+Run of LISA Version Ex 2.01; last modified 12/18/13
+
+Note: Mapping n-place relations to m-place ones
+Note: "Jill wants a sandwich.  She knows Sam has one.  She asks him for a sandwich."
+Note: "Bob wants a ride.  He knows Jen has a car.  He asks her for a ride."
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Ride    Recip : Sandwich    Fire control:props    Goals: NORMAL     Phase set: P1:WAS-HIT (BOB)
+Seq. 1    Driver:Sandwich    Recip : Ride    Fire control:props    Goals: NORMAL     Phase set: P1:HIT (JILL, SAM)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Sandwich to Ride:
+  Groups:
+  Props:
+    From P1 (IC = 0.616) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    'SP1' = 0.993
+    From SP1.2 to:    SP1.1 = 0.993
+  Preds:
+    From HIT1 to:    'HIT1' = 0.968
+    From HIT2 to:    WAS-HIT1 = 0.968
+  Objs:
+    From JILL to:    'JILL' = 0.968
+    From SAM to:    BOB = 0.968
+
+From Ride to Sandwich:
+  Groups:
+  Props:
+    From P1 (IC = 0.616) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.2 = 0.993
+    From 'SP1' to:    SP1.1 = 0.993
+  Preds:
+    From WAS-HIT1 to:    HIT2 = 0.968
+    From 'HIT1' to:    HIT1 = 0.968
+  Objs:
+    From BOB to:    SAM = 0.968
+    From 'JILL' to:    JILL = 0.968
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Ride * * * * *
+
+Groups:
+
+Props:
+
+Preds:
+'HIT1':
+   HIT1(1.000)
+   IMPACT1(1.000)
+   P-TRANS1(1.000)
+   OTHER1(1.000)
+   STUFF1(1.000)
+
+
+Objs:
+'JILL':
+   HUMAN(1.000)
+   FEMALE(1.000)
+   ADULT(1.000)
+   JILL(1.000)
+

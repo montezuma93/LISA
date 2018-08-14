@@ -1,0 +1,75 @@
+
+================================
+Sequence element0
+    Driver:1101
+    Recip: 1110  
+
+    Fire control: random
+    Goals: NORMAL 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+
+================================
+Sequence element1
+    Driver:1101
+    Recip: 1110  
+
+    Fire control: random
+    Goals: NORMAL 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+
+================================
+Sequence element2
+    Driver:1101
+    Recip: 1110  
+
+    Fire control: random
+    Goals: NORMAL 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+
+================================
+Sequence element3
+    Driver:1101
+    Recip: 1110  
+
+    Fire control: random
+    Goals: NORMAL 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P2 
+
+
+================================
+Sequence element4
+    Driver:1101
+    Recip: 1110  
+
+    Fire control: random
+    Goals: NORMAL 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+
+* * * * * * * * * *
+Simulation is done.
+* * * * * * * * * *
+

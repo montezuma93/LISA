@@ -1,0 +1,36 @@
+Note: Mapping n-place relations to m-place ones
+Note: "Jill wants a sandwich.  She knows Sam has one.  She asks him for a sandwich."
+Note: "Bob wants a ride.  He knows Jen has a car.  He asks her for a ride."
+
+Analog Sandwich
+  DefPreds
+    hit 2 hit impact p-trans other stuff ;
+  end ;
+  DefObjs
+     Jill human female adult jill  ;
+     Sam human male child sam  ;
+  end ;
+   DefProps
+    P1 hit (  Jill Sam  ) ;
+  end ;
+done
+
+Analog Ride
+  DefPreds
+    was-hit 0 [ hit2 impact2 p-trans2 other2 stuff2 ] ;
+  end ;
+  DefObjs
+     Bob   human male adult bob  ;
+     dummy ;
+   end ;
+   DefProps
+    P1 was-hit (  Bob  ) ;
+  end ;
+done
+
+Sequence
+  Driver=[ 0 ] 
+  Recip=[ 1 ]
+  Order=[ P1 h ]
+done.
+

@@ -1,0 +1,28 @@
+Note: Semantic/test1a.sym
+Note: First attempt to fuck with semantic relations and detect contradictions
+Note: Has bird wings?  (it ougta not detect a contradiction here)
+
+Include Semantics.inc
+
+Include WorldKnowledge.inc
+
+Analog ToVerify
+  DefPreds
+    has 2 state possess has1 has2 ;
+  end
+  DefObjs
+    bird bird living fly small sing nest ;
+    b-wings organ biological fly b-wings animal ; { biological (as opposed to mechanical) wings
+  end
+  DefProps
+    P1 has ( bird b-wings ) ;
+  end
+done { glass example
+
+Sequence { 
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  ContraDetect= On { turn contradiction detection on
+  Order=[ P1 h P1 h ]
+done.
+    

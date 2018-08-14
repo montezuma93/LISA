@@ -1,0 +1,36 @@
+Run of LISA Version Ex 1.14; last modified 12/09/08
+
+Note: RobinsHaveEnzyme
+Note: Tell LISA robins have enzyme; ask it whether birds do
+Note: Much more explicit world knowledge than in previous attempts to model similarity and diversity
+Note: World knowledge now broken down into many separate schemas, i.e., analogs
+Note: This WorldKnowledge file also includes the semantic relations (which used to be  in a separate file)
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:ToVerify    Recip :    Fire control:groups    Goals: VERIFY RETRIEVE     Phase set: P1:HAS (BIRD, ENZYME)
+Seq. 1    Driver:ToVerify    Recip : WorkSpace    Fire control:groups-d    Goals: VERIFY MAP     Phase set: P1:HAS (BIRD, ENZYME)
+
+Truth verified! (I.e., Lack-of-anomaly detected)
+The assertion HAS (BIRD, ENZYME) matches prop P1: HAS (ROBIN, ENZYME)
+Iteration (RT) = 620
+
+Seq. 2    Driver:ToVerify    Recip : WorkSpace    Fire control:groups-d    Goals: VERIFY MAP     Phase set: P1:HAS (BIRD, ENZYME)
+
+Truth verified! (I.e., Lack-of-anomaly detected)
+The assertion HAS (BIRD, ENZYME) matches prop P1: HAS (ROBIN, ENZYME)
+Iteration (RT) = 1163
+

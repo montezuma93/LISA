@@ -1,0 +1,70 @@
+Note: Semantic/test4.sym
+Note: tell it lambs eat grass
+Note: eats lamb flowers ?  (it ougta detect a contradiction here)
+
+Parameters
+    SaveGroupHebbs False
+    SavePropHebbs False
+    SaveSPHebbs False
+    SaveOPHebbs False
+Done
+
+Include Semantics.inc
+
+Analog WorldKnowledge
+  DefPreds
+    has 2 state possess has1 has2 ;
+    can [ state1 has-ability able1 can1 ] [ state2 is-ability able2 can2 ] ;
+    animal [ living animal breath move natural born will-die animal ] ;
+    eat [ has-ability consume1 destroy1 eat1 ] [ is-ability consume2 destroy2 eat2 ] ;
+  end
+  DefObjs
+    animal breath move natural born will-die animal ;
+    artifact artifact man-made ;
+    bird bird living fly small sing nest ;
+    lungs organ biological breathe animal ;
+    b-wings organ biological fly b-wings animal ;
+    b-feet organ biological walk b-feet animal ;
+    a-wings artifact man-made fly a-part ;
+    car vehicle expensive small passengers car ;
+    wheels artifact round wheels roll ;
+    fly act move air fly ;
+    drive act move ground fast drive ;
+    lamb lamb baby sheep ;
+    monkey monkey live-in-trees ;
+    grass grass green ground ;
+    flower flower pretty ground ; 
+    tree tree green wood high ;
+  end
+  DefProps
+    P1 has ( animal lungs ) ;
+    P3 can ( bird fly ) ;
+    P4 has ( car wheels ) ;
+    P5 has ( bird b-wings ) ;
+    P6 can ( car drive ) ;
+    P7 has ( bird b-feet ) ;
+    P8 animal ( animal ) ;
+    P9 eat ( lamb grass ) ;
+  end
+done { world knowledge
+
+Analog ToVerify
+  DefPreds
+    eat [ has-ability consume1 destroy1 eat1 ] [ is-ability consume2 destroy2 eat2 ] ;
+  end
+  DefObjs
+    lamb lamb baby sheep ;
+    flower flower pretty ground ; 
+  end
+  DefProps
+    P1 eat ( lamb flower ) ;
+  end
+done { glass example
+
+Sequence { 
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  ContraDetect= On { turn contradiction detection on
+  Order=[ P1 h P1 h ]
+done.
+    

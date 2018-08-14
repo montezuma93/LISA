@@ -1,0 +1,146 @@
+Run of LISA Version Ex 1.17; last modified 10/24/13
+
+Note: Andrei&Zack/OJ_easy3.sym -- only one specific distractor
+Note: Why do we drink OJ for breakfast?
+Note: Low-hanging fruit (or so John thinks)
+Note: Semantics carefully controlled for overlap
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Mike    Recip :    Fire control:groups (QUESTION)     Goals: EXPLAIN RETRIEVE     Phase set: P1:DRINK (MIKE, OJ)
+Seq. 1    Driver:Mike    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:DRINK (MIKE, OJ)
+Seq. 2    Driver:WorkSpace    Recip : Mike    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P1:DRINK (PERSON, OJ)
+Seq. 3    Driver:WorkSpace    Recip : Mike    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P2:PART_OF (OJ, BREAKFAST)
+Seq. 4    Driver:WorkSpace    Recip : Mike    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P3:HAS (OJ, VITC)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Mike to WorkSpace:
+  Groups:
+    From QUESTION to:    EFFECT1 = 0.969
+    From 'CE-1' to:    CE-1 = 0.969
+    From 'CAUSE2' to:    CAUSE1 = 0.967
+  Props:
+    From P1 to:    P1 = 0.990
+    From 'P1' to:    P2 = 0.990
+    From 'P2' to:    P3 = 1.000
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From 'SP2' to:    SP2.1 = 0.990
+    From 'SP3' to:    SP2.2 = 0.993
+    From 'SP4' to:    SP3.1 = 1.000
+  Preds:
+    From DRINK1 to:    DRINK1 = 0.968
+    From DRINK2 to:    DRINK2 = 0.968
+    From 'PART_OF1' to:    PART_OF1 = 0.969
+    From 'PART_OF2' to:    PART_OF2 = 0.970
+    From 'HAS1' to:    HAS1 = 1.000
+  Objs:
+    From OJ to:    OJ = 0.968
+    From MIKE to:    PERSON = 0.968
+    From 'BREAKFAST' to:    BREAKFAST = 0.970
+
+From WorkSpace to Mike:
+  Groups:
+    From CE-1 to:    'CE-1' = 0.969
+    From EFFECT1 to:    QUESTION = 0.969
+    From CAUSE1 to:    'CAUSE2' = 0.967
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    'P1' = 0.990
+    From P3 to:    'P2' = 1.000
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    'SP2' = 0.990
+    From SP2.2 to:    'SP3' = 0.993
+    From SP3.1 to:    'SP4' = 1.000
+  Preds:
+    From DRINK1 to:    DRINK1 = 0.968
+    From DRINK2 to:    DRINK2 = 0.968
+    From PART_OF1 to:    'PART_OF1' = 0.969
+    From PART_OF2 to:    'PART_OF2' = 0.970
+    From HAS1 to:    'HAS1' = 1.000
+  Objs:
+    From PERSON to:    MIKE = 0.968
+    From OJ to:    OJ = 0.968
+    From BREAKFAST to:    'BREAKFAST' = 0.970
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Mike * * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.772) CS_1.0 (0.772) 
+
+     Groups: 
+     QUESTION (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) DRINK (MIKE, OJ) 
+
+     'CAUSE2' (index = 2 level =0):  
+          Semantics: CAUSE (0.772) 
+          Props: 'P1') 'PART_OF' (OJ, 'BREAKFAST') 'P2')  
+
+
+'CAUSE2' (index = 2 level =0):  
+     Semantics: CAUSE (0.772) 
+     Props: 'P1') 'PART_OF' (OJ, 'BREAKFAST') 'P2')  
+
+
+Props:
+'P1':  [ 'PART_OF1' + OJ ] [ 'PART_OF2' + 'BREAKFAST' ] 
+'P2':  [ 'HAS1' + NIL ] 
+
+Preds:
+'PART_OF1':
+   PART1(1.000)
+   CONSTITUENT1(1.000)
+   COMPONENT1(1.000)
+   ELEMENT1(1.000)
+   CONTENT1(1.000)
+
+'PART_OF2':
+   PART2(1.000)
+   CONSTITUENT2(1.000)
+   COMPONENT2(1.000)
+   ELEMENT2(1.000)
+   CONTENT2(1.000)
+
+'HAS1':
+   STATE1(1.000)
+   POSSESS1(1.000)
+   HAS1(1.000)
+   CONTAINS1(1.000)
+   INCLUDES1(1.000)
+
+
+Objs:
+'BREAKFAST':
+   BREAKFAST(1.000)
+   MORNING(1.000)
+   FOOD(1.000)
+   MEAL(1.000)
+

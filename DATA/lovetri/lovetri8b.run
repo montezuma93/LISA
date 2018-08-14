@@ -1,0 +1,227 @@
+Run of LISA Version Ex 1.06; last modified 3/27/08
+
+Note: LoveTri8b.sym
+Note: 3/28/08  Investigating apparent problem w/ Group Hebb creation
+Note: This version maps males to males & females to females to make it easy
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Abe&Beth    Recip : Andy&Betty    Fire control:props    Goals: NORMAL     Phase set: P1 P2
+Seq. 1    Driver:Abe&Beth    Recip : Andy&Betty    Fire control:props    Goals: NORMAL     Phase set: P1
+Seq. 2    Driver:Abe&Beth    Recip : Andy&Betty    Fire control:props    Goals: NORMAL     Phase set: P2
+Seq. 3    Driver:Abe&Beth    Recip : Andy&Betty    Fire control:props    Goals: NORMAL     Phase set: P1
+Seq. 4    Driver:Abe&Beth    Recip : Andy&Betty    Fire control:props    Goals: NORMAL     Phase set: P2
+Seq. 5    Driver:Andy&Betty    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P2
+Seq. 6    Driver:Andy&Betty    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P3
+Seq. 7    Driver:Andy&Betty    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P1
+Seq. 8    Driver:Andy&Betty    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P1
+Seq. 9    Driver:Andy&Betty    Recip : Abe&Beth Schema    Fire control:groups    Goals: NORMAL     Phase set: P2
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Andy&Betty to Abe&Beth:
+  Groups:
+    From CE-1 to:    "CE-1" = 0.879
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.990
+    From P3 to:    "P3" = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+    From SP3.1 to:    "SP3.1" = 0.990
+    From SP3.2 to:    "SP3.2" = 0.990
+  Preds:
+    From LOVES1 to:    LOVES1 = 0.970
+    From LOVES2 to:    LOVES2 = 0.970
+    From JEALOUS1 to:    "JEALOUS1" = 0.969
+    From JEALOUS2 to:    "JEALOUS2" = 0.969
+  Objs:
+    From ANDY to:    ABE = 0.970
+    From BETTY to:    BETH = 0.970
+    From CARL to:    CHAD = 0.970
+
+From Andy&Betty to Schema:
+  Groups:
+    From CAUSE1 to:    "CAUSE1" = 0.879
+    From EFFECT1 to:    "EFFECT1" = 0.879
+    From CE-1 to:    "CE-1" = 0.879
+  Props:
+    From P1 to:    "P1" = 0.990
+    From P2 to:    "P2" = 0.990
+    From P3 to:    "P3" = 0.990
+  SPs:
+    From SP1.1 to:    "SP1.1" = 0.993
+    From SP1.2 to:    "SP1.2" = 0.993
+    From SP2.1 to:    "SP2.1" = 0.993
+    From SP2.2 to:    "SP2.2" = 0.993
+    From SP3.1 to:    "SP3.1" = 0.993
+    From SP3.2 to:    "SP3.2" = 0.990
+  Preds:
+    From LOVES1 to:    "LOVES1" = 0.970
+    From LOVES2 to:    "LOVES2" = 0.970
+    From JEALOUS1 to:    "JEALOUS1" = 0.970
+    From JEALOUS2 to:    "JEALOUS2" = 0.969
+  Objs:
+    From ANDY to:    "ANDY" = 0.970
+    From BETTY to:    "BETTY" = 0.970
+    From CARL to:    "CARL" = 0.970
+
+From Abe&Beth to Andy&Betty:
+  Groups:
+    From "CE-1" to:    CE-1 = 0.879
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.990
+    From "P3" to:    P3 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+    From "SP3.1" to:    SP3.1 = 0.990
+    From "SP3.2" to:    SP3.2 = 0.990
+  Preds:
+    From LOVES1 to:    LOVES1 = 0.970
+    From LOVES2 to:    LOVES2 = 0.970
+    From "JEALOUS1" to:    JEALOUS1 = 0.969
+    From "JEALOUS2" to:    JEALOUS2 = 0.969
+  Objs:
+    From ABE to:    ANDY = 0.970
+    From BETH to:    BETTY = 0.970
+    From CHAD to:    CARL = 0.970
+
+From Schema to Andy&Betty:
+  Groups:
+    From "CE-1" to:    CE-1 = 0.879
+    From "CAUSE1" to:    CAUSE1 = 0.879
+    From "EFFECT1" to:    EFFECT1 = 0.879
+  Props:
+    From "P2" to:    P2 = 0.990
+    From "P3" to:    P3 = 0.990
+    From "P1" to:    P1 = 0.990
+  SPs:
+    From "SP2.1" to:    SP2.1 = 0.993
+    From "SP2.2" to:    SP2.2 = 0.993
+    From "SP3.1" to:    SP3.1 = 0.993
+    From "SP3.2" to:    SP3.2 = 0.990
+    From "SP1.1" to:    SP1.1 = 0.993
+    From "SP1.2" to:    SP1.2 = 0.993
+  Preds:
+    From "LOVES1" to:    LOVES1 = 0.970
+    From "LOVES2" to:    LOVES2 = 0.970
+    From "JEALOUS1" to:    JEALOUS1 = 0.970
+    From "JEALOUS2" to:    JEALOUS2 = 0.969
+  Objs:
+    From "BETTY" to:    BETTY = 0.970
+    From "CARL" to:    CARL = 0.970
+    From "ANDY" to:    ANDY = 0.970
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Abe&Beth * * * * *
+
+Groups:
+"CE-1"(1):  G1 CAUSE-EFFECT (0.781) CS_1.0 (0.781) 
+
+Props:
+"P3":  [ "JEALOUS1" + ABE ] [ "JEALOUS2" + CHAD ] 
+
+Preds:
+"JEALOUS1":
+   EMOTION1(1.000)
+   STRONG1(1.000)
+   NEGATIVE1(1.000)
+   JEALOUS1(1.000)
+
+"JEALOUS2":
+   EMOTION2(1.000)
+   STRONG2(1.000)
+   NEGATIVE2(1.000)
+   JEALOUS2(1.000)
+
+
+Objs:
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+"CE-1"(0):  "CAUSE1" "EFFECT1" CAUSE-EFFECT (0.710) CS_1.0 (0.710) 
+"CAUSE1"(1):  "P2" "P1" CAUSE (0.668) 
+"EFFECT1"(2):  "P3" EFFECT (0.668) 
+
+Props:
+"P2":  [ "LOVES1" + "BETTY" ] [ "LOVES2" + "CARL" ] 
+"P3":  [ "JEALOUS1" + "ANDY" ] [ "JEALOUS2" + "CARL" ] 
+"P1":  [ "LOVES1" + "ANDY" ] [ "LOVES2" + "BETTY" ] 
+
+Preds:
+"LOVES1":
+   EMOTION1(1.000)
+   POSITIVE1(1.000)
+   STRONG1(1.000)
+   LOVES1(1.000)
+
+"LOVES2":
+   EMOTION2(1.000)
+   POSITIVE2(1.000)
+   STRONG2(1.000)
+   LOVES2(1.000)
+
+"JEALOUS1":
+   EMOTION1(1.000)
+   STRONG1(1.000)
+   NEGATIVE1(1.000)
+   JEALOUS1(1.000)
+
+"JEALOUS2":
+   EMOTION2(1.000)
+   STRONG2(1.000)
+   NEGATIVE2(1.000)
+   JEALOUS2(1.000)
+
+
+Objs:
+"BETTY":
+   HUMAN(1.000)
+   ADULT(1.000)
+   FEMALE(1.000)
+         BETTY(0.448)
+       BETH(0.563)
+
+"CARL":
+   HUMAN(1.000)
+   ADULT(1.000)
+   MALE(1.000)
+         CARL(0.448)
+       CHAD(0.563)
+
+"ANDY":
+   HUMAN(1.000)
+   ADULT(1.000)
+   MALE(1.000)
+         ANDY(0.448)
+       ABE(0.563)
+

@@ -1,0 +1,27 @@
+Run of LISA Version Ex 1.05; last modified 2/28/08
+
+Note: Semantic/test5.sym
+Note: Nth attempt to fuck with semantic relations and detect contradictions
+Note: Tell it: eat lamb plants; ask eats lamb flowers ?  (it ougta not detect a contradiction here)
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:ToVerify    Recip : WorldKnowledge    Fire control:props    Goals: NORMAL     Phase set: P1
+
+Truth verified! (I.e., Lack-of-anomaly detected)
+The assertion EAT (LAMB, FLOWER) matches prop P8: EAT (LAMB, PLANT)
+Iteration (RT) = 429
+

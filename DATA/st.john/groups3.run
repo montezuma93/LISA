@@ -1,0 +1,347 @@
+Run of LISA Version Ex 1.04; last modified 2/12/08
+
+Note: st.john/groups.sym  The whole kit & kaboodle
+Note: This version uses groups to represent causal and enabling relations
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Target-Joan    Recip : Source-Bill    Fire control:props    Operating mode:NORMAL    Phase set: P1
+Seq. 1    Driver:Target-Joan    Recip : Source-Bill    Fire control:props    Operating mode:NORMAL    Phase set: P2
+Seq. 2    Driver:Target-Joan    Recip : Source-Bill    Fire control:props    Operating mode:NORMAL    Phase set: P3
+Seq. 3    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:props    Operating mode:NORMAL    Phase set: P1
+Seq. 4    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:props    Operating mode:NORMAL    Phase set: P2
+Seq. 5    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:props    Operating mode:NORMAL    Phase set: P3
+Seq. 6    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:props    Operating mode:NORMAL    Phase set: P4
+Seq. 7    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:groups    Operating mode:NORMAL    Phase set: P1
+Seq. 8    Driver:Source-Bill    Recip : Target-Joan Schema    Fire control:groups    Operating mode:NORMAL    Phase set: P4
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Target-Joan to Source-Bill:
+  Groups:
+    From NOT1 to:    ENABLER1 = 0.882
+    From "CAUSE1" to:    CAUSE1 = 0.879
+    From "CE-1" to:    EFFECT1 = 0.756
+    From "EFFECT1" to:    ENABLER1 = 0.654
+    From "ENABLES1" to:    ENABLES1 = 0.889
+    From "ENABLED1" to:    ENABLED1 = 0.882
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.982
+    From P3 to:    P3 = 0.990
+    From "P4" to:    P4 = 0.993
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.992
+    From "SP4.1" to:    SP4.1 = 0.994
+    From "SP4.2" to:    SP4.2 = 0.994
+    From "SP4.3" to:    SP4.3 = 0.994
+  Preds:
+    From HAS1 to:    HAS1 = 0.970
+    From HAS2 to:    HAS2 = 0.970
+    From GOTO1 to:    GOTO1 = 0.968
+    From GOTO2 to:    GOTO2 = 0.968
+    From WANT1 to:    WANT1 = 0.970
+    From WANT2 to:    WANT2 = 0.970
+    From "DRIVETO1" to:    DRIVETO1 = 0.970
+    From "DRIVETO2" to:    DRIVETO2 = 0.970
+    From "DRIVETO3" to:    DRIVETO3 = 0.970
+  Objs:
+    From JOAN to:    BILL = 0.970
+    From CIVIC to:    JEEP = 0.970
+    From LAX to:    BEACH = 0.970
+
+From Source-Bill to Target-Joan:
+  Groups:
+    From CAUSE1 to:    "CAUSE1" = 0.879
+    From EFFECT1 to:    "CE-1" = 0.756
+    From CE-1 to:
+    From ENABLER1 to:    NOT1 = 0.882    "EFFECT1" = 0.654
+    From ENABLED1 to:    "ENABLED1" = 0.882
+    From ENABLES1 to:    "ENABLES1" = 0.889
+  Props:
+    From P1 to:    P1 = 0.990
+    From P2 to:    P2 = 0.982
+    From P3 to:    P3 = 0.990
+    From P4 to:    "P4" = 0.993
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.993
+    From SP1.2 to:    SP1.2 = 0.993
+    From SP2.1 to:    SP2.1 = 0.993
+    From SP2.2 to:    SP2.2 = 0.993
+    From SP3.1 to:    SP3.1 = 0.993
+    From SP3.2 to:    SP3.2 = 0.992
+    From SP4.1 to:    "SP4.1" = 0.994
+    From SP4.2 to:    "SP4.2" = 0.994
+    From SP4.3 to:    "SP4.3" = 0.994
+  Preds:
+    From HAS1 to:    HAS1 = 0.970
+    From HAS2 to:    HAS2 = 0.970
+    From GOTO1 to:    GOTO1 = 0.968
+    From GOTO2 to:    GOTO2 = 0.968
+    From WANT1 to:    WANT1 = 0.970
+    From WANT2 to:    WANT2 = 0.970
+    From DRIVETO1 to:    "DRIVETO1" = 0.970
+    From DRIVETO2 to:    "DRIVETO2" = 0.970
+    From DRIVETO3 to:    "DRIVETO3" = 0.970
+  Objs:
+    From BILL to:    JOAN = 0.970
+    From JEEP to:    CIVIC = 0.970
+    From BEACH to:    LAX = 0.970
+
+From Source-Bill to Schema:
+  Groups:
+    From CAUSE1 to:    "CAUSE1" = 0.879
+    From EFFECT1 to:
+    From CE-1 to:    "CE-1" = 0.874
+    From ENABLER1 to:    "ENABLER1" = 0.878    "EFFECT1" = 0.757
+    From ENABLED1 to:    "ENABLED1" = 0.883
+    From ENABLES1 to:    "ENABLES1" = 0.889
+  Props:
+    From P1 to:    "P1" = 0.990
+    From P2 to:    "P2" = 0.982
+    From P3 to:    "P3" = 0.990
+    From P4 to:    "P4" = 0.993
+  SPs:
+    From SP1.1 to:    "SP1.1" = 0.993
+    From SP1.2 to:    "SP1.2" = 0.993
+    From SP2.1 to:    "SP2.1" = 0.990
+    From SP2.2 to:    "SP2.2" = 0.993
+    From SP3.1 to:    "SP3.1" = 0.990
+    From SP3.2 to:    "SP3.2" = 0.992
+    From SP4.1 to:    "SP4.1" = 0.994
+    From SP4.2 to:    "SP4.2" = 0.994
+    From SP4.3 to:    "SP4.3" = 0.994
+  Preds:
+    From HAS1 to:    "HAS1" = 0.970
+    From HAS2 to:    "HAS2" = 0.970
+    From GOTO1 to:    "GOTO1" = 0.969
+    From GOTO2 to:    "GOTO2" = 0.970
+    From WANT1 to:    "WANT1" = 0.969
+    From WANT2 to:    "WANT2" = 0.970
+    From DRIVETO1 to:    "DRIVETO1" = 0.970
+    From DRIVETO2 to:    "DRIVETO2" = 0.970
+    From DRIVETO3 to:    "DRIVETO3" = 0.970
+  Objs:
+    From BILL to:    "BILL" = 0.970
+    From JEEP to:    "JEEP" = 0.970
+    From BEACH to:    "BEACH" = 0.970
+
+From Schema to Source-Bill:
+  Groups:
+    From "ENABLER1" to:    ENABLER1 = 0.878
+    From "ENABLES1" to:    ENABLES1 = 0.889
+    From "CAUSE1" to:    CAUSE1 = 0.879
+    From "CE-1" to:    CE-1 = 0.874
+    From "EFFECT1" to:    ENABLER1 = 0.757
+    From "ENABLED1" to:    ENABLED1 = 0.883
+  Props:
+    From "P1" to:    P1 = 0.990
+    From "P2" to:    P2 = 0.982
+    From "P3" to:    P3 = 0.990
+    From "P4" to:    P4 = 0.993
+  SPs:
+    From "SP1.2" to:    SP1.2 = 0.993
+    From "SP1.1" to:    SP1.1 = 0.993
+    From "SP2.1" to:    SP2.1 = 0.990
+    From "SP2.2" to:    SP2.2 = 0.993
+    From "SP3.2" to:    SP3.2 = 0.992
+    From "SP3.1" to:    SP3.1 = 0.990
+    From "SP4.1" to:    SP4.1 = 0.994
+    From "SP4.2" to:    SP4.2 = 0.994
+    From "SP4.3" to:    SP4.3 = 0.994
+  Preds:
+    From "HAS2" to:    HAS2 = 0.970
+    From "HAS1" to:    HAS1 = 0.970
+    From "GOTO1" to:    GOTO1 = 0.969
+    From "GOTO2" to:    GOTO2 = 0.970
+    From "WANT2" to:    WANT2 = 0.970
+    From "WANT1" to:    WANT1 = 0.969
+    From "DRIVETO1" to:    DRIVETO1 = 0.970
+    From "DRIVETO2" to:    DRIVETO2 = 0.970
+    From "DRIVETO3" to:    DRIVETO3 = 0.970
+  Objs:
+    From "JEEP" to:    JEEP = 0.970
+    From "BILL" to:    BILL = 0.970
+    From "BEACH" to:    BEACH = 0.970
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Target-Joan * * * * *
+
+Groups:
+"CAUSE1"(1):  P3 CAUSE (0.910) 
+"CE-1"(2):  "CAUSE1" "EFFECT1" CAUSE-EFFECT (0.875) CS_1.0 (0.875) 
+"EFFECT1"(3):  "P4" EFFECT (0.910) 
+"ENABLES1"(4):  NOT1 "ENABLED1" ENABLES (0.913) ES_1.0 (0.913) 
+"ENABLED1"(5):  "P4" ENABLED (0.911) 
+
+Props:
+"P4":  [ "DRIVETO1" + JOAN ] [ "DRIVETO2" + CIVIC ] [ "DRIVETO3" + LAX ] 
+
+Preds:
+"DRIVETO1":
+   PTRANS1(1.000)
+   GOTO1(1.000)
+   DRIVE1(1.000)
+   VEHICLE1(1.000)
+   DRIVE21(1.000)
+   DRIVE31(1.000)
+
+"DRIVETO2":
+   PTRANS2(1.000)
+   GOTO2(1.000)
+   DRIVE2(1.000)
+   VEHICLE2(1.000)
+   DRIVE22(1.000)
+   DRIVE32(1.000)
+
+"DRIVETO3":
+   PTRANS3(1.000)
+   GOTO3(1.000)
+   DRIVE3(1.000)
+   VEHICLE3(1.000)
+   DRIVE23(1.000)
+   DRIVE33(1.000)
+
+
+Objs:
+
+* * * * * Analog Schema * * * * *
+
+Groups:
+"ENABLER1"(0):  "P1" ENABLE (0.911) 
+"ENABLES1"(1):  "ENABLER1" "ENABLED1" ENABLES (0.913) ES_1.0 (0.913) 
+"CAUSE1"(2):  "P3" CAUSE (0.910) 
+"CE-1"(3):  "CAUSE1" "EFFECT1" CAUSE-EFFECT (0.875) CS_1.0 (0.875) 
+"EFFECT1"(4):  "P4" EFFECT (0.910) 
+"ENABLED1"(5):  "P4" ENABLED (0.911) 
+
+Props:
+"P1":  [ "HAS2" + "JEEP" ] [ "HAS1" + "BILL" ] 
+"P2":  [ "GOTO1" + "BILL" ] [ "GOTO2" + "BEACH" ] 
+"P3":  [ "WANT2" + "P2" ] [ "WANT1" + "BILL" ] 
+"P4":  [ "DRIVETO1" + "BILL" ] [ "DRIVETO2" + "JEEP" ] [ "DRIVETO3" + "BEACH" ] 
+
+Preds:
+"HAS2":
+   STATE2(1.000)
+   HAS12(1.000)
+   HAS22(1.000)
+   HAS32(1.000)
+
+"HAS1":
+   STATE1(1.000)
+   HAS11(1.000)
+   HAS21(1.000)
+   HAS31(1.000)
+
+"GOTO1":
+   PTRANS1(1.000)
+   GOTO11(1.000)
+   GOTO21(1.000)
+   GOTO31(1.000)
+
+"GOTO2":
+   PTRANS2(1.000)
+   GOTO12(1.000)
+   GOTO22(1.000)
+   GOTO32(1.000)
+
+"WANT2":
+   STATE2(1.000)
+   WANT12(1.000)
+   WANT22(1.000)
+   WANT32(1.000)
+
+"WANT1":
+   STATE1(1.000)
+   WANT11(1.000)
+   WANT21(1.000)
+   WANT31(1.000)
+
+"DRIVETO1":
+   PTRANS1(1.000)
+   GOTO1(1.000)
+   DRIVE1(1.000)
+   VEHICLE1(1.000)
+   DRIVE21(1.000)
+   DRIVE31(1.000)
+
+"DRIVETO2":
+   PTRANS2(1.000)
+   GOTO2(1.000)
+   DRIVE2(1.000)
+   VEHICLE2(1.000)
+   DRIVE22(1.000)
+   DRIVE32(1.000)
+
+"DRIVETO3":
+   PTRANS3(1.000)
+   GOTO3(1.000)
+   DRIVE3(1.000)
+   VEHICLE3(1.000)
+   DRIVE23(1.000)
+   DRIVE33(1.000)
+
+
+Objs:
+"JEEP":
+   CAR(1.000)
+         CIVIC(0.364)
+           JEEP(0.211)
+     ARTIFACT(0.827)
+     VEHICLE(0.827)
+        JAPANESE(0.490)
+        GOOD(0.490)
+          AMERICAN(0.343)
+          SHIT(0.343)
+
+"BILL":
+   HUMAN(1.000)
+   ADULT(1.000)
+       FEMALE(0.589)
+       JOAN1(0.589)
+       JOAN2(0.589)
+       JOAN3(0.589)
+         MALE(0.419)
+         BILL1(0.419)
+         BILL2(0.419)
+         BILL3(0.419)
+
+"BEACH":
+          PLACE(0.297)
+        AIRPORT(0.522)
+         BEACH(0.414)
+   LOCATION(1.000)
+   COMMERCE(1.000)
+       TRANSPORT(0.560)
+       FLIGHT(0.560)
+         RECREATION(0.449)
+         OCEAN(0.449)
+         SAND(0.449)
+

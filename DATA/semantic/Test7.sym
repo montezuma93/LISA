@@ -1,0 +1,34 @@
+Note: Semantic/test7.sym
+Note: a different way to assert that a bird is a monkey
+
+Parameters
+    SaveGroupHebbs False
+    SavePropHebbs False
+    SaveSPHebbs False
+    SaveOPHebbs False
+Done
+
+Include Semantics.inc
+
+Include WorldKnowledge.inc
+
+Analog ToVerify
+  DefPreds
+    isa [ state1 hierarchy1 exemplar isa1 ] [ state2 hierarchy2 category isa2 ] ;
+  end
+  DefObjs
+    bird bird living fly small sing nest ;
+    monkey monkey live-in-trees ;
+  end
+  DefProps
+    P1 isa ( bird  monkey ) ;
+  end
+done { glass example
+
+Sequence { 
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  ContraDetect= On { turn contradiction detection on
+  Order=[ P1 h P1 h ]
+done.
+    

@@ -1,0 +1,70 @@
+Run of LISA Version Ex 1.12; last modified 10/08/08
+
+Note: Semantic/test2.sym
+Note: First attempt to fuck with semantic relations and detect contradictions
+Note: Has bird lungs?  (it ougta not detect a contradiction here)
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:ToVerify    Recip :    Fire control:groups    Goals: VERIFY RETRIEVE     Phase set: P1:HAS (BIRD, LUNGS)
+Seq. 1    Driver:ToVerify    Recip : WorkSpace    Fire control:groups-d    Goals: VERIFY MAP     Phase set: P1:HAS (BIRD, LUNGS)
+Seq. 2    Driver:ToVerify    Recip : WorkSpace    Fire control:groups-d    Goals: VERIFY MAP     Phase set: P1:HAS (BIRD, LUNGS)
+
+Truth verified! (I.e., Lack-of-anomaly detected)
+The assertion HAS (BIRD, LUNGS) matches prop P5: HAS (BIRD, B-WINGS)
+Iteration (RT) = 1484
+
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From ToVerify to WorkSpace:
+  Groups:
+    From TOVERIFY to:    BIRDS = 0.879
+  Props:
+    From P1 to:    P5 = 0.990
+  SPs:
+    From SP1.1 to:    SP5.1 = 0.993
+    From SP1.2 to:    SP5.2 = 0.993
+  Preds:
+    From HAS1 to:    HAS1 = 0.970
+    From HAS2 to:    HAS2 = 0.970
+  Objs:
+    From BIRD to:    BIRD = 0.970
+    From LUNGS to:    B-WINGS = 0.959
+
+From WorkSpace to ToVerify:
+  Groups:
+    From BIRDS to:    TOVERIFY = 0.879
+  Props:
+    From P3 to:
+    From P5 to:    P1 = 0.990
+    From P7 to:
+    From P10 to:
+    From P11 to:
+    From P12 to:
+  SPs:
+    From SP5.1 to:    SP1.1 = 0.993
+    From SP5.2 to:    SP1.2 = 0.993
+  Preds:
+    From HAS1 to:    HAS1 = 0.970
+    From HAS2 to:    HAS2 = 0.970
+  Objs:
+    From BIRD to:    BIRD = 0.970
+    From B-WINGS to:    LUNGS = 0.959
+

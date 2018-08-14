@@ -1,0 +1,34 @@
+Note: Semantic/test11.sym
+Note: assert that a tree is an animal
+
+Parameters
+    SaveGroupHebbs False
+    SavePropHebbs False
+    SaveSPHebbs False
+    SaveOPHebbs False
+Done
+
+Include semantics.inc
+
+Include WorldKnowledge.inc
+
+Analog ToVerify
+  DefPreds
+    isa [ isa1 exemplar ] [ isa2 category ] ;
+  end
+  DefObjs
+    tree tree green wood high ;
+    animal breath move natural born will-die animal ;
+  end
+  DefProps
+    P1 isa ( tree animal ) ;
+  end
+done { glass example
+
+Sequence { 
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  ContraDetect= On { turn contradiction detection on
+  Order=[ P1 h P1 h ]
+done.
+    

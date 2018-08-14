@@ -1,0 +1,171 @@
+
+
+5/30/07
+
+All completed aspects of the code appear to be working at this time.  
+
+Except that:
+
+Empty memory function still not working properly (therefore must quit LISA between runs... at elast between ggraphical runs).
+
+6/13/07 -- Version Beta 3:
+
+Making groups more intelligent
+
+For SS-learning: Question is whether groups should be able to take both groups and props as arguments
+Your previous leaning was to say No.
+However, working with Karl today, you discovered a case in which it is advantageous to say Yes:
+  That is, in the case of cause-relation groups, which take cause and effect groups as arguments,
+  you may wany to also allow those groups to take an explicit causal proposition as an argument as well.
+But saying Yes poses a problem for U-learining: When should a group learn a conneciton to a prop.
+Potential answer: Only the lowest-level group active with a prop can take that prop as an argument.
+In this case, the cause-relation group can take a cause relation prop as an argument because the
+  cause-relation (top-level_ group will be actiev, but the lower-level (cause and effect) groups will not,
+  so the causal proposition will learn a connection only to the higher-level cause-relation group.
+  
+Discussion with Derek today (6/18/07) suggests perhaps we should stick with strict hierarchy.
+  
+Group-based fire control and group SSL now both appear to work correctly.  Hierarchical group-based fire control allows you to designate a high-level group and fire control will select props from its child groups and Their child groups (as of today, only three levels of hierarchy, however). (6/18/07)
+
+6/22/07
+
+Group-based SSL not working quite perfectly: LISA is inferring mutiple copies of the same group.  Make sure mapping connections getting (a) properly set up at time of inference and (b) properly used to decide whether new units really needed
+
+Need better control of which groups get active in the driver, including top-down control (?).  In Karl&Renee/Toy2b: G9 contains G8 and G7, which contain P1 and P5, respectively.  When G9 has fire control and P1 fires, it (P1) activates G1 and G3, which are at the same level as G8 and which should therefore be inhibited by G8 (in the driver, recall).
+
+Also, need top-down input to groups in phase set.
+
+After much mucking about, it now Appears to work properly, with the tiny exception that inferred group-to-semantic learning is a bit messy: inferred groups connected most strongly to correct semantics, but not exclusively.
+
+For future reference: The problem wasn't with SSL, per se, but rather with the lack of proper inhibition and excitation of groups in the driver.
+
+Problem solved!  (By inceasing group-group inhibition in driver and permitting modest semantic unlearning, i.e., slow loss of semantic weight when weight > semantic activation)
+
+7/3/07
+
+Reinstated props' pan-sp memory vis not subjecting them to between-sp refresh
+    1) Makes theoretical sense and helps with Bob's simulations
+    2) Look for trouble down the road
+
+7/16/07
+
+WTF?? The version last updated 7/6/07 does not save parameters or mapping connections to file on a blind run and does not save notes to the .run file after the first run.
+
+7/22/07: It seems to save everything fine on the first run, blind or with graphics.
+
+It fails to save stuff on subsequent runs (I think) cause of where that other stuff gets written (e.g., in the case of Notes, in Build)
+
+7/22/07
+
+Launching Version Beta 4: Goal is to get SSL working w/ unlimited WM and to add help functions to the parameter menus... i.e., to turn these beta versions into the final LISA Version 1
+
+Success.  Saving as version 1.00
+
+That was premature.  It's still invoking graphics during batch run.
+
+Problem solved.
+
+HOWEVER it's now fucking up on boys&dogs (has been for a while), and it's giving more errors than I would like on the love triangle.  I ask myself: Did you do anything fundamental to the code to cause this, and the answer (I now remember) is Yes I did!: For Bob's simulations, I reinstated the props' tendency to perseverate somewhat across SPs (a theoretically very reasonable position) (I did it by excusing them form the global inhibition created betweeh driver SPs).  This is fucking with its ability to solve these purely structural mappings.  Maaaaaybe this is a good thing... but then maaaaybe it's not.  This is a theoretical question.  Do people solve the love triangle by batching or by re-representation?  (Certainly in the case of boys&dogs, it's by re-representation.)  The current version of LISA says they do it by re-representation (unless they're lucky)... of course, this version of LISA also says it's Not Possible, in general, to solve it by batching, and this would be a major departure from our earlier theoretical position, and from Halford.  And it raises the major theoretical question of when and how we rerepresent.  (The answer to When is Whenever we would batch.  [An equally open question]  The answer to How is, well, much harder, but perhaps similar: Notice repetition of a relation over different arguments & predicate it.)  Ugh.  This fucking problem is supposed to be solved!
+
+OK, John, Here's your problem: The logic of sustained prop activation (in the recipient) is premised on the assumption that SPs in the driver fire in close temporal proximity to the extent that they belong to the same prop.  It also assumes some sort of between-prop inhibition signal to inhibit props in the recipient(s) to tell them that a new prop is coming.  But your code has neither of these ingredients: You fire SPs in the driver in a random (not prop-based) random order, meaning that when multiple props are put into batch, there's no telling which SPs will fire close to which AND you don't have a between-prop inhibition signal.  You need to correct both of these theory-to-code errors before you can expect your code to work properly.
+
+9/21/07
+
+Explanation LISA VersEx1.00, the first explanation version, generates mini (one causal link) explanations but it is "cheeky" because it's group retrieval routines are not particularly intelligent.  (Recall that on Karl&Renee/4.sym, which states "fall(glass)", and which LISA should explain by inferring "unsupported(glass)", along with all the cause groups, what LISA actually tends to infer is "not(fall(glass)) and "supported(glass", along with the relevant causal structures.)
+
+VersEx1.01 is the first attempt to build in more intelligent group retrieval routines.  I feel like I'm opening a huge can of worms here: I think doing this right is going to require me to implement the full-blown retrieval algorithm, along with the proposed schema-induction-like token inference routines.  Hence the new version number... if you fuck up, John, then go back to VersEx1.00 and start over.
+
+I put a Weber law BU input term on bottom-level groups and that seems to be helping (correct effect group now getting more active than incorrect one)
+
+More important changes:
+
+1) Group integrators: Groups no longer connect directly to their member props or child groups.  Instead, they have a list GroupConnector structures.  Each group connector has a pointer to a prop or child group and an integrator that retains a record of the highest activation achieved by that member (prop or child group) over some temporal integration period (whose duration is yet to be fully decided on).  Currently, the integrators are initialized to zero only at the beginning of a run or we a group actually gets retrieved based on its integrators.
+
+2) Input to group integrators: First-level groups (i.e., those that organize props, rather than other groups) set their integrators according to the corresponding props' retrieval status, not their activation.  Second level (e.g., cause-effect) groups get retrieved when either of their first-level (i.e., cause or effect) groups gets retrieved.
+
+9/24/07
+
+Vers 1.01 works pretty well, so I don't want to fuck it up.  Hence, I'm implementing the next changes in Vers Ex1.02.
+
+As of this writing (11:18, Mon. 9/24/07), I have not touched the code; i.e., Ex1.02 is still identical to Ex1.01.
+
+What I need to do is:  
+
+Tag groups as "processed" once they have been processed, i.e., once they have been mapped or used to drive inference.  This will allow LISA to volley intelligently, using newly inferred props (as yet "unprocessed") to drive retrieval from LTM and mapping, and thus to bootstrap the next inference.  At that point, they can be tagged as "processed".
+
+This tagging: Do it as a number (data field Refractory on a Group unit) rather than as a boolean: Then process stochastically, as in if Random > Refractory then allow processing.  Set refractory to 1.0 when group first processed and allow to decay over time to allow stochansic re-processing of stuff.
+
+10/25/07
+
+Still need to do the above.
+
+Another thing I need to do is work on the retrieval algorithm and work on the predication of semantics algorithm among about a billion other things.
+
+Yesterday I implemented the first version of the ministers and coke explanation (data/minister/easy1.sym), which worked remarkably well.  I also implemented a slightly harder version (data/minister/hard1.sym), which failed both predictably and informatively.  Use hard1.sym as a benchmark to remind you what you have yet to implement.
+
+10/30/07
+
+1/8/08 and 1/9/08
+
+Vers Ex 1.03: Addition of intelligent semantics from conversation w/ David
+
+Version Ex1.04 from Ex1.03
+
+Working toward contradiction detection
+
+Added SP focus: the extent to which an SP responds to its role * its filler vs. its 
+role + its filler
+
+During contradiction dtection, SPs hve high focus (i.e., get input as function of role 
+* filler) and inhibition in recip between props and between SPs greatly relaxed
+
+to this end, had to add variables such as default_prop_to_prop_inhib, etc.: These are
+set by the user and used by default by LISA.  When LISA goes into contradiction detection mode, it greadly reduces the effective inhibition.  When it leaves that mode, it returns to the default parameters.
+
+So far the results look good!
+
+Modified temporal integration properties of prop units
+-- SPs now have an output field that maintains a record of max activtion during the 
+   phase set.  Parent props get input from output rather than current act
+-- Prop's bu_input now divided by num SPs
+
+Tested the model on lovetri and it got 8/10 mappings right!  Better than I expected.
+
+-------------- 3/27/08 working on vers Ex 1.06 -----------------
+
+Ex 1.06 is working pretty well to date. Now we're futzing with little things.
+
+Among the "little" things we recently changed (which might later bite us in the ass) are:
+
+1) Increased delta (the decay constant for the activation function) in recipient analogs to 0.6 in the attempt to make activation more linear in a longer range of input values, and it worked.  Need to do the same thing fo dormant analogs
+
+2) Increased the Weber constant from 1 to 2 for the same reason and it worked
+
+3) Decreased the Hebb Bias from 5 to 3 (in order to decrease flutter in recipient activation) and it worked
+
+-------------- 10/08/08, Vers Ex 1.12 ---------------------
+
+Lotsa changes:
+
+1) Under Verify as top goal, LISA now automatically embarks on one
+phase set of retrieval (to retrieve a relevant fact from LTM)
+and two of mapping.  First mapping establishes correspondence
+of elements; second uses that learned correspondence to
+decide whether there is an anomaly or not.
+
+One (of many) limitation of this approach is that verification
+of truth is virtually guaranteed if anomaly Not detected.  Need a better 
+way to detect "truth" than this.
+
+2) TopDownOK has been disabled! In the recipient, it's Always OK;
+but as in the old way, in dormant analogs, it's never OK.
+
+Reason for this is that top-down to semantics is the sole basis for
+detecting contradictions -- delaying top-down-OK was delaying
+contradiction detection and causing LISA to falsely accept 
+contradictions as true.
+
+3) Thresholds have been futzed around with, as has the decay rate
+on the activation function of dormant units
+
+4) Probably lots of other stuff I can't remember.

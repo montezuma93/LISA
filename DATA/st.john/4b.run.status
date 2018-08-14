@@ -1,0 +1,129 @@
+
+---------------------------------------
+LISA/DORA Vers. Ex 1.15
+
+Complete LISA code augmented
+ with routines from DORA for the
+ purpose of generatng explanations.
+
+Last modified 10/10/09
+---------------------------------------
+
+
+================================
+Sequence element0
+    Driver:Target-Joan
+    Recip: Source-Bill  
+
+    Fire control: props
+    Goals: NORMAL 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+
+================================
+Sequence element1
+    Driver:Target-Joan
+    Recip: Source-Bill  
+
+    Fire control: props
+    Goals: NORMAL 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P2 
+
+
+================================
+Sequence element2
+    Driver:Target-Joan
+    Recip: Source-Bill  
+
+    Fire control: props
+    Goals: NORMAL 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P3 
+
+
+================================
+Sequence element3
+    Driver:Source-Bill
+    Recip: Target-Joan  Schema  
+
+    Fire control: props
+    Goals: NORMAL 
+
+    Operating mode: LISA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P1 
+
+* * * Switching from LISA mode to DORA mode
+
+================================
+Sequence element4
+    Driver:Source-Bill
+    Recip: Target-Joan  Schema  
+
+    Fire control: props
+    Goals: NORMAL 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P2 
+
+
+================================
+Sequence element5
+    Driver:Source-Bill
+    Recip: Target-Joan  Schema  
+
+    Fire control: props
+    Goals: NORMAL 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P3 
+
+
+================================
+Sequence element6
+    Driver:Source-Bill
+    Recip: Target-Joan  Schema  
+
+    Fire control: props
+    Goals: NORMAL 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P4 
+
+
+================================
+Sequence element7
+    Driver:Source-Bill
+    Recip: Target-Joan  Schema  
+
+    Fire control: props
+    Goals: NORMAL 
+
+    Operating mode: DORA
+    Update mapping connections: True
+    Detect anomalies: False
+Phase set: P5 
+
+
+* * * * * * * * * *
+Simulation is done.
+* * * * * * * * * *
+

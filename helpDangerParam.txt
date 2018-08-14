@@ -1,0 +1,29 @@
+
+
+1) Prop-to-prop Inhibition:  The connection strength with which propositions in a recipient analog inhibit one another.  The default value is -1.
+
+2) SP-to-SP Inhibition: The connection strength with which SPs in an analog inhibit one another.  The default value is -1.
+
+3) Out-prop: Prop-to-SP: The connection strength with which propositions in a recipient analog inhibit SPs not connected to them.  The default value is -1.
+
+4) Out-prop: SP-to-pred: The connection strength with which SPs in a recipient analog inhibit predicate units not connected to themselves.  The default value is -1.
+
+5) Out-prop: SP-to-obj: The connection strength with which SPs in a recipient analog inhibit object units not connected to themselves.  The default value is -1.
+
+6) Pred-to-SP: The connection strength with which predicate units in a recipient analog excite SP units to which they are connected.  The default value is 1.
+
+7) Obj-to-SP: The connection strength with which object units in a recipient analog excite SP units to which they are connected.  The default value is 1.
+
+8) Semantic-to-pred:  A global (pan-unit) weighting term on the input from semantic units to predicate units in recipient analogs.  The default value is 1.5.
+
+9) Semantic-to-obj: A global (pan-unit) weighting term on the input from semantic units to object units in recipient analogs.  The default value is 0.5.
+
+10) Retrieval Threshold: The activation a proposition or group unit in a recipient analog must achieve in order to be retrieved from active memory into WM and thus to have the opportunity to learn mapping connections to units in the driver.  The default value is 0.4. 
+
+ 11) Hebb Bias: A global (pan-unit) weighting term on the effect of input arriving via mapping connections on units in recipient analogs.  The default value is 2.
+
+12) Iterations per SP (normal WM only):  This parameter, which only has an effect under Neurally plausible WM capacity (parameter (1) under Ordinary Run Parameters, above) is used to set the duration of a phase set (in iterations) based on the number of driver SPs in tat phase set (Duration = Iterations_Per_SP * Number_of_SPs).  The default value is 330.  This value is chosen to allow each SP to fire three times for approximately 110 iterations each time.
+
+13) Phase duration (unlimited WM only): This parameter, which only has an effect under Unlimited WM capacity (parameter (1) under Ordinary Run Parameters, above) is used to set the duration of each phase of a phase set (in iterations).  The default value is 75.  Each Sp in the phase set fires three times for Phase_duration iterations each time.
+
+

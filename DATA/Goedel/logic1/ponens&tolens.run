@@ -1,0 +1,380 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+Note: ponens&tolens.sym
+Note: an attempt to implement deductive logic in LISA
+Note: implement modus ponens and modus tollens as groups; add foil groups to catch partial matches?
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 0.5000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Ponens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 1    Driver:Ponens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 2    Driver:Ponens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 3    Driver:Ponens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 4    Driver:Ponens    Recip : Logic    Fire control:props    Goals: NORMAL     Phase set: P1:LIKE (BILL, OJ)
+Seq. 5    Driver:Ponens    Recip : Logic    Fire control:props    Goals: NORMAL     Phase set: P2:INGEST (BILL, OJ)
+Seq. 6    Driver:Logic    Recip : Ponens    Fire control:groups    Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 7    Driver:Logic    Recip : Ponens    Fire control:groups    Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 8    Driver:Logic    Recip : Ponens    Fire control:groups    Goals: NORMAL     Phase set: P5:TRUE (P2)
+Seq. 9    Driver:Logic    Recip : Ponens    Fire control:groups    Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 10    Driver:Logic    Recip : Ponens    Fire control:groups    Goals: NORMAL     Phase set: P7:FALSE (P2)
+Seq. 11    Driver:Logic    Recip : Ponens    Fire control:groups    Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 12    Driver:Logic    Recip : Ponens    Fire control:groups    Goals: NORMAL     Phase set: P7:FALSE (P2)
+Seq. 13    Driver:Logic    Recip : Ponens    Fire control:groups    Goals: NORMAL     Phase set: P6:FALSE (P1)
+Seq. 14    Driver:Tollens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P4:FALSE (P2)
+Seq. 15    Driver:Tollens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 16    Driver:Tollens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P4:FALSE (P2)
+Seq. 17    Driver:Tollens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 18    Driver:Tollens    Recip : Logic    Fire control:props    Goals: NORMAL     Phase set: P1:LIKE (BILL, OJ)
+Seq. 19    Driver:Tollens    Recip : Logic    Fire control:props    Goals: NORMAL     Phase set: P2:INGEST (BILL, OJ)
+Seq. 20    Driver:Logic    Recip : Tollens    Fire control:groups    Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 21    Driver:Logic    Recip : Tollens    Fire control:groups    Goals: NORMAL     Phase set: P7:FALSE (P2)
+Seq. 22    Driver:Logic    Recip : Tollens    Fire control:groups    Goals: NORMAL     Phase set: P6:FALSE (P1)
+Seq. 23    Driver:Logic    Recip : Tollens    Fire control:groups    Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 24    Driver:Logic    Recip : Tollens    Fire control:groups    Goals: NORMAL     Phase set: P5:TRUE (P2)
+Seq. 25    Driver:Logic    Recip : Tollens    Fire control:groups    Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 26    Driver:Logic    Recip : Tollens    Fire control:groups    Goals: NORMAL     Phase set: P5:TRUE (P2)
+Seq. 27    Driver:Logic    Recip : Tollens    Fire control:groups    Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 28    Driver:FalsePonens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 29    Driver:FalsePonens    Recip : Logic    Fire control:groups (G1)     Goals: NORMAL     Phase set: P1:LIKE (BILL, OJ)
+Seq. 30    Driver:FalsePonens    Recip : Logic    Fire control:props    Goals: NORMAL     Phase set: P1:LIKE (BILL, OJ)
+Seq. 31    Driver:FalsePonens    Recip : Logic    Fire control:props    Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 32    Driver:Logic    Recip : FalsePonens    Fire control:groups    Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 33    Driver:Logic    Recip : FalsePonens    Fire control:groups    Goals: NORMAL     Phase set: P5:TRUE (P2)
+Seq. 34    Driver:Logic    Recip : FalsePonens    Fire control:groups    Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 35    Driver:Logic    Recip : FalsePonens    Fire control:groups    Goals: NORMAL     Phase set: P4:TRUE (P1)
+Seq. 36    Driver:Logic    Recip : FalsePonens    Fire control:groups    Goals: NORMAL     Phase set: P7:FALSE (P2)
+Seq. 37    Driver:Logic    Recip : FalsePonens    Fire control:groups    Goals: NORMAL     Phase set: P3:IMPLIES (P1, P2)
+Seq. 38    Driver:Logic    Recip : FalsePonens    Fire control:groups    Goals: NORMAL     Phase set: P6:FALSE (P1)
+Seq. 39    Driver:Logic    Recip : FalsePonens    Fire control:groups    Goals: NORMAL     Phase set: P7:FALSE (P2)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Logic to Ponens:
+  Groups:
+    From Cause-1 to:    'Cause-3' = 0.879
+    From Effect-1 to:
+    From CE-1 (IC = 0.500) to:    'CE-1' = 0.879
+    From Cause-2 to:
+    From Effect-2 to:    'Effect-5' = 0.879
+    From CE-2 (IC = 0.500) to:    'CE-4' = 0.879
+  Props:
+    From P1 (IC = 0.857) to:    P1 = 0.981
+    From P2 (IC = 0.800) to:    P2 = 0.981
+    From P3 (IC = 0.788) to:    P3 = 0.990
+    From P4 (IC = 0.709) to:    P4 = 0.982
+    From P5 (IC = 0.652) to:    'P4' = 0.982
+    From P6 (IC = 0.500) to:    'P6' = 0.982
+    From P7 (IC = 0.618) to:    'P5' = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.992    SP1.2 = 0.992
+    From SP2.1 to:    SP2.2 = 0.992
+    From SP3.1 to:    SP3.1 = 0.992
+    From SP3.2 to:    SP3.2 = 0.992
+    From SP4.1 to:    SP4.1 = 0.990
+    From SP5.1 to:    'SP7' = 0.982
+    From SP6.1 to:    'SP9' = 0.982
+    From SP7.1 to:    'SP8' = 0.990
+  Preds:
+    From TRUE1 to:    TRUE1 = 0.969
+    From FALSE1 to:    'FALSE1' = 0.969
+    From IMPLIES1 to:    IMPLIES1 = 0.970
+    From IMPLIES2 to:    IMPLIES2 = 0.970
+    From P1 to:    LIKE1 = 0.968    LIKE2 = 0.968
+    From Q1 to:    INGEST2 = 0.969
+  Objs:
+    From X to:    BILL = 0.968    OJ = 0.968
+    From Y to:    OJ = 0.957
+
+From Logic to Tollens:
+  Groups:
+    From Cause-1 to:    G1 = 0.879
+    From Effect-1 to:
+    From CE-1 (IC = 0.500) to:    'CE-4' = 0.879
+    From Cause-2 to:    'Cause-3' = 0.879
+    From Effect-2 to:
+    From CE-2 (IC = 0.500) to:    'CE-1' = 0.879
+  Props:
+    From P1 (IC = 0.857) to:    P1 = 0.982
+    From P2 (IC = 0.800) to:    P2 = 0.982
+    From P3 (IC = 0.788) to:    P3 = 0.990
+    From P4 (IC = 0.709) to:    'P6' = 0.982
+    From P5 (IC = 0.652) to:    'P5' = 0.982
+    From P6 (IC = 0.500) to:    'P4' = 0.982
+    From P7 (IC = 0.618) to:    P4 = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.992    SP1.2 = 0.992
+    From SP2.1 to:    SP2.2 = 0.992
+    From SP3.1 to:    SP3.1 = 0.992
+    From SP3.2 to:    SP3.2 = 0.992
+    From SP4.1 to:    'SP9' = 0.982
+    From SP5.1 to:    'SP8' = 0.990
+    From SP6.1 to:    'SP7' = 0.982
+    From SP7.1 to:    SP4.1 = 0.990
+  Preds:
+    From TRUE1 to:    'TRUE1' = 0.969
+    From FALSE1 to:    FALSE1 = 0.969
+    From IMPLIES1 to:    IMPLIES1 = 0.970
+    From IMPLIES2 to:    IMPLIES2 = 0.970
+    From P1 to:    LIKE1 = 0.968    LIKE2 = 0.968
+    From Q1 to:    INGEST2 = 0.969
+  Objs:
+    From X to:    BILL = 0.968    OJ = 0.968
+    From Y to:    OJ = 0.957
+
+From Logic to FalsePonens:
+  Groups:
+    From Cause-1 to:    G1 = 0.879
+    From Effect-1 to:
+    From Cause-2 to:
+    From Effect-2 to:
+  Props:
+    From P1 (IC = 0.857) to:
+    From P2 (IC = 0.800) to:
+    From P3 (IC = 0.788) to:    P1 = 0.990
+    From P4 (IC = 0.709) to:    P4 = 0.982
+    From P5 (IC = 0.652) to:    P4 = 0.982
+    From P7 (IC = 0.618) to:
+  SPs:
+    From SP1.1 to:    SP1.2 = 0.992
+    From SP3.1 to:    SP1.2 = 0.989
+    From SP3.2 to:    SP1.1 = 0.990
+    From SP4.1 to:    SP4.1 = 0.990
+    From SP5.1 to:    SP4.1 = 0.990
+  Preds:
+    From TRUE1 to:    TRUE1 = 0.969
+    From IMPLIES1 to:    LIKE2 = 0.957
+    From IMPLIES2 to:    LIKE1 = 0.969
+    From P1 to:    LIKE2 = 0.968
+  Objs:
+    From X to:    OJ = 0.968
+
+From Ponens to Logic:
+  Groups:
+    From G1 to:
+    From 'CE-1' (IC = 0.778) to:    CE-1 = 0.879
+    From 'Effect-2' to:
+    From 'Cause-3' to:    Cause-1 = 0.879
+    From 'CE-4' (IC = 0.576) to:    CE-2 = 0.879
+    From 'Effect-5' to:    Effect-2 = 0.879
+  Props:
+    From P1 (IC = 0.618) to:    P1 = 0.981
+    From P2 (IC = 0.618) to:    P2 = 0.981
+    From P3 (IC = 0.621) to:    P3 = 0.990
+    From P4 (IC = 0.618) to:    P4 = 0.982
+    From 'P4' (IC = 0.809) to:    P5 = 0.982
+    From 'P5' (IC = 0.669) to:    P7 = 0.982
+    From 'P6' (IC = 0.241) to:    P6 = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.992
+    From SP1.2 to:    SP1.1 = 0.992
+    From SP2.1 to:
+    From SP2.2 to:    SP2.1 = 0.992
+    From SP3.1 to:    SP3.1 = 0.992
+    From SP3.2 to:    SP3.2 = 0.992
+    From SP4.1 to:    SP4.1 = 0.990
+    From 'SP7' to:    SP5.1 = 0.982
+    From 'SP8' to:    SP7.1 = 0.990
+    From 'SP9' to:    SP6.1 = 0.982
+  Preds:
+    From TRUE1 to:    TRUE1 = 0.969
+    From IMPLIES1 to:    IMPLIES1 = 0.970
+    From IMPLIES2 to:    IMPLIES2 = 0.970
+    From LIKE1 to:    P1 = 0.968
+    From LIKE2 to:    P1 = 0.968
+    From INGEST1 to:
+    From INGEST2 to:    Q1 = 0.969
+    From 'FALSE1' to:    FALSE1 = 0.969
+  Objs:
+    From OJ to:    X = 0.968    Y = 0.957
+    From BILL to:    X = 0.968
+
+From Tollens to Logic:
+  Groups:
+    From G1 to:    Cause-1 = 0.879
+    From 'CE-1' (IC = 0.778) to:    CE-2 = 0.879
+    From 'Effect-2' to:
+    From 'Cause-3' to:    Cause-2 = 0.879
+    From 'CE-4' (IC = 0.576) to:    CE-1 = 0.879
+  Props:
+    From P1 (IC = 0.647) to:    P1 = 0.982
+    From P2 (IC = 0.647) to:    P2 = 0.982
+    From P3 (IC = 0.651) to:    P3 = 0.990
+    From P4 (IC = 0.618) to:    P7 = 0.982
+    From 'P4' (IC = 0.809) to:    P6 = 0.982
+    From 'P5' (IC = 0.669) to:    P5 = 0.982
+    From 'P6' (IC = 0.655) to:    P4 = 0.982
+  SPs:
+    From SP1.1 to:    SP1.1 = 0.992
+    From SP1.2 to:    SP1.1 = 0.992
+    From SP2.1 to:
+    From SP2.2 to:    SP2.1 = 0.992
+    From SP3.1 to:    SP3.1 = 0.992
+    From SP3.2 to:    SP3.2 = 0.992
+    From SP4.1 to:    SP7.1 = 0.990
+    From 'SP7' to:    SP6.1 = 0.982
+    From 'SP8' to:    SP5.1 = 0.990
+    From 'SP9' to:    SP4.1 = 0.982
+  Preds:
+    From FALSE1 to:    FALSE1 = 0.969
+    From IMPLIES1 to:    IMPLIES1 = 0.970
+    From IMPLIES2 to:    IMPLIES2 = 0.970
+    From LIKE1 to:    P1 = 0.968
+    From LIKE2 to:    P1 = 0.968
+    From INGEST1 to:
+    From INGEST2 to:    Q1 = 0.969
+    From 'TRUE1' to:    TRUE1 = 0.969
+  Objs:
+    From OJ to:    X = 0.968    Y = 0.957
+    From BILL to:    X = 0.968
+
+From FalsePonens to Logic:
+  Groups:
+    From G1 to:    Cause-1 = 0.879
+  Props:
+    From P1 (IC = 0.768) to:    P3 = 0.990
+    From P4 (IC = 0.647) to:    P4 = 0.982    P5 = 0.982
+  SPs:
+    From SP1.1 to:    SP3.2 = 0.990
+    From SP1.2 to:    SP1.1 = 0.992    SP3.1 = 0.989
+    From SP4.1 to:    SP4.1 = 0.990    SP5.1 = 0.990
+  Preds:
+    From TRUE1 to:    TRUE1 = 0.969
+    From LIKE1 to:    IMPLIES2 = 0.969
+    From LIKE2 to:    P1 = 0.968    IMPLIES1 = 0.957
+  Objs:
+    From OJ to:    X = 0.968
+    From BILL to:
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Ponens * * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+	Inductive confidence = 0.778
+     Semantics: CAUSE-EFFECT (0.875) CS_1.0 (0.875) 
+
+     Groups: 
+     G1 (index = 0 level =0):  
+          Semantics: CAUSE (1.000) 
+          Props: P3) IMPLIES (P1, P2) P4) TRUE (P1) 
+
+     'Effect-2' (index = 2 level =0):  
+          Semantics: EFFECT (0.778) 
+          Props: 'P4') TRUE (P2) 
+
+     'Cause-3' (index = 3 level =0):  
+          Semantics: CAUSE (0.778) 
+          Props: P4) TRUE (P1) 
+
+
+'Effect-2' (index = 2 level =0):  
+     Semantics: EFFECT (0.778) 
+     Props: 'P4') TRUE (P2) 
+
+'Cause-3' (index = 3 level =0):  
+     Semantics: CAUSE (0.778) 
+     Props: P4) TRUE (P1) 
+
+'CE-4' (index = 4 level =1):  
+	Inductive confidence = 0.576
+     Semantics: CAUSE-EFFECT (0.875) CS_1.0 (0.875) 
+
+     Groups: 
+     G1 (index = 0 level =0):  
+          Semantics: CAUSE (1.000) 
+          Props: P3) IMPLIES (P1, P2) P4) TRUE (P1) 
+
+     'Effect-5' (index = 5 level =0):  
+          Semantics: EFFECT (0.778) 
+          Props: 'P6') 'FALSE' (P1) 
+
+
+'Effect-5' (index = 5 level =0):  
+     Semantics: EFFECT (0.778) 
+     Props: 'P6') 'FALSE' (P1) 
+
+
+Props:
+'P4':  [ TRUE1 + P2 ] 
+'P5':  [ 'FALSE1' + P2 ] 
+'P6':  [ 'FALSE1' + P1 ] 
+
+Preds:
+'FALSE1':
+   FALSE1(1.000)
+
+
+Objs:
+
+* * * * * Analog Tollens * * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+	Inductive confidence = 0.778
+     Semantics: CAUSE-EFFECT (0.710) CS_1.0 (0.710) 
+
+     Groups: 
+     G1 (index = 0 level =0):  
+          Semantics: CAUSE (1.000) 
+          Props: P3) IMPLIES (P1, P2) P4) FALSE (P2) 
+
+     'Effect-2' (index = 2 level =0):  
+          Semantics: EFFECT (0.778) 
+          Props: 'P4') FALSE (P1) 
+
+     'Cause-3' (index = 3 level =0):  
+          Semantics: CAUSE (0.668) 
+          Props: P3) IMPLIES (P1, P2) 
+
+
+'Effect-2' (index = 2 level =0):  
+     Semantics: EFFECT (0.778) 
+     Props: 'P4') FALSE (P1) 
+
+'Cause-3' (index = 3 level =0):  
+     Semantics: CAUSE (0.668) 
+     Props: P3) IMPLIES (P1, P2) 
+
+'CE-4' (index = 4 level =1):  
+	Inductive confidence = 0.576
+     Semantics: CAUSE-EFFECT (0.710) CS_1.0 (0.710) 
+
+     Groups: 
+     G1 (index = 0 level =0):  
+          Semantics: CAUSE (1.000) 
+          Props: P3) IMPLIES (P1, P2) P4) FALSE (P2) 
+
+
+
+Props:
+'P4':  [ FALSE1 + P1 ] 
+'P5':  [ 'TRUE1' + P2 ] 
+'P6':  [ 'TRUE1' + P1 ] 
+
+Preds:
+'TRUE1':
+   TRUE1(1.000)
+
+
+Objs:

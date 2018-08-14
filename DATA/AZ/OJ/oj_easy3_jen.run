@@ -1,0 +1,30 @@
+Run of LISA Version Ex 1.17; last modified 10/24/13
+
+Note: Andrei&Zack/OJ_easy3.sym -- only one specific distractor
+Note: Why do we drink OJ for breakfast?
+Note: Low-hanging fruit (or so John thinks)
+Note: Semantics carefully controlled for overlap
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Jen    Recip :    Fire control:groups (QUESTION)     Goals: EXPLAIN RETRIEVE     Phase set: P1:DRINK (JEN, OJ)
+Seq. 1    Driver:Jen    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:DRINK (JEN, OJ)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+

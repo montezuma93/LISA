@@ -1,0 +1,67 @@
+Note: Andrei&Zack/Schemas/Ex1.sym
+Note: Why do we drink OJ for breakfast?
+Note: One of the earliest schemas to be learned, e.g., when one is 3.2778 years old
+Note: One guy has inherent reason and one idiosyncratic reason
+Note: Other guy has same inherent reason and a diff idiosyncratic reason
+
+Analog FirstGuy { put all of knowledge, both generics and specifics, into a single LTM: Analog 0
+  DefPreds
+    { common preds
+    delicious 1 taste good yum delicious tasty refreshing tangy citrus tart ;
+    drink 2 ingest consume liquid swallow liquid ;
+    isa 2 kind class set isa ;
+  end
+  DefObjs
+    { common objects
+    OJ orange juice liquid breakfast morning ;
+    { FirstGuy, the fetishist
+    FirstGuy human person animate alive male banker deserves_death 1% larry ;
+    fetishist person unusual freaky sexual compulsion ;
+  end
+  DefProps
+    P1 drink ( FirstGuy OJ ) ;
+    P2 delicious ( OJ ) ;
+    P3 isa ( FirstGuy fetishist ) ;
+  end
+  DefGroups
+    Cause ( P2 P3 ) ( P1 ) 1.0 ;
+  end
+done { LTM: Analog 0
+
+Analog SecondGuy { the other banker: Analog 1
+  DefPreds
+    { common preds
+    delicious 1 taste good yum delicious tasty refreshing tangy citrus tart ;
+    drink 2 ingest consume liquid swallow liquid ;
+    isa 2 kind class set isa ;
+  end
+  DefObjs
+    OJ orange juice liquid breakfast morning ;
+    { SecondGuy, the mechanic
+    SecondGuy human person animate alive male mechanic father dude ;
+    mechanic person profession cars machines skill talent blue_collar ;
+  end
+  DefProps
+    P1 drink ( SecondGuy OJ ) ;
+    P2 delicious ( OJ ) ;
+    P3 isa ( SecondGuy mechanic ) ;
+  end
+  DefGroups
+    Cause ( P2 P3 ) ( P1 ) 1.0 ;
+  end
+done {
+
+Analog SchemaEx1 {
+done
+
+Sequence { 
+  Driver=[ 1 ] { Analog 1: SecondGuy
+  Recip=[ 0 ] { analog 0: FirstGuy
+  Order=[ CE-1 ( 3 1 ) ]
+  SSL_ON
+  Driver=[ 0 ] { Analog 0: FirstdGuy
+  Recip=[ 1 2 ] { analog 1: SecondGuy and the Schema: Do schema induction!
+  Order=[ CE-1 ( 6 1 ) ] { fire 5 props: give it time to think
+  SaveSym=[ 2 ] { save the resulting schema as a .sym file
+done.
+    

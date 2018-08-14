@@ -1,0 +1,64 @@
+Note: st.john/groups2.sym  in which Joan does NOT have a car
+Note: This version uses groups to represent causal and enabling relations
+SemanticRelations:
+  Preds
+    possession1 ( has1 nothas1 )
+    possession2 ( has2 nothas2 )
+  end { preds
+done { with semantic relations
+{
+Analog Target-Joan
+   DefPreds
+     nothave 2 state nothas ;
+     goto 2 ptrans goto1 goto2 goto3 ;
+     want 2 state want1 want2 want3 ;
+   end ; { def preds
+   DefObjs
+     Joan human adult female joan1 joan2 joan3 ;
+     Car artifact vehicle car ;
+     LAX location airport commerce transport flight ;
+   end ; { def objs
+   DefProps
+     P1 nothave ( Joan Car ) ;
+     P2 goto ( Joan LAX ) ;
+     P3 want ( Joan P2 ) ;
+   end ; { def props
+done ; { analog 1
+{
+Analog Source-Bill
+   DefPreds
+     has 2 state has ;
+     goto 2 ptrans goto1 goto2 goto3 ;
+     want 2 state want1 want2 want3 ;
+     driveto 3 ptrans goto drive vehicle drive2 drive3 ;
+   end ; { def preds
+   DefObjs
+     Bill human adult male bill1 bill2 bill3 ;
+     Jeep artifact vehicle car american shit jeep ;
+     Beach location beach commerce recreation ocean sand ;
+   end ; { def objs
+   DefProps
+     P1 has ( Bill Jeep ) ;
+     P2 goto ( Bill Beach ) ;
+     P3 want ( Bill P2 ) ;
+     P4 driveto ( Bill Jeep Beach ) ;
+   end ; { def props
+   DefGroups
+     Cause ( P3 ) ( P4 ) ;
+     Enable ( P1 ) ( P4 ) ; { will be called "Enables1"
+   end ;
+done ; { analog 1
+Analog Schema
+done ; { analog 2
+{
+Sequence
+   ContraDetect= On { turn contradiction detection on
+   Driver=[ 0 ] { set target to driver
+   Recip=[ 1 ]  { set source to recip
+   Order=[ P1 h P2 h P3 h ] { and fire all three props
+   { volley: turn control over to source
+   Driver=[ 1 ]
+   Recip=[ 0 2 ]
+   SSL_OK  { let LISA figure out whether to turn on ssl
+   Order=[ P1 h P2 h P3 h P4 h ENABLES1 ( 2 1 ) ] { try inference
+done ;

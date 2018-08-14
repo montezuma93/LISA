@@ -1,0 +1,42 @@
+Note: part inference.sym
+Note: Can LISA infer just part of a proposition?
+
+Analog Whole { a representation of Modus Ponens, highly variablized for generic use; i.e., version as instantiated in expert
+  DefPreds
+	loves 2 emotion strong  positive love ;
+  end
+  DefObjs
+	John adult human male john ;
+	Mary adult human female mary ;
+  end
+  DefProps
+	P1 loves ( John Mary ) ;
+  end
+done { LTM: Analog 0
+
+Analog Part { the other banker: Analog 1
+  DefPreds
+	lover [ emotion1 strong1 positive1 love1 ] ;
+  end
+  DefObjs
+    OJ orange juice liquid breakfast morning ;
+    Bill adult human male bill ;
+  end
+  DefProps
+    P1 lover ( Bill ) ;
+  end
+done { 
+
+Sequence { 
+  	Driver=[ 1 ] 
+	Recip=[ 0 ] 
+	Order=[ P1 h ]
+	SSL_ON
+	Driver=[ 0 ]
+	Recip=[ 1 ]
+  	Order=[ P1 h ]
+  	Driver=[ 1 ] 
+	Recip=[ 0 ] 
+	Order=[ P1 h ]
+done.
+    

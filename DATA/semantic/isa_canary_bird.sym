@@ -1,0 +1,45 @@
+Note: Semantic/test1a.sym
+Note: First attempt to fuck with semantic relations and detect contradictions
+Note: Has bird wings?  (it ougta not detect a contradiction here)
+
+Include Semantics.inc
+
+Include WorldKnowledge.inc
+
+Analog Target-Bird
+   DefPreds
+     blank [ blank ] ;
+   end ; { def preds
+   DefObjs
+     bird warm_blood terrestrial feat1 feat2 feat3 feat4 feat5 feat6 bird ;
+   end ; { def objs
+   DefProps
+     P1 blank ( bird ) ;
+   end ; { def props
+done ; { analog 1
+
+Analog Source-Canary
+   DefPreds
+     blank [ blank ] ;
+   end ; { def preds
+   DefObjs
+     canary warm_blood terrestrial feat1 feat2 feat3 feat4 feat5 feat6 canary bird ;
+   end ; { def objs
+   DefProps
+     P1 blank ( canary ) ;
+   end ; { def props
+done ; { analog 1
+{
+Sequence
+   Driver=[ 1 ] { set target to driver
+   Recip=[ 0 ]  { set source to recip
+   Order=[ P1 h P1 h ] { and fire all three props
+done ;
+
+Sequence { 
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  ContraDetect= On { turn contradiction detection on
+  Order=[ P1 h P1 h ]
+done.
+    

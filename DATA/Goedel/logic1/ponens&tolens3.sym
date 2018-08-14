@@ -1,0 +1,143 @@
+Note: ponens&tolens.sym
+Note: an attempt to implement deductive logic in LISA
+Note: implement modus ponens and modus tollens as groups; add foil groups to catch partial matches?
+
+Analog Logic { a representation of Modus Ponens and Modus Tollens, highly variablized for generic use; i.e., version as instantiated in expert
+
+  DefPreds
+	true 1 true -false ;
+	false 1 -true false ;
+	implies 2 implication implies ;
+	p 0 [ ] ;
+	q 0 [ ] ;
+  end
+
+  DefObjs
+	x ;
+	y ;
+  end
+
+  DefProps
+	P1 p ( x ) ;
+	P2 q ( y ) ;
+	P3 implies ( P1 P2 ) ;
+	P4 true ( P1 ) ;
+	P5 true ( P2 ) ;
+	P6 false ( P1 ) ;
+	P7 false ( P2 ) ;
+  end
+  
+  DefGroups
+    Cause ( P3 P4 ) ( P5 ) ; { modus ponens
+    Cause ( P3 P7 ) ( P6 ) ; { modus tollens
+    { foils
+    G1
+    	Props: P3 %
+    	%%
+    G2
+    	Props: P4 %
+    	%%
+    G3
+    	Props: P5 %
+    	%%
+    G4
+    	Props: P6 %
+    	%%
+    G5
+    	Props: P7 %
+    	%%
+end
+done { LTM: Analog 0
+
+Analog Ponens { application of modus ponens
+
+  DefPreds
+	true 1 true -false ;
+	implies 2 implication implies ;
+    like 2 like prefer enjoy ;
+	ingest 2 ingest eat drink consume ;
+  end
+
+  DefObjs
+    	OJ orange juice liquid breakfast morning ;
+    	Bill human person bill banker deserves_death 1% ;
+  end
+
+  DefProps
+    P1 like ( Bill OJ ) ;
+	P2 ingest ( Bill OJ ) ;
+	P3 implies ( P1 P2 ) ;
+	P4 true ( P1 ) ;
+  end
+  
+  DefGroups
+    G1
+    	Props: P3 P4 %
+    	Semantics: Cause %
+    	%%
+  end
+done { 
+
+Analog Tollens { application of modus tollens
+
+  DefPreds
+	true 1 true -false ;
+	false 1 -true false ;
+	implies 2 implication implies ;
+     like 2 like prefer enjoy ;
+	ingest 2 ingest eat drink consume ;
+  end
+
+  DefObjs
+    	OJ orange juice liquid breakfast morning ;
+    	Bill human person bill banker deserves_death 1% ;
+  end
+
+  DefProps
+    P1 like ( Bill OJ ) ;
+	P2 ingest ( Bill OJ ) ;
+	P3 implies ( P1 P2 ) ;
+	P4 false ( P2 ) ;
+  end
+  DefGroups
+    G1
+    	Props: P3 P4 %
+    	Semantics: Cause %
+    	%%
+  end
+done { 
+
+Analog FalsePonens { should trigger neither ponens nor tollens
+  DefPreds
+	true 1 true -false ;
+	false 1 -true false ;
+	implies 2 implication implies ;
+    like 2 like prefer enjoy ;
+	ingest 2 ingest eat drink consume ;
+  end
+
+  DefObjs
+    	OJ orange juice liquid breakfast morning ;
+    	Bill human person bill banker deserves_death 1% ;
+  end
+
+  DefProps
+    P1 like ( Bill OJ ) ;
+	P4 true ( P1 ) ;
+  end
+  DefGroups
+    G1
+    	Props: P1 P4 %
+    	Semantics: Cause %
+    	%%
+  end
+done { 
+
+Sequence { 
+    { modus tolens
+  	Driver=[ 2 ]
+  	Goal= Explain
+  	Order=[ G1 ( 2 1 ) ]
+done.
+
+    

@@ -1,0 +1,135 @@
+Run of LISA Version Ex 1.14; last modified 10/31/08
+
+Note: Semantic/birdwheels.sym
+Note: Second attempt to do semantic verification (11/12/08)
+Note: Test of idea that vrification can be modeled As Explanation:
+Note: To verify whether, say birds have lungs or wheels, try to explain
+Note:   Why they have lungs or wheels
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:ToVerify    Recip :    Fire control:groups    Goals: EXPLAIN RETRIEVE     Phase set: P1:HAS (BIRD, WHEELS)
+Seq. 1    Driver:ToVerify    Recip : WorkSpace    Fire control:groups-d    Goals: EXPLAIN MAP     Phase set: P1:HAS (BIRD, WHEELS)
+
+Contradiction detected underTHING.  Active members are: LIVING, NON-LIVING
+Simulation iteration (i.e., total RT) =495
+
+Seq. 2    Driver:WorkSpace    Recip : ToVerify    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P4:HAS (CAR, WHEELS)
+
+Contradiction detected underTHING.  Active members are: LIVING, NON-LIVING
+Simulation iteration (i.e., total RT) =1237
+
+
+Truth verified! (I.e., Lack-of-anomaly detected)
+The assertion HAS (CAR, WHEELS) matches prop P1: HAS (BIRD, WHEELS)
+Iteration (RT) = 1318
+
+Seq. 3    Driver:WorkSpace    Recip : ToVerify    Fire control:groups-d    Goals: EXPLAIN INFER     Phase set: P15:ISA (CAR, VEHICLE)
+
+Contradiction detected underTHING.  Active members are: LIVING, NON-LIVING
+Simulation iteration (i.e., total RT) =1898
+
+
+Truth verified! (I.e., Lack-of-anomaly detected)
+The assertion ISA (CAR, VEHICLE) matches prop 'P1': 
+Iteration (RT) = 1977
+
+
+
+* * * Current Mapping Connections From ToVerify to WorkSpace * * *
+  Groups:
+    From 'CE-1' to:    CE-2 = 0.879
+  Props:
+    From P1 to:    P4 = 0.990
+    From 'P1' to:    P15 = 0.990
+  SPs:
+    From SP1.1 to:    SP4.1 = 0.993
+    From SP1.2 to:    SP4.2 = 0.993
+    From 'SP2' to:    SP15.1 = 0.990
+    From 'SP3' to:    SP15.2 = 0.993
+  Preds:
+    From HAS1 to:    HAS1 = 0.970
+    From HAS2 to:    HAS2 = 0.970
+    From 'ISA1' to:    ISA1 = 0.969
+    From 'ISA2' to:    ISA2 = 0.970
+  Objs:
+    From BIRD to:    CAR = 0.970
+    From WHEELS to:    WHEELS = 0.970
+    From 'VEHICLE' to:    VEHICLE = 0.970
+
+
+
+* * * * Inferred Groups and Props in Explanandum * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_1.0 (0.725) 
+
+     Groups: 
+     TOVERIFY (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) HAS (BIRD, WHEELS) 
+
+
+
+Props:
+'P1':  [ 'ISA1' + BIRD ] [ 'ISA2' + 'VEHICLE' ] 
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog ToVerify * * * * *
+
+Groups:
+'CE-1' (index = 1 level =1):  
+     Semantics: CAUSE-EFFECT (0.725) CS_1.0 (0.725) 
+
+     Groups: 
+     TOVERIFY (index = 0 level =0):  
+          Semantics: EFFECT (1.000) 
+          Props: P1) HAS (BIRD, WHEELS) 
+
+
+
+Props:
+'P1':  [ 'ISA1' + BIRD ] [ 'ISA2' + 'VEHICLE' ] 
+
+Preds:
+'ISA1':
+   ISA1(1.000)
+   EXEMPLAR(1.000)
+
+'ISA2':
+   ISA2(1.000)
+   CATEGORY(1.000)
+
+
+Objs:
+'VEHICLE':
+      THING(0.730)
+     NON-LIVING(0.782)
+   ARTIFACT(1.000)
+       TRANSPORT(0.633)
+        VEHICLE(0.458)
+

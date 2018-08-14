@@ -1,0 +1,60 @@
+Note: Similar examples for diversity simulations
+Note: Tell LISA that mice and elephants have enzyme & let it induce schema
+
+Parameters
+    SaveGroupHebbs False
+    SavePropHebbs False
+    SaveSPHebbs False
+    SaveOPHebbs False
+Done
+
+Analog Elephant
+  DefPreds
+    has 2 state possess has1 has2 ;
+  end
+  DefObjs
+    elephant elephant animal mammal huge -tiny smart domestic ;
+    enzyme chemical bio enzyme ;
+  end
+  DefProps
+    P1 has ( elephant enzyme ) ;
+  end
+  DefGroups
+    NewFact
+      Props: P1 %
+      Semantics: Generic %
+      %%
+  end
+done
+
+Analog Mouse
+  DefPreds
+    has 2 state possess has1 has2 ;
+  end
+  DefObjs
+    elephant elephant animal mammal huge -tiny smart domestic ;
+    enzyme chemical bio enzyme ;
+  end
+  DefProps
+    P1 has ( elephant enzyme ) ;
+  end
+  DefGroups
+    NewFact
+      Props: P1 %
+      Semantics: Generic %
+      %%
+  end
+done
+
+Analog Schema
+done
+
+Sequence { 
+  Driver=[ 0 ]
+  Recip=[ 1 2 ]
+  Order=[ P1 h ]
+  SSL_ON
+  Order=[ NewFact ( 1 1 ) ]
+  SaveSYM=[ 2 ]
+done.
+    

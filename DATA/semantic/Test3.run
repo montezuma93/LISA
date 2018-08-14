@@ -1,0 +1,26 @@
+Run of LISA Version Ex 1.06; last modified 3/05/08
+
+Note: Semantic/test3.sym
+Note: Nth attempt to fuck with semantic relations and detect contradictions
+Note: eats lamb monkey ?  (it ougta to detect an anamoly here)
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 1.0000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:ToVerify    Recip : WorldKnowledge    Fire control:props    Goals: NORMAL     Phase set: P1
+
+Contradiction detected underLIVING.  Active members are: ANIMAL, PLANT
+Simulation iteration (i.e., total RT) =405
+
