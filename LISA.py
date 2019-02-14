@@ -94,7 +94,7 @@ import pygame
 import graphics
 import runLISA
 import hebbs
-import explain  # explanation routines, 9/25/07
+#import explain  # explanation routines, 9/25/07
 import outFile
 import math
 import os, random, datetime
