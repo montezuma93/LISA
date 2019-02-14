@@ -1,0 +1,128 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 0.5000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (SWEDEN, GERMANY)
+Seq. 1    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P2:NORTH (GERMANY, ITALY)
+Seq. 2    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (SWEDEN, GERMANY)
+Seq. 3    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P2:NORTH (GERMANY, ITALY)
+Seq. 4    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (SWEDEN, GERMANY)
+Seq. 5    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P2:NORTH (GERMANY, ITALY)
+Seq. 6    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (SWEDEN, GERMANY)
+Seq. 7    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P2:NORTH (GERMANY, ITALY)
+Seq. 8    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (SWEDEN, GERMANY)
+Seq. 9    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:random    Goals: NORMAL     Phase set: P2:NORTH (GERMANY, ITALY)
+Seq. 10    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (SWEDEN, GERMANY) P2:NORTH (GERMANY, ITALY)
+Seq. 11    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (SWEDEN, GERMANY)
+Seq. 12    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:props    Goals: NORMAL     Phase set: P2:NORTH (GERMANY, ITALY)
+Seq. 13    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (SWEDEN, GERMANY)
+Seq. 14    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:props    Goals: NORMAL     Phase set: P2:NORTH (GERMANY, ITALY)
+Seq. 15    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (SWEDEN, GERMANY)
+Seq. 16    Driver:Sweden,Germany&Italy    Recip : England,France&Egypt    Fire control:props    Goals: NORMAL     Phase set: P2:NORTH (GERMANY, ITALY)
+Seq. 17    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (ENGLAND, FRANCE)
+Seq. 18    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P3:NORTH (ENGLAND, EGYPT)
+Seq. 19    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P2:SOUTH (EGYPT, FRANCE)
+Seq. 20    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (ENGLAND, FRANCE)
+Seq. 21    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P2:SOUTH (EGYPT, FRANCE)
+Seq. 22    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (ENGLAND, FRANCE)
+Seq. 23    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P3:NORTH (ENGLAND, EGYPT)
+Seq. 24    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P2:SOUTH (EGYPT, FRANCE)
+Seq. 25    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (ENGLAND, FRANCE)
+Seq. 26    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:random    Goals: NORMAL     Phase set: P3:NORTH (ENGLAND, EGYPT)
+Seq. 27    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (ENGLAND, FRANCE) P2:SOUTH (EGYPT, FRANCE) P3:NORTH (ENGLAND, EGYPT)
+Seq. 28    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (ENGLAND, FRANCE)
+Seq. 29    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:props    Goals: NORMAL     Phase set: P2:SOUTH (EGYPT, FRANCE)
+Seq. 30    Driver:England,France&Egypt    Recip : Sweden,Germany&Italy    Fire control:props    Goals: NORMAL     Phase set: P3:NORTH (ENGLAND, EGYPT)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From England,France&Egypt to Sweden,Germany&Italy:
+  Groups:
+  Props:
+    From P1 (IC = 0.621) to:    P1 = 0.990
+    From P2 (IC = 0.500) to:    'P2' = 0.990
+    From P3 (IC = 0.621) to:    P2 = 0.990
+  SPs:
+    From SP1.1 to:    SP1.2 = 0.990
+    From SP1.2 to:    'SP4' = 0.993
+    From SP2.1 to:    'SP5' = 0.993
+    From SP2.2 to:    'SP6' = 0.993
+    From SP3.1 to:    SP1.1 = 0.982    SP2.1 = 0.993
+    From SP3.2 to:    SP2.2 = 0.993
+  Preds:
+    From NORTH1 to:    NORTH1 = 0.968
+    From NORTH2 to:    NORTH2 = 0.968
+    From SOUTH1 to:    'SOUTH1' = 0.968
+    From SOUTH2 to:    'SOUTH2' = 0.968
+  Objs:
+    From ENGLAND to:    GERMANY = 0.968
+    From FRANCE to:    SWEDEN = 0.968
+    From EGYPT to:    ITALY = 0.968
+
+From Sweden,Germany&Italy to England,France&Egypt:
+  Groups:
+  Props:
+    From P1 (IC = 0.621) to:    P1 = 0.990
+    From P2 (IC = 0.621) to:    P3 = 0.990
+    From 'P2' (IC = 0.966) to:    P2 = 0.990
+  SPs:
+    From SP1.1 to:    SP3.1 = 0.982
+    From SP1.2 to:    SP1.1 = 0.990
+    From SP2.1 to:    SP3.1 = 0.993
+    From SP2.2 to:    SP3.2 = 0.993
+    From 'SP4' to:    SP1.2 = 0.993
+    From 'SP5' to:    SP2.1 = 0.993
+    From 'SP6' to:    SP2.2 = 0.993
+  Preds:
+    From NORTH1 to:    NORTH1 = 0.968
+    From NORTH2 to:    NORTH2 = 0.968
+    From 'SOUTH1' to:    SOUTH1 = 0.968
+    From 'SOUTH2' to:    SOUTH2 = 0.968
+  Objs:
+    From SWEDEN to:    FRANCE = 0.968
+    From GERMANY to:    ENGLAND = 0.968
+    From ITALY to:    EGYPT = 0.968
+
+
+
+* * * * * * * * * * * * * * * *
+* * * * Inferred Units  * * * *
+* * * * * * * * * * * * * * * *
+
+* * * * * Analog Sweden,Germany&Italy * * * * *
+
+Groups:
+
+Props:
+'P2':  [ 'SOUTH1' + ITALY ] [ 'SOUTH2' + SWEDEN ] 
+
+Preds:
+'SOUTH1':
+   CARDINAL_DIRECTION1(1.000)
+   HOT1(1.000)
+   DOWN1(1.000)
+
+'SOUTH2':
+   CARDINAL_DIRECTION2(1.000)
+   HOT2(1.000)
+   DOWN2(1.000)
+
+
+Objs:

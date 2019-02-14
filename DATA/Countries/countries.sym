@@ -1,0 +1,44 @@
+Analog England,France&Egypt
+
+  Defpreds
+    North 2 cardinal_direction cold up ;
+    South 2 cardinal_direction hot down ;
+  end; { def preds
+  Defobjs
+     England country UN_member european cold ;
+     France country UN_member european ;
+     Egypt  country UN_member african hot ;
+  end; { def objs
+  DefProps
+     P1 North ( England France ) ; 
+     P2 South ( Egypt France ) ; 
+     P3 North ( England Egypt ) ;
+  end ; { def props
+done ; { analog 0
+
+Analog Sweden,Germany&Italy
+
+  Defpreds
+    North 2 cardinal_direction cold up ;
+    South 2 cardinal_direction hot down ;
+  end ; { def preds
+  Defobjs
+    Sweden country UN_member european cold ;
+    Germany country UN_member european ;
+    Italy country UN_member european hot ;
+  end ; { def objs
+  DefProps
+     P1 North ( Sweden Germany ) ;
+     P2 North ( Germany Italy ) ;
+  end ; { def props
+done ; { analog 1
+
+Sequence
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  Order=[ R ( 10 1 ) h P1 P2 h P1 h P2 h P1 h P2 h P1 h P2 h ]
+  SSL_On
+  Driver=[ 0 ]
+  Recip=[ 1 ]
+  Order=[ R ( 10 1 ) h P1 P2 P3 h P1 h P2 h P3 h ]
+Done. { whole sym file

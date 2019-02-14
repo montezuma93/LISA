@@ -1,0 +1,37 @@
+Analog Mall-Station
+  Defpreds
+    North 2 cardinal_direction up ;
+    South 2 cardinal_direction down ;
+  end; { def preds
+  Defobjs
+     Mall object ;
+     Station object ;
+  end; { def objs
+  DefProps
+     P1 North ( Mall Station ) ; 
+     P2 South ( Station Mall ) ;
+  end ; { def props
+done ; { analog 0
+Analog Station-Bar
+  Defpreds
+    North 2 cardinal_direction up ;
+    South 2 cardinal_direction down ;
+  end ; { def preds
+  Defobjs
+    Station object ;
+    Bar object ;
+  end ; { def objs
+  DefProps
+     P1 North ( Station Bar ) ;
+     P2 South ( Bar Station ) ;
+  end ; { defprops
+done ; { analog 1
+Sequence
+  Driver=[ 1 ]
+  Recip=[ 0 ]
+  Order=[ P1 P2 h P1 h P2 h P1 h P2 h P1 h P2 h ]
+  SSL_On
+  Driver=[ 0 ]
+  Recip=[ 1 ]
+  Order=[ R ( 10 1 ) h P1 P2 P3 h ]
+Done. { whole sym file

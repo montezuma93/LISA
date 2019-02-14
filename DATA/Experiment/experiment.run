@@ -1,0 +1,80 @@
+Run of LISA Version Ex 2.01; last modified 4/15/14
+
+
+* * * * * * * * * * * * * * * * * * * * *
+Parameters values:
+    Neurally-plausible WM
+    Semantic Noise = 0.0000
+    Semantic Death = 0.0000
+    Attention = 1.0000
+    Within-group support = 1.0000
+    Driver Inhibition = 1.0000
+    Recip Inhibition = 0.5000
+    Hebb Learning Rate = 1.0000
+    Bail Upon Settling = False
+    Using Vers142 Mapping Algorithm
+* * * * * * * * * * * * * * * * * * * * *
+
+Sequence:
+Seq. 0    Driver:Station-Bar    Recip : Mall-Station    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (STATION, BAR) P2:SOUTH (BAR, STATION)
+Seq. 1    Driver:Station-Bar    Recip : Mall-Station    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (STATION, BAR)
+Seq. 2    Driver:Station-Bar    Recip : Mall-Station    Fire control:props    Goals: NORMAL     Phase set: P2:SOUTH (BAR, STATION)
+Seq. 3    Driver:Station-Bar    Recip : Mall-Station    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (STATION, BAR)
+Seq. 4    Driver:Station-Bar    Recip : Mall-Station    Fire control:props    Goals: NORMAL     Phase set: P2:SOUTH (BAR, STATION)
+Seq. 5    Driver:Station-Bar    Recip : Mall-Station    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (STATION, BAR)
+Seq. 6    Driver:Station-Bar    Recip : Mall-Station    Fire control:props    Goals: NORMAL     Phase set: P2:SOUTH (BAR, STATION)
+Seq. 7    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (MALL, STATION)
+Seq. 8    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P2:SOUTH (STATION, MALL)
+Seq. 9    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (MALL, STATION)
+Seq. 10    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P2:SOUTH (STATION, MALL)
+Seq. 11    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (MALL, STATION)
+Seq. 12    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P2:SOUTH (STATION, MALL)
+Seq. 13    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (MALL, STATION)
+Seq. 14    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P2:SOUTH (STATION, MALL)
+Seq. 15    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P1:NORTH (MALL, STATION)
+Seq. 16    Driver:Mall-Station    Recip : Station-Bar    Fire control:random    Goals: NORMAL     Phase set: P2:SOUTH (STATION, MALL)
+Seq. 17    Driver:Mall-Station    Recip : Station-Bar    Fire control:props    Goals: NORMAL     Phase set: P1:NORTH (MALL, STATION) P2:SOUTH (STATION, MALL)
+
+
+* * * * * * * * * * * * * * * *
+* * * Mapping Connections * * *
+* * * * * * * * * * * * * * * *
+
+From Mall-Station to Station-Bar:
+  Groups:
+  Props:
+    From P1 (IC = 0.621) to:    P2 = 0.990
+    From P2 (IC = 0.621) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    SP2.1 = 0.993
+    From SP1.2 to:    SP2.2 = 0.993
+    From SP2.1 to:    SP1.1 = 0.993
+    From SP2.2 to:    SP1.2 = 0.993
+  Preds:
+    From NORTH1 to:    SOUTH1 = 0.968
+    From NORTH2 to:    SOUTH2 = 0.968
+    From SOUTH1 to:    NORTH1 = 0.968
+    From SOUTH2 to:    NORTH2 = 0.968
+  Objs:
+    From MALL to:    BAR = 0.982
+    From STATION to:    STATION = 0.982
+
+From Station-Bar to Mall-Station:
+  Groups:
+  Props:
+    From P1 (IC = 0.621) to:    P2 = 0.990
+    From P2 (IC = 0.621) to:    P1 = 0.990
+  SPs:
+    From SP1.1 to:    SP2.1 = 0.993
+    From SP1.2 to:    SP2.2 = 0.993
+    From SP2.1 to:    SP1.1 = 0.993
+    From SP2.2 to:    SP1.2 = 0.993
+  Preds:
+    From NORTH1 to:    SOUTH1 = 0.968
+    From NORTH2 to:    SOUTH2 = 0.968
+    From SOUTH1 to:    NORTH1 = 0.968
+    From SOUTH2 to:    NORTH2 = 0.968
+  Objs:
+    From STATION to:    STATION = 0.982
+    From BAR to:    MALL = 0.982
+
